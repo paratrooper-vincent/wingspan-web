@@ -196,7 +196,7 @@ export function* matchLoop(st, DATA) {
 
   // ===== 轮次循环 =====
   for (st.round = 1; st.round <= C.rounds; st.round++) {
-    for (const p of st.players) p.cubesSupply = 9 - st.round; // 8/7/6/5
+    for (const p of st.players) p.cubesSupply = 9 - st.round; // 8/7/6/5：每轮一个方块留在目标板不收回，可用数递减
     logEvent(st, 'round_start', { round: st.round });
     // 回合调度
     const order = st.players.map(p => p.pid); // 座位顺序，先手开始
@@ -219,7 +219,7 @@ export function* matchLoop(st, DATA) {
       }
     } else {
       // Flock / 扩展：转盘波次，每组各出 1 名活跃玩家并发；
-      // 每名玩家每轮行动 8/7/6/5 次（以 cubesSupply 计数），转盘指针轮转推进。
+      // 每名玩家每轮行动 8/7/6/5 次（以 cubesSupply 计数，每轮一个方块留目标板），转盘指针轮转推进。
       const cursors = st.groups.map(g => {
         const list = g.pids;
         return { gid: g.id, list, ptr: Math.max(0, list.indexOf(st.firstPid)) };

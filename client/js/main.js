@@ -13,6 +13,21 @@ const G = {
   lastRev: 0,
 };
 
+// 统一图片加载失败重试：error 不冒泡，用 capture 监听；指数退避最多 3 次，
+// 应对免费实例冷启动 / 限流 / 网络抖动导致的偶发空白，避免永久不显示。
+document.addEventListener('error', e => {
+  const img = e.target;
+  if (!(img instanceof HTMLImageElement) || !img.src) return;
+  const n = (Number(img.dataset.retry) || 0) + 1;
+  img.dataset.retry = String(n);
+  if (n > 3) return; // 确属缺失则放弃，避免死循环
+  setTimeout(() => {
+    const u = new URL(img.src, location.href);
+    u.searchParams.set('_r', String(n)); // 加参数避免命中坏缓存
+    img.src = u.toString();
+  }, 500 * 2 ** (n - 1)); // 0.5s / 1s / 2s
+}, true);
+
 // ---------------- 初始化 ----------------
 const WS_MAX_RETRY = 5;
 let wsRetries = 0;
