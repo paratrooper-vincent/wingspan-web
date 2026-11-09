@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 570 870" font-family="'Microsoft YaHei','PingFang SC','Noto Sans SC',sans-serif">
+<defs><linearGradient id="pg" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#fbf5e8"/><stop offset="1" stop-color="#f4eddb"/></linearGradient></defs>
+<rect x="6" y="6" width="558" height="858" rx="20" fill="url(#pg)" stroke="#b9a98c" stroke-width="2"/>
+
+  <rect x="6" y="6" width="187" height="64" fill="#3e7d4e" rx="20" ry="20"/><rect x="192" y="6" width="187" height="64" fill="#c29a2a" /><rect x="378" y="6" width="187" height="64" fill="#4a7fa5" /><text x="99" y="46" font-size="22" fill="#fff" text-anchor="middle" font-weight="700">森林</text><text x="285" y="46" font-size="22" fill="#fff" text-anchor="middle" font-weight="700">草原</text><text x="471" y="46" font-size="22" fill="#fff" text-anchor="middle" font-weight="700">湿地</text>
+  <g transform="translate(0,8)">
+    <g><path d="M13,116.3 q8.5,-17 17,0 q8.5,17 17,0" fill="none" stroke="#3a2c1a" stroke-width="5.44" stroke-linecap="round"/></g><text x="65.7" y="118" font-size="27.200000000000003" fill="#3a2c1a">/</text><g><ellipse cx="84.4" cy="107.8" rx="12.24" ry="17" fill="#3a2c1a"/><path d="M84.4,90.8 l5.949999999999999,-9.350000000000001" stroke="#3a2c1a" stroke-width="4.760000000000001" fill="none"/></g><text x="120.10000000000001" y="118" font-size="27.200000000000003" fill="#3a2c1a">/</text><g><circle cx="138.8" cy="109.84" r="14.45" fill="#3a2c1a"/><path d="M138.8,95.9 q6.800000000000001,-6.800000000000001 11.899999999999999,0" fill="none" stroke="#3a2c1a" stroke-width="4.760000000000001"/></g>
+    <circle cx="518" cy="100" r="30" fill="#c99b3f" stroke="#a87f2c" stroke-width="2"/>
+    <text x="518" y="111" font-size="32" fill="#fff" text-anchor="middle" font-weight="800">0</text>
+  </g>
+  <circle cx="285" cy="330" r="118" fill="#e7dcc2" stroke="#c9b996" stroke-width="2"/>
+  <g>
+    <path d="M234.0,330.0 L206.8,306.2 L215.3,348.7 L240.8,353.8 Z" fill="#a2703d"/>
+    <ellipse cx="285" cy="338.5" rx="51" ry="35.699999999999996" fill="#a2703d"/>
+    <circle cx="323.25" cy="304.5" r="22.099999999999998" fill="#a2703d"/>
+    <path d="M342.8,301.1 L366.6,306.2 L342.8,313.0 Z" fill="#a2703d"/>
+    <line x1="272.25" y1="372.5" x2="268" y2="402.25" stroke="#a2703d" stroke-width="4.25"/>
+    <line x1="289.25" y1="372.5" x2="293.5" y2="402.25" stroke="#a2703d" stroke-width="4.25"/>
+  </g>
+  <text x="285" y="498" font-size="27" fill="#3a2c1a" text-anchor="middle" font-weight="700">Song Sparrow</text>
+  <text x="285" y="528" font-size="20" fill="#6b5b45" text-anchor="middle">歌带鹀</text>
+  <line x1="40" y1="552" x2="530" y2="552" stroke="#c9b996" stroke-width="1.5"/>
+  <g><path d="M53,586.9 q17,23.799999999999997 34,0" fill="none" stroke="#3a2c1a" stroke-width="5.44"/></g>
+  <text x="96" y="600" font-size="17" fill="#3a2c1a">蛋上限 5</text>
+  <text x="330" y="600" font-size="17" fill="#3a2c1a">翼展 20 cm</text>
+  
+  <rect x="28" y="636" width="8" height="40" rx="4" fill="#a2703d"/>
+  <text x="50" y="656.0" font-size="16" fill="#3a2c1a" text-anchor="start" font-family="inherit" font-weight="normal">若这只鸟是其栖息地最右侧的鸟，将它迁徙到另一个栖息地</text>
+  <text x="285" y="846" font-size="12" fill="#a8987c" text-anchor="middle">程序化卡面 · 非官方扫描（数值与能力文本依官方数据）</text></svg>

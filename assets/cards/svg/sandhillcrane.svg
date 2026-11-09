@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 570 870" font-family="'Microsoft YaHei','PingFang SC','Noto Sans SC',sans-serif">
+<defs><linearGradient id="pg" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#fbf5e8"/><stop offset="1" stop-color="#f4eddb"/></linearGradient></defs>
+<rect x="6" y="6" width="558" height="858" rx="20" fill="url(#pg)" stroke="#b9a98c" stroke-width="2"/>
+
+  <rect x="6" y="6" width="280" height="64" fill="#c29a2a" rx="20" ry="20"/><rect x="285" y="6" width="280" height="64" fill="#4a7fa5" /><text x="145.5" y="46" font-size="22" fill="#fff" text-anchor="middle" font-weight="700">草原</text><text x="424.5" y="46" font-size="22" fill="#fff" text-anchor="middle" font-weight="700">湿地</text>
+  <g transform="translate(0,8)">
+    <g><ellipse cx="30" cy="107.8" rx="12.24" ry="17" fill="#3a2c1a"/><path d="M30,90.8 l5.949999999999999,-9.350000000000001" stroke="#3a2c1a" stroke-width="4.760000000000001" fill="none"/></g><g><ellipse cx="65.7" cy="107.8" rx="12.24" ry="17" fill="#3a2c1a"/><path d="M65.7,90.8 l5.949999999999999,-9.350000000000001" stroke="#3a2c1a" stroke-width="4.760000000000001" fill="none"/></g><g><path d="M109.9,91.7L114.4,101.6L125.3,102.8L117.2,110.2L119.4,120.9L109.9,115.5L100.4,120.9L102.6,110.2L94.5,102.8L105.4,101.6Z" fill="#3a2c1a"/></g>
+    <circle cx="518" cy="100" r="30" fill="#c99b3f" stroke="#a87f2c" stroke-width="2"/>
+    <text x="518" y="111" font-size="32" fill="#fff" text-anchor="middle" font-weight="800">5</text>
+  </g>
+  <circle cx="285" cy="330" r="118" fill="#e7dcc2" stroke="#c9b996" stroke-width="2"/>
+  <g>
+    <path d="M234.0,330.0 L206.8,306.2 L215.3,348.7 L240.8,353.8 Z" fill="#a2703d"/>
+    <ellipse cx="285" cy="338.5" rx="51" ry="35.699999999999996" fill="#a2703d"/>
+    <circle cx="323.25" cy="304.5" r="22.099999999999998" fill="#a2703d"/>
+    <path d="M342.8,301.1 L366.6,306.2 L342.8,313.0 Z" fill="#a2703d"/>
+    <line x1="272.25" y1="372.5" x2="268" y2="402.25" stroke="#a2703d" stroke-width="4.25"/>
+    <line x1="289.25" y1="372.5" x2="293.5" y2="402.25" stroke="#a2703d" stroke-width="4.25"/>
+  </g>
+  <text x="285" y="498" font-size="27" fill="#3a2c1a" text-anchor="middle" font-weight="700">Sandhill Crane</text>
+  <text x="285" y="528" font-size="20" fill="#6b5b45" text-anchor="middle">沙丘鹤</text>
+  <line x1="40" y1="552" x2="530" y2="552" stroke="#c9b996" stroke-width="1.5"/>
+  <g><ellipse cx="70" cy="590.3" rx="13.600000000000001" ry="8.5" fill="#3a2c1a"/><line x1="53" y1="602.54" x2="87" y2="602.54" stroke="#3a2c1a" stroke-width="5.1" stroke-linecap="round"/></g>
+  <text x="96" y="600" font-size="17" fill="#3a2c1a">蛋上限 1</text>
+  <text x="330" y="600" font-size="17" fill="#3a2c1a">翼展 196 cm</text>
+  
+  <rect x="28" y="636" width="8" height="40" rx="4" fill="#a2703d"/>
+  <text x="50" y="656.0" font-size="16" fill="#3a2c1a" text-anchor="start" font-family="inherit" font-weight="normal">弃 种子×1，从牌库顶塞 2 张卡到这只鸟下</text>
+  <text x="285" y="846" font-size="12" fill="#a8987c" text-anchor="middle">程序化卡面 · 非官方扫描（数值与能力文本依官方数据）</text></svg>

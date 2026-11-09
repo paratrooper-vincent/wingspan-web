@@ -1,0 +1,1186 @@
+[
+ {
+  "name": "Common Merganser",
+  "color": "brown",
+  "ss": false,
+  "power": "Roll all dice not in birdfeeder. If any are [fish], cache 1 [fish] from the supply on this bird.",
+  "vp": 5,
+  "habitats": [
+   "wetland"
+  ]
+ },
+ {
+  "name": "Common Nighthawk",
+  "color": "brown",
+  "ss": false,
+  "power": "If this bird is to the right of all other birds in its habitat, move it to another habitat.",
+  "vp": 3,
+  "habitats": [
+   "forest",
+   "grassland",
+   "wetland"
+  ]
+ },
+ {
+  "name": "Common Raven",
+  "color": "brown",
+  "ss": false,
+  "power": "Discard 1 [egg] from any of your other birds to gain 2 [wild] from the supply.",
+  "vp": 5,
+  "habitats": [
+   "forest",
+   "grassland",
+   "wetland"
+  ]
+ },
+ {
+  "name": "Common Yellowthroat",
+  "color": "brown",
+  "ss": false,
+  "power": "Draw 2 [card]. If you do, discard 1 [card] from your hand at the end of your turn.",
+  "vp": 1,
+  "habitats": [
+   "wetland"
+  ]
+ },
+ {
+  "name": "Cooper's Hawk",
+  "color": "brown",
+  "ss": false,
+  "power": "Look at a [card] from the deck. If less than 75cm, tuck it behind this bird. If not, discard it.",
+  "vp": 3,
+  "habitats": [
+   "forest"
+  ]
+ },
+ {
+  "name": "Dark-Eyed Junco",
+  "color": "brown",
+  "ss": false,
+  "power": "Tuck 1 [card] from your hand behind this bird. If you do, gain 1 [seed] from the supply.",
+  "vp": 3,
+  "habitats": [
+   "forest",
+   "grassland"
+  ]
+ },
+ {
+  "name": "Dickcissel",
+  "color": "brown",
+  "ss": false,
+  "power": "Tuck 1 [card] from your hand behind this bird. If you do, you may also lay 1 [egg] on this bird.",
+  "vp": 4,
+  "habitats": [
+   "grassland"
+  ]
+ },
+ {
+  "name": "Double-Crested Cormorant",
+  "color": "brown",
+  "ss": false,
+  "power": "Discard 1 [fish] to tuck 2 [card] from the deck behind this bird.",
+  "vp": 3,
+  "habitats": [
+   "wetland"
+  ]
+ },
+ {
+  "name": "Downy Woodpecker",
+  "color": "white",
+  "ss": false,
+  "power": "Play an additional bird in your [forest]. Pay its normal cost.",
+  "vp": 3,
+  "habitats": [
+   "forest"
+  ]
+ },
+ {
+  "name": "Eastern Bluebird",
+  "color": "white",
+  "ss": false,
+  "power": "Play an additional bird in your [grassland]. Pay its normal cost.",
+  "vp": 4,
+  "habitats": [
+   "grassland"
+  ]
+ },
+ {
+  "name": "Eastern Kingbird",
+  "color": "pink",
+  "ss": false,
+  "power": "When another player plays a bird in their [forest], gain 1 [invertebrate] from the supply.",
+  "vp": 2,
+  "habitats": [
+   "forest",
+   "grassland",
+   "wetland"
+  ]
+ },
+ {
+  "name": "Eastern Phoebe",
+  "color": "brown",
+  "ss": false,
+  "power": "All players gain 1 [invertebrate] from the supply.",
+  "vp": 3,
+  "habitats": [
+   "forest",
+   "grassland",
+   "wetland"
+  ]
+ },
+ {
+  "name": "Eastern Screech-Owl",
+  "color": "brown",
+  "ss": false,
+  "power": "Roll all dice not in birdfeeder. If any are [rodent], cache 1 [rodent] from the supply on this bird.",
+  "vp": 4,
+  "habitats": [
+   "forest"
+  ]
+ },
+ {
+  "name": "Ferruginous Hawk",
+  "color": "brown",
+  "ss": false,
+  "power": "Roll all dice not in birdfeeder. If any are [rodent], cache 1 [rodent] from the supply on this bird.",
+  "vp": 6,
+  "habitats": [
+   "grassland"
+  ]
+ },
+ {
+  "name": "Fish Crow",
+  "color": "brown",
+  "ss": false,
+  "power": "Discard 1 [egg] from any of your other birds to gain 1 [wild] from the supply.",
+  "vp": 6,
+  "habitats": [
+   "forest",
+   "grassland",
+   "wetland"
+  ]
+ },
+ {
+  "name": "Franklin's Gull",
+  "color": "brown",
+  "ss": false,
+  "power": "Discard 1 [egg] to draw 2 [card].",
+  "vp": 3,
+  "habitats": [
+   "grassland",
+   "wetland"
+  ]
+ },
+ {
+  "name": "Golden Eagle",
+  "color": "brown",
+  "ss": false,
+  "power": "Look at a [card] from the deck. If less than 100cm, tuck it behind this bird. If not, discard it.",
+  "vp": 8,
+  "habitats": [
+   "grassland",
+   "wetland"
+  ]
+ },
+ {
+  "name": "Grasshopper Sparrow",
+  "color": "brown",
+  "ss": false,
+  "power": "Lay 1 [egg] on any bird.",
+  "vp": 2,
+  "habitats": [
+   "grassland"
+  ]
+ },
+ {
+  "name": "Gray Catbird",
+  "color": "brown",
+  "ss": false,
+  "power": "Repeat a brown power on another bird in this habitat.",
+  "vp": 5,
+  "habitats": [
+   "forest",
+   "grassland",
+   "wetland"
+  ]
+ },
+ {
+  "name": "Great Blue Heron",
+  "color": "white",
+  "ss": false,
+  "power": "Play an additional bird in your [wetland]. Pay its normal cost.",
+  "vp": 5,
+  "habitats": [
+   "wetland"
+  ]
+ },
+ {
+  "name": "Great Crested Flycatcher",
+  "color": "brown",
+  "ss": false,
+  "power": "Gain 1 [invertebrate] from the birdfeeder, if available.",
+  "vp": 5,
+  "habitats": [
+   "forest"
+  ]
+ },
+ {
+  "name": "Great Egret",
+  "color": "white",
+  "ss": false,
+  "power": "Play an additional bird in your [wetland]. Pay its normal cost.",
+  "vp": 7,
+  "habitats": [
+   "wetland"
+  ]
+ },
+ {
+  "name": "Great Horned Owl",
+  "color": "brown",
+  "ss": false,
+  "power": "Look at a [card] from the deck. If less than 100cm, tuck it behind this bird. If not, discard it.",
+  "vp": 8,
+  "habitats": [
+   "forest"
+  ]
+ },
+ {
+  "name": "Greater Prairie-Chicken",
+  "color": "white",
+  "ss": false,
+  "power": "Draw 2 new bonus cards and keep 1.",
+  "vp": 5,
+  "habitats": [
+   "grassland"
+  ]
+ },
+ {
+  "name": "Greater Roadrunner",
+  "color": "brown",
+  "ss": false,
+  "power": "Look at a [card] from the deck. If less than 50cm, tuck it behind this bird. If not, discard it.",
+  "vp": 7,
+  "habitats": [
+   "grassland"
+  ]
+ },
+ {
+  "name": "Green Heron",
+  "color": "brown",
+  "ss": false,
+  "power": "Trade 1 [wild] for any other type from the supply.",
+  "vp": 4,
+  "habitats": [
+   "wetland"
+  ]
+ },
+ {
+  "name": "Hermit Thrush",
+  "color": "brown",
+  "ss": false,
+  "power": "Player(s) with the fewest birds in their [forest] gain 1 [die] from birdfeeder.",
+  "vp": 7,
+  "habitats": [
+   "forest"
+  ]
+ },
+ {
+  "name": "Hooded Merganser",
+  "color": "brown",
+  "ss": false,
+  "power": "Repeat 1 [predator] power in this habitat.",
+  "vp": 5,
+  "habitats": [
+   "wetland"
+  ]
+ },
+ {
+  "name": "Hooded Warbler",
+  "color": "none",
+  "ss": false,
+  "power": "",
+  "vp": 7,
+  "habitats": [
+   "forest"
+  ]
+ },
+ {
+  "name": "Horned Lark",
+  "color": "pink",
+  "ss": false,
+  "power": "When another player plays a bird in their [grassland], tuck 1 [card] from your hand behind this bird.",
+  "vp": 5,
+  "habitats": [
+   "grassland"
+  ]
+ },
+ {
+  "name": "House Finch",
+  "color": "brown",
+  "ss": false,
+  "power": "Tuck 1 [card] from your hand behind this bird. If you do, draw 1 [card].",
+  "vp": 3,
+  "habitats": [
+   "forest",
+   "grassland",
+   "wetland"
+  ]
+ },
+ {
+  "name": "House Wren",
+  "color": "white",
+  "ss": false,
+  "power": "Play an additional bird in this bird's habitat. Pay its normal cost.",
+  "vp": 1,
+  "habitats": [
+   "forest",
+   "grassland"
+  ]
+ },
+ {
+  "name": "Inca Dove",
+  "color": "white",
+  "ss": false,
+  "power": "Lay 1 [egg] on each of your birds with a [platform] nest.",
+  "vp": 2,
+  "habitats": [
+   "grassland"
+  ]
+ },
+ {
+  "name": "Indigo Bunting",
+  "color": "brown",
+  "ss": false,
+  "power": "Gain 1 [invertebrate] or [fruit] from the birdfeeder, if available.",
+  "vp": 5,
+  "habitats": [
+   "forest",
+   "grassland"
+  ]
+ },
+ {
+  "name": "Juniper Titmouse",
+  "color": "brown",
+  "ss": false,
+  "power": "Cache 1 [seed] from the supply on this bird.",
+  "vp": 4,
+  "habitats": [
+   "forest"
+  ]
+ },
+ {
+  "name": "Killdeer",
+  "color": "brown",
+  "ss": false,
+  "power": "Discard 1 [egg] to draw 2 [card].",
+  "vp": 1,
+  "habitats": [
+   "grassland",
+   "wetland"
+  ]
+ },
+ {
+  "name": "King Rail",
+  "color": "white",
+  "ss": false,
+  "power": "Draw 2 new bonus cards and keep 1.",
+  "vp": 4,
+  "habitats": [
+   "wetland"
+  ]
+ },
+ {
+  "name": "Lazuli Bunting",
+  "color": "brown",
+  "ss": false,
+  "power": "All players lay 1 [egg] on any 1 [bowl] bird. You may lay 1 [egg] on 1 additional [bowl] bird.",
+  "vp": 4,
+  "habitats": [
+   "grassland"
+  ]
+ },
+ {
+  "name": "Lincoln's Sparrow",
+  "color": "brown",
+  "ss": false,
+  "power": "If this bird is to the right of all other birds in its habitat, move it to another habitat.",
+  "vp": 3,
+  "habitats": [
+   "forest",
+   "grassland",
+   "wetland"
+  ]
+ },
+ {
+  "name": "Loggerhead Shrike",
+  "color": "pink",
+  "ss": false,
+  "power": "When another player takes the \"gain food\" action, if they gain any number of [rodent], cache 1 [rodent] from the supply on this bird.",
+  "vp": 3,
+  "habitats": [
+   "grassland",
+   "wetland"
+  ]
+ },
+ {
+  "name": "Mallard",
+  "color": "brown",
+  "ss": false,
+  "power": "Draw 1 [card].",
+  "vp": 0,
+  "habitats": [
+   "wetland"
+  ]
+ },
+ {
+  "name": "Mississippi Kite",
+  "color": "brown",
+  "ss": false,
+  "power": "Roll all dice not in birdfeeder. If any are [rodent], cache 1 [rodent] from the supply on this bird.",
+  "vp": 4,
+  "habitats": [
+   "forest",
+   "grassland"
+  ]
+ },
+ {
+  "name": "Mountain Bluebird",
+  "color": "white",
+  "ss": false,
+  "power": "Play an additional bird in your [grassland]. Pay its normal cost.",
+  "vp": 4,
+  "habitats": [
+   "grassland"
+  ]
+ },
+ {
+  "name": "Mountain Chickadee",
+  "color": "brown",
+  "ss": false,
+  "power": "Cache 1 [seed] from the supply on this bird.",
+  "vp": 2,
+  "habitats": [
+   "forest"
+  ]
+ },
+ {
+  "name": "Mourning Dove",
+  "color": "brown",
+  "ss": false,
+  "power": "Lay 1 [egg] on this bird.",
+  "vp": 0,
+  "habitats": [
+   "forest",
+   "grassland",
+   "wetland"
+  ]
+ },
+ {
+  "name": "Northern Bobwhite",
+  "color": "brown",
+  "ss": false,
+  "power": "Lay 1 [egg] on this bird.",
+  "vp": 5,
+  "habitats": [
+   "grassland"
+  ]
+ },
+ {
+  "name": "Northern Cardinal",
+  "color": "brown",
+  "ss": false,
+  "power": "Gain 1 [fruit] from the supply.",
+  "vp": 3,
+  "habitats": [
+   "forest"
+  ]
+ },
+ {
+  "name": "Northern Flicker",
+  "color": "white",
+  "ss": false,
+  "power": "Gain all [invertebrate] that are in the birdfeeder.",
+  "vp": 2,
+  "habitats": [
+   "forest",
+   "grassland"
+  ]
+ },
+ {
+  "name": "Northern Harrier",
+  "color": "brown",
+  "ss": false,
+  "power": "Look at a [card] from the deck. If less than 75cm, tuck it behind this bird. If not, discard it.",
+  "vp": 3,
+  "habitats": [
+   "grassland",
+   "wetland"
+  ]
+ },
+ {
+  "name": "Northern Mockingbird",
+  "color": "brown",
+  "ss": false,
+  "power": "Repeat a brown power on another bird in this habitat.",
+  "vp": 2,
+  "habitats": [
+   "forest",
+   "grassland",
+   "wetland"
+  ]
+ },
+ {
+  "name": "Northern Shoveler",
+  "color": "brown",
+  "ss": false,
+  "power": "All players draw 1 [card] from the deck.",
+  "vp": 7,
+  "habitats": [
+   "wetland"
+  ]
+ },
+ {
+  "name": "Osprey",
+  "color": "brown",
+  "ss": false,
+  "power": "All players gain 1 [fish] from the supply.",
+  "vp": 5,
+  "habitats": [
+   "wetland"
+  ]
+ },
+ {
+  "name": "Painted Bunting",
+  "color": "white",
+  "ss": false,
+  "power": "Draw 2 new bonus cards and keep 1.",
+  "vp": 5,
+  "habitats": [
+   "grassland"
+  ]
+ },
+ {
+  "name": "Painted Whitestart",
+  "color": "brown",
+  "ss": true,
+  "power": "Gain 1 [invertebrate] from the supply.",
+  "vp": 1,
+  "habitats": [
+   "forest"
+  ]
+ },
+ {
+  "name": "Peregrine Falcon",
+  "color": "brown",
+  "ss": false,
+  "power": "Look at a [card] from the deck. If less than 100cm, tuck it behind this bird. If not, discard it.",
+  "vp": 5,
+  "habitats": [
+   "grassland",
+   "wetland"
+  ]
+ },
+ {
+  "name": "Pied-Billed Grebe",
+  "color": "brown",
+  "ss": false,
+  "power": "Draw 2 [card]. If you do, discard 1 [card] from your hand at the end of your turn.",
+  "vp": 0,
+  "habitats": [
+   "wetland"
+  ]
+ },
+ {
+  "name": "Pileated Woodpecker",
+  "color": "brown",
+  "ss": false,
+  "power": "All players lay 1 [egg] on any 1 [cavity] bird. You may lay 1 [egg] on 1 additional [cavity] bird.",
+  "vp": 4,
+  "habitats": [
+   "forest"
+  ]
+ },
+ {
+  "name": "Pine Siskin",
+  "color": "brown",
+  "ss": false,
+  "power": "Tuck 1 [card] from your hand behind this bird. If you do, gain 1 [seed] from the supply.",
+  "vp": 3,
+  "habitats": [
+   "forest"
+  ]
+ },
+ {
+  "name": "Prothonotary Warbler",
+  "color": "none",
+  "ss": false,
+  "power": "",
+  "vp": 8,
+  "habitats": [
+   "forest",
+   "wetland"
+  ]
+ },
+ {
+  "name": "Purple Gallinule",
+  "color": "brown",
+  "ss": false,
+  "power": "All players draw 1 [card] from the deck.",
+  "vp": 7,
+  "habitats": [
+   "wetland"
+  ]
+ },
+ {
+  "name": "Purple Martin",
+  "color": "brown",
+  "ss": false,
+  "power": "Tuck 1 [card] from your hand behind this bird. If you do, draw 1 [card].",
+  "vp": 2,
+  "habitats": [
+   "grassland",
+   "wetland"
+  ]
+ },
+ {
+  "name": "Pygmy Nuthatch",
+  "color": "brown",
+  "ss": false,
+  "power": "Tuck 1 [card] from your hand behind this bird. If you do, gain 1 [invertebrate] or [seed] from the supply.",
+  "vp": 2,
+  "habitats": [
+   "forest"
+  ]
+ },
+ {
+  "name": "Red Crossbill",
+  "color": "brown",
+  "ss": false,
+  "power": "All players gain 1 [seed] from the supply.",
+  "vp": 6,
+  "habitats": [
+   "forest"
+  ]
+ },
+ {
+  "name": "Red-Bellied Woodpecker",
+  "color": "brown",
+  "ss": false,
+  "power": "Gain 1 [seed] from the birdfeeder, if available. You may cache it on this bird.",
+  "vp": 1,
+  "habitats": [
+   "forest"
+  ]
+ },
+ {
+  "name": "Red-Breasted Merganser",
+  "color": "brown",
+  "ss": true,
+  "power": "Draw 2 [card]. If you do, discard 1 [card] from your hand at the end of your turn.",
+  "vp": 3,
+  "habitats": [
+   "wetland"
+  ]
+ },
+ {
+  "name": "Red-Breasted Nuthatch",
+  "color": "brown",
+  "ss": false,
+  "power": "Cache 1 [seed] from the supply on this bird.",
+  "vp": 2,
+  "habitats": [
+   "forest"
+  ]
+ },
+ {
+  "name": "Red-Cockaded Woodpecker",
+  "color": "white",
+  "ss": false,
+  "power": "Draw 2 new bonus cards and keep 1.",
+  "vp": 4,
+  "habitats": [
+   "forest"
+  ]
+ },
+ {
+  "name": "Red-Eyed Vireo",
+  "color": "white",
+  "ss": false,
+  "power": "Play an additional bird in your [forest]. Pay its normal cost.",
+  "vp": 3,
+  "habitats": [
+   "forest"
+  ]
+ },
+ {
+  "name": "Red-Headed Woodpecker",
+  "color": "brown",
+  "ss": false,
+  "power": "Gain 1 [seed] from the birdfeeder, if available. You may cache it on this bird.",
+  "vp": 4,
+  "habitats": [
+   "forest",
+   "grassland",
+   "wetland"
+  ]
+ },
+ {
+  "name": "Red-Shouldered Hawk",
+  "color": "brown",
+  "ss": false,
+  "power": "Look at a [card] from the deck. If less than 75cm, tuck it behind this bird. If not, discard it.",
+  "vp": 3,
+  "habitats": [
+   "forest"
+  ]
+ },
+ {
+  "name": "Red-Tailed Hawk",
+  "color": "brown",
+  "ss": false,
+  "power": "Look at a [card] from the deck. If less than 75cm, tuck it behind this bird. If not, discard it.",
+  "vp": 5,
+  "habitats": [
+   "forest",
+   "grassland",
+   "wetland"
+  ]
+ },
+ {
+  "name": "Red-Winged Blackbird",
+  "color": "brown",
+  "ss": false,
+  "power": "Tuck 1 [card] from your hand behind this bird. If you do, you may also lay 1 [egg] on this bird.",
+  "vp": 2,
+  "habitats": [
+   "grassland",
+   "wetland"
+  ]
+ },
+ {
+  "name": "Ring-Billed Gull",
+  "color": "brown",
+  "ss": false,
+  "power": "Tuck 1 [card] from your hand behind this bird. If you do, draw 1 [card].",
+  "vp": 4,
+  "habitats": [
+   "wetland"
+  ]
+ },
+ {
+  "name": "Rose-Breasted Grosbeak",
+  "color": "brown",
+  "ss": false,
+  "power": "Gain 1 [seed] or [fruit] from the birdfeeder, if available.",
+  "vp": 6,
+  "habitats": [
+   "forest"
+  ]
+ },
+ {
+  "name": "Roseate Spoonbill",
+  "color": "white",
+  "ss": false,
+  "power": "Draw 2 new bonus cards and keep 1.",
+  "vp": 6,
+  "habitats": [
+   "wetland"
+  ]
+ },
+ {
+  "name": "Ruby-Crowned Kinglet",
+  "color": "white",
+  "ss": false,
+  "power": "Play an additional bird in your [forest]. Pay its normal cost.",
+  "vp": 2,
+  "habitats": [
+   "forest"
+  ]
+ },
+ {
+  "name": "Ruby-Throated Hummingbird",
+  "color": "brown",
+  "ss": false,
+  "power": "Each player gains 1 [die] from the birdfeeder, starting with the player of your choice.",
+  "vp": 4,
+  "habitats": [
+   "forest",
+   "grassland",
+   "wetland"
+  ]
+ },
+ {
+  "name": "Sandhill Crane",
+  "color": "brown",
+  "ss": false,
+  "power": "Discard 1 [seed] to tuck 2 [card] from the deck behind this bird.",
+  "vp": 5,
+  "habitats": [
+   "grassland",
+   "wetland"
+  ]
+ },
+ {
+  "name": "Savannah Sparrow",
+  "color": "white",
+  "ss": false,
+  "power": "Play an additional bird in your [grassland]. Pay its normal cost.",
+  "vp": 2,
+  "habitats": [
+   "grassland"
+  ]
+ },
+ {
+  "name": "Say's Phoebe",
+  "color": "white",
+  "ss": false,
+  "power": "Lay 1 [egg] on each of your birds with a [bowl] nest.",
+  "vp": 5,
+  "habitats": [
+   "grassland"
+  ]
+ },
+ {
+  "name": "Scaled Quail",
+  "color": "brown",
+  "ss": true,
+  "power": "Lay 1 [egg] on this bird.",
+  "vp": 0,
+  "habitats": [
+   "grassland"
+  ]
+ },
+ {
+  "name": "Scissor-Tailed Flycatcher",
+  "color": "brown",
+  "ss": false,
+  "power": "All players gain 1 [invertebrate] from the supply.",
+  "vp": 8,
+  "habitats": [
+   "grassland"
+  ]
+ },
+ {
+  "name": "Snowy Egret",
+  "color": "brown",
+  "ss": false,
+  "power": "Roll all dice not in birdfeeder. If any are [fish], cache 1 [fish] from the supply on this bird.",
+  "vp": 4,
+  "habitats": [
+   "wetland"
+  ]
+ },
+ {
+  "name": "Song Sparrow",
+  "color": "brown",
+  "ss": false,
+  "power": "If this bird is to the right of all other birds in its habitat, move it to another habitat.",
+  "vp": 0,
+  "habitats": [
+   "forest",
+   "grassland",
+   "wetland"
+  ]
+ },
+ {
+  "name": "Spotted Owl",
+  "color": "white",
+  "ss": false,
+  "power": "Draw 2 new bonus cards and keep 1.",
+  "vp": 5,
+  "habitats": [
+   "forest"
+  ]
+ },
+ {
+  "name": "Spotted Sandpiper",
+  "color": "brown",
+  "ss": false,
+  "power": "All players draw 1 [card] from the deck.",
+  "vp": 5,
+  "habitats": [
+   "wetland"
+  ]
+ },
+ {
+  "name": "Spotted Towhee",
+  "color": "brown",
+  "ss": false,
+  "power": "Gain 1 [seed] from the supply.",
+  "vp": 0,
+  "habitats": [
+   "forest",
+   "grassland"
+  ]
+ },
+ {
+  "name": "Sprague's Pipit",
+  "color": "white",
+  "ss": false,
+  "power": "Draw 2 new bonus cards and keep 1.",
+  "vp": 3,
+  "habitats": [
+   "grassland"
+  ]
+ },
+ {
+  "name": "Steller's Jay",
+  "color": "brown",
+  "ss": false,
+  "power": "Gain 1 [seed] from the birdfeeder, if available. You may cache it on this bird.",
+  "vp": 5,
+  "habitats": [
+   "forest"
+  ]
+ },
+ {
+  "name": "Swainson's Hawk",
+  "color": "brown",
+  "ss": false,
+  "power": "Look at a [card] from the deck. If less than 75cm, tuck it behind this bird. If not, discard it.",
+  "vp": 5,
+  "habitats": [
+   "grassland"
+  ]
+ },
+ {
+  "name": "Tree Swallow",
+  "color": "brown",
+  "ss": false,
+  "power": "Tuck 1 [card] from your hand behind this bird. If you do, draw 1 [card].",
+  "vp": 3,
+  "habitats": [
+   "wetland"
+  ]
+ },
+ {
+  "name": "Trumpeter Swan",
+  "color": "none",
+  "ss": false,
+  "power": "",
+  "vp": 9,
+  "habitats": [
+   "wetland"
+  ]
+ },
+ {
+  "name": "Tufted Titmouse",
+  "color": "white",
+  "ss": false,
+  "power": "Play an additional bird in your [forest]. Pay its normal cost.",
+  "vp": 2,
+  "habitats": [
+   "forest"
+  ]
+ },
+ {
+  "name": "Turkey Vulture",
+  "color": "pink",
+  "ss": false,
+  "power": "When another player's [predator] succeeds, gain 1 [die] from the birdfeeder.",
+  "vp": 1,
+  "habitats": [
+   "forest",
+   "grassland",
+   "wetland"
+  ]
+ },
+ {
+  "name": "Vaux's Swift",
+  "color": "brown",
+  "ss": true,
+  "power": "Tuck 1 [card] from your hand behind this bird. If you do, gain 1 [invertebrate] from the supply.",
+  "vp": 2,
+  "habitats": [
+   "forest"
+  ]
+ },
+ {
+  "name": "Violet-Green Swallow",
+  "color": "brown",
+  "ss": false,
+  "power": "Tuck 1 [card] from your hand behind this bird. If you do, draw 1 [card].",
+  "vp": 3,
+  "habitats": [
+   "forest",
+   "grassland",
+   "wetland"
+  ]
+ },
+ {
+  "name": "Western Meadowlark",
+  "color": "brown",
+  "ss": false,
+  "power": "All players lay 1 [egg] on any 1 [ground] bird. You may lay 1 [egg] on 1 additional [ground] bird.",
+  "vp": 2,
+  "habitats": [
+   "grassland"
+  ]
+ },
+ {
+  "name": "Western Tanager",
+  "color": "brown",
+  "ss": false,
+  "power": "Gain 1 [invertebrate] or [fruit] from the birdfeeder, if available.",
+  "vp": 6,
+  "habitats": [
+   "forest"
+  ]
+ },
+ {
+  "name": "White-Breasted Nuthatch",
+  "color": "brown",
+  "ss": false,
+  "power": "Cache 1 [seed] from the supply on this bird.",
+  "vp": 2,
+  "habitats": [
+   "forest"
+  ]
+ },
+ {
+  "name": "White-Crowned Sparrow",
+  "color": "brown",
+  "ss": false,
+  "power": "If this bird is to the right of all other birds in its habitat, move it to another habitat.",
+  "vp": 2,
+  "habitats": [
+   "forest",
+   "grassland",
+   "wetland"
+  ]
+ },
+ {
+  "name": "White-Faced Ibis",
+  "color": "brown",
+  "ss": false,
+  "power": "Roll all dice not in birdfeeder. If any are [fish], cache 1 [fish] from the supply on this bird.",
+  "vp": 8,
+  "habitats": [
+   "wetland"
+  ]
+ },
+ {
+  "name": "White-Throated Swift",
+  "color": "brown",
+  "ss": true,
+  "power": "Tuck 1 [card] from your hand behind this bird. If you do, lay 1 [egg] on any bird.",
+  "vp": 2,
+  "habitats": [
+   "grassland"
+  ]
+ },
+ {
+  "name": "Whooping Crane",
+  "color": "white",
+  "ss": false,
+  "power": "Draw 2 new bonus cards and keep 1.",
+  "vp": 6,
+  "habitats": [
+   "wetland"
+  ]
+ },
+ {
+  "name": "Wild Turkey",
+  "color": "none",
+  "ss": false,
+  "power": "",
+  "vp": 8,
+  "habitats": [
+   "forest",
+   "grassland"
+  ]
+ },
+ {
+  "name": "Willet",
+  "color": "brown",
+  "ss": false,
+  "power": "Roll all dice not in birdfeeder. If any are [fish], cache 1 [fish] from the supply on this bird.",
+  "vp": 4,
+  "habitats": [
+   "wetland"
+  ]
+ },
+ {
+  "name": "Wilson's Snipe",
+  "color": "brown",
+  "ss": false,
+  "power": "All players draw 1 [card] from the deck.",
+  "vp": 5,
+  "habitats": [
+   "wetland"
+  ]
+ },
+ {
+  "name": "Wood Duck",
+  "color": "brown",
+  "ss": false,
+  "power": "Draw 2 [card]. If you do, discard 1 [card] from your hand at the end of your turn.",
+  "vp": 4,
+  "habitats": [
+   "forest",
+   "wetland"
+  ]
+ },
+ {
+  "name": "Wood Stork",
+  "color": "white",
+  "ss": false,
+  "power": "Draw 2 new bonus cards and keep 1.",
+  "vp": 6,
+  "habitats": [
+   "wetland"
+  ]
+ },
+ {
+  "name": "Yellow-Bellied Sapsucker",
+  "color": "brown",
+  "ss": false,
+  "power": "Gain 1 [invertebrate] from the supply.",
+  "vp": 3,
+  "habitats": [
+   "forest"
+  ]
+ },
+ {
+  "name": "Yellow-Billed Cuckoo",
+  "color": "pink",
+  "ss": false,
+  "power": "When another player takes the \"lay eggs\" action, lay 1 [egg] on a bird with a [bowl] nest.",
+  "vp": 5,
+  "habitats": [
+   "forest"
+  ]
+ },
+ {
+  "name": "Yellow-Breasted Chat",
+  "color": "brown",
+  "ss": false,
+  "power": "If this bird is to the right of all other birds in its habitat, move it to another habitat.",
+  "vp": 5,
+  "habitats": [
+   "forest",
+   "grassland",
+   "wetland"
+  ]
+ },
+ {
+  "name": "Yellow-Headed Blackbird",
+  "color": "brown",
+  "ss": false,
+  "power": "Tuck 1 [card] from your hand behind this bird. If you do, you may also lay 1 [egg] on this bird.",
+  "vp": 4,
+  "habitats": [
+   "wetland"
+  ]
+ },
+ {
+  "name": "Yellow-Rumped Warbler",
+  "color": "brown",
+  "ss": false,
+  "power": "Tuck 1 [card] from your hand behind this bird. If you do, draw 1 [card].",
+  "vp": 1,
+  "habitats": [
+   "forest"
+  ]
+ }
+]

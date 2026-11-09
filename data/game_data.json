@@ -1,0 +1,7828 @@
+{
+ "meta": {
+  "source": "TawnyFrogmouth 社区数据集（官方数值）+ 官方扫描图 + 程序化 SVG 卡面",
+  "bird_count": 180,
+  "generated_at": "2026-11-09T07:27:12.392Z",
+  "swift_start_count": 10
+ },
+ "birds": [
+  {
+   "id": "b001",
+   "file": "cards/AcornWoodpecker.jpg",
+   "name_en": "Acorn Woodpecker",
+   "name_zh": "橡树啄木鸟",
+   "latin": "Melanerpes formicivorus",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "seed",
+     "amount": 3
+    }
+   ],
+   "points": 5,
+   "nest": "cavity",
+   "egg_limit": 4,
+   "wingspan": 46,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Gain 1 [seed] from the birdfeeder, if available. You may cache it on this bird.",
+    "text_zh": "从喂食器获得 1 种子（若有），可改为储存到这只鸟上",
+    "ops": [
+     {
+      "op": "gain_food",
+      "from": "feeder",
+      "food": "seed",
+      "n": 1,
+      "optional_cache": true
+     }
+    ]
+   }
+  },
+  {
+   "id": "b002",
+   "file": "cards/AmericanAvocet.jpg",
+   "name_en": "American Avocet",
+   "name_zh": "美洲反嘴鹬",
+   "latin": "Recurvirostra americana",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 2
+    },
+    {
+     "type": "seed",
+     "amount": 1
+    }
+   ],
+   "points": 6,
+   "nest": "ground",
+   "egg_limit": 2,
+   "wingspan": 79,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "pink",
+    "text": "When another player takes the \"lay eggs\" action, lay 1 [egg] on another bird with a [ground] nest.",
+    "text_zh": "当其他玩家执行「产蛋」行动时，你可以：在另一只地巢（或星巢）的鸟上产 1 蛋",
+    "ops": [
+     {
+      "op": "pink",
+      "trigger": "lay_eggs_action",
+      "effect": [
+       {
+        "op": "lay_eggs",
+        "n": 1,
+        "on": {
+         "other_nest": "ground"
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b003",
+   "file": "cards/AmericanBittern.jpg",
+   "name_en": "American Bittern",
+   "name_zh": "美洲麻鳽",
+   "latin": "Botaurus lentiginosus",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "fish",
+     "amount": 1
+    },
+    {
+     "type": "rodent",
+     "amount": 1
+    }
+   ],
+   "points": 7,
+   "nest": "platform",
+   "egg_limit": 2,
+   "wingspan": 107,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Player(s) with the fewest birds in their [wetland] draw 1 [card].",
+    "text_zh": "湿地中鸟最少的每位玩家（可并列）各抽 1 张卡",
+    "ops": [
+     {
+      "op": "fewest_habitat_draw",
+      "habitat": "wetland",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b004",
+   "file": "cards/AmericanCoot.jpg",
+   "name_en": "American Coot",
+   "name_zh": "美洲白骨顶",
+   "latin": "Fulica americana",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "seed",
+     "amount": 1
+    },
+    {
+     "type": "wild",
+     "amount": 1
+    }
+   ],
+   "points": 3,
+   "nest": "platform",
+   "egg_limit": 5,
+   "wingspan": 61,
+   "beak": "right",
+   "predator": false,
+   "flocking": true,
+   "power": {
+    "color": "brown",
+    "text": "Tuck 1 [card] from your hand behind this bird. If you do, draw 1 [card].",
+    "text_zh": "从手牌塞 1 张卡到这只鸟下，若如此做：抽 1 张鸟卡（托盘或牌库自选）",
+    "ops": [
+     {
+      "op": "tuck_hand",
+      "n": 1,
+      "if_do": [
+       {
+        "op": "draw",
+        "n": 1,
+        "from": "any"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b005",
+   "file": "cards/AmericanCrow.jpg",
+   "name_en": "American Crow",
+   "name_zh": "美洲鸦",
+   "latin": "Corvus brachyrhynchos",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "wild",
+     "amount": 1
+    }
+   ],
+   "points": 4,
+   "nest": "platform",
+   "egg_limit": 2,
+   "wingspan": 99,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Discard 1 [egg] from any of your other birds to gain 1 [wild] from the supply.",
+    "text_zh": "从你的另一只鸟上弃 1 蛋，获得任意食物×1",
+    "ops": [
+     {
+      "op": "discard_egg_gain",
+      "gain_food": "wild",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b006",
+   "file": "cards/AmericanGoldfinch.jpg",
+   "name_en": "American Goldfinch",
+   "name_zh": "北美金翅雀",
+   "latin": "Spinus tristis",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "seed",
+     "amount": 2
+    }
+   ],
+   "points": 3,
+   "nest": "bowl",
+   "egg_limit": 3,
+   "wingspan": 23,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Gain 3 [seed] from the supply.",
+    "text_zh": "从供应区获得 种子×3",
+    "ops": [
+     {
+      "op": "gain_food",
+      "from": "supply",
+      "food": "seed",
+      "n": 3
+     }
+    ]
+   }
+  },
+  {
+   "id": "b007",
+   "file": "cards/AmericanKestrel.jpg",
+   "name_en": "American Kestrel",
+   "name_zh": "美洲隼",
+   "latin": "Falco sparverius",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "rodent",
+     "amount": 1
+    }
+   ],
+   "points": 5,
+   "nest": "cavity",
+   "egg_limit": 3,
+   "wingspan": 56,
+   "beak": "left",
+   "predator": true,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Roll all dice not in birdfeeder. If any are [rodent], cache 1 [rodent] from the supply on this bird.",
+    "text_zh": "重掷喂食器外的所有骰子，若有啮齿，在这只鸟上储存 1 个啮齿",
+    "ops": [
+     {
+      "op": "predator",
+      "face": "rodent"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b008",
+   "file": "cards/AmericanOystercatcher.jpg",
+   "name_en": "American Oystercatcher",
+   "name_zh": "美洲蛎鹬",
+   "latin": "Haematopus palliatus",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 2
+    }
+   ],
+   "points": 5,
+   "nest": "ground",
+   "egg_limit": 2,
+   "wingspan": 81,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Draw [card] equal to the number of players +1. Starting with you and proceeding clockwise, each player selects 1 of those cards and places it in their hand. You keep the extra card.",
+    "text_zh": "抽「玩家数+1」张鸟卡，从你开始顺时针每位玩家选 1 张加入手牌，你保留剩余的卡",
+    "ops": [
+     {
+      "op": "draw_and_distribute"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b009",
+   "file": "cards/AmericanRedstart.jpg",
+   "name_en": "American Redstart",
+   "name_zh": "橙尾鸲莺",
+   "latin": "Setophaga ruticilla",
+   "swift_start": true,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "fruit",
+     "amount": 1
+    }
+   ],
+   "points": 4,
+   "nest": "bowl",
+   "egg_limit": 2,
+   "wingspan": 20,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Gain 1 [die] from the birdfeeder.",
+    "text_zh": "从喂食器取 1 颗骰子（自选面）",
+    "ops": [
+     {
+      "op": "take_die"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b010",
+   "file": "cards/AmericanRobin.jpg",
+   "name_en": "American Robin",
+   "name_zh": "旅鸫",
+   "latin": "Turdus migratorius",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "fruit",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 1,
+   "nest": "bowl",
+   "egg_limit": 4,
+   "wingspan": 43,
+   "beak": "right",
+   "predator": false,
+   "flocking": true,
+   "power": {
+    "color": "brown",
+    "text": "Tuck 1 [card] from your hand behind this bird. If you do, draw 1 [card].",
+    "text_zh": "从手牌塞 1 张卡到这只鸟下，若如此做：抽 1 张鸟卡（托盘或牌库自选）",
+    "ops": [
+     {
+      "op": "tuck_hand",
+      "n": 1,
+      "if_do": [
+       {
+        "op": "draw",
+        "n": 1,
+        "from": "any"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b011",
+   "file": "cards/AmericanWhitePelican.jpg",
+   "name_en": "American White Pelican",
+   "name_zh": "美洲白鹈鹕",
+   "latin": "Pelecanus erythrorhynchos",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "fish",
+     "amount": 2
+    }
+   ],
+   "points": 5,
+   "nest": "ground",
+   "egg_limit": 1,
+   "wingspan": 274,
+   "beak": "right",
+   "predator": false,
+   "flocking": true,
+   "power": {
+    "color": "brown",
+    "text": "Discard 1 [fish] to tuck 2 [card] from the deck behind this bird.",
+    "text_zh": "弃 鱼×1，从牌库顶塞 2 张卡到这只鸟下",
+    "ops": [
+     {
+      "op": "tuck_deck_cost",
+      "cost": {
+       "food": "fish",
+       "n": 1
+      },
+      "tuck": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": "b012",
+   "file": "cards/AmericanWoodcock.jpg",
+   "name_en": "American Woodcock",
+   "name_zh": "美洲丘鹬",
+   "latin": "Scolopax minor",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 2
+    },
+    {
+     "type": "seed",
+     "amount": 1
+    }
+   ],
+   "points": 9,
+   "nest": "ground",
+   "egg_limit": 2,
+   "wingspan": 46,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": null
+  },
+  {
+   "id": "b013",
+   "file": "cards/Anhinga.jpg",
+   "name_en": "Anhinga",
+   "name_zh": "蛇鹈",
+   "latin": "Anhinga anhinga",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "fish",
+     "amount": 2
+    }
+   ],
+   "points": 6,
+   "nest": "platform",
+   "egg_limit": 2,
+   "wingspan": 114,
+   "beak": "left",
+   "predator": true,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Roll all dice not in birdfeeder. If any are [fish], cache 1 [fish] from the supply on this bird.",
+    "text_zh": "重掷喂食器外的所有骰子，若有鱼，在这只鸟上储存 1 个鱼",
+    "ops": [
+     {
+      "op": "predator",
+      "face": "fish"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b014",
+   "file": "cards/AnnasHummingbird.jpg",
+   "name_en": "Anna's Hummingbird",
+   "name_zh": "安娜蜂鸟",
+   "latin": "Calypte anna",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "wild",
+     "amount": 1
+    }
+   ],
+   "points": 4,
+   "nest": "bowl",
+   "egg_limit": 2,
+   "wingspan": 13,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Each player gains 1 [die] from the birdfeeder, starting with the player of your choice.",
+    "text_zh": "每位玩家（含你）依次从喂食器取 1 颗骰子，由你选择起始玩家",
+    "ops": [
+     {
+      "op": "each_take_die"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b015",
+   "file": "cards/Ash-ThroatedFlycatcher.jpg",
+   "name_en": "Ash-Throated Flycatcher",
+   "name_zh": "灰喉霸鹟",
+   "latin": "Myiarchus cinerascens",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 2
+    },
+    {
+     "type": "fruit",
+     "amount": 1
+    }
+   ],
+   "points": 4,
+   "nest": "cavity",
+   "egg_limit": 4,
+   "wingspan": 30,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Lay 1 [egg] on each of your birds with a [cavity] nest.",
+    "text_zh": "在每只洞巢（或星巢）的鸟上各产 1 蛋",
+    "ops": [
+     {
+      "op": "lay_eggs_each",
+      "nest": "cavity"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b016",
+   "file": "cards/AtlanticPuffin.jpg",
+   "name_en": "Atlantic Puffin",
+   "name_zh": "北极海鹦",
+   "latin": "Fratercula arctica",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "fish",
+     "amount": 3
+    }
+   ],
+   "points": 8,
+   "nest": "wild",
+   "egg_limit": 1,
+   "wingspan": 53,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Draw 2 new bonus cards and keep 1.",
+    "text_zh": "抽 2 张新的奖励卡，保留其中 1 张",
+    "ops": [
+     {
+      "op": "draw_bonus",
+      "draw": 2,
+      "keep": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b017",
+   "file": "cards/BairdsSparrow.jpg",
+   "name_en": "Baird's Sparrow",
+   "name_zh": "贝尔德沙鹀",
+   "latin": "Ammodramus bairdii",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "seed",
+     "amount": 1
+    }
+   ],
+   "points": 3,
+   "nest": "ground",
+   "egg_limit": 2,
+   "wingspan": 23,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Lay 1 [egg] on any bird.",
+    "text_zh": "在任意一只鸟上产 1 蛋",
+    "ops": [
+     {
+      "op": "lay_eggs",
+      "n": 1,
+      "on": "any"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b018",
+   "file": "cards/BaldEagle.jpg",
+   "name_en": "Bald Eagle",
+   "name_zh": "白头海雕",
+   "latin": "Haliaeetus leucocephalus",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "fish",
+     "amount": 2
+    },
+    {
+     "type": "rodent",
+     "amount": 1
+    }
+   ],
+   "points": 9,
+   "nest": "platform",
+   "egg_limit": 1,
+   "wingspan": 203,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Gain all [fish] that are in the birdfeeder.",
+    "text_zh": "获得喂食器中所有鱼",
+    "ops": [
+     {
+      "op": "gain_all_dice",
+      "face": "fish"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b019",
+   "file": "cards/BaltimoreOriole.jpg",
+   "name_en": "Baltimore Oriole",
+   "name_zh": "巴尔的摩拟黄鹂",
+   "latin": "Icterus galbula",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "fruit",
+     "amount": 2
+    }
+   ],
+   "points": 9,
+   "nest": "wild",
+   "egg_limit": 2,
+   "wingspan": 30,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "All players gain 1 [fruit] from the supply.",
+    "text_zh": "所有玩家各从供应区获得 水果×1",
+    "ops": [
+     {
+      "op": "all_gain",
+      "food": "fruit",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b020",
+   "file": "cards/BarnOwl.jpg",
+   "name_en": "Barn Owl",
+   "name_zh": "仓鸮",
+   "latin": "Tyto alba",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "rodent",
+     "amount": 2
+    }
+   ],
+   "points": 5,
+   "nest": "cavity",
+   "egg_limit": 4,
+   "wingspan": 107,
+   "beak": "front",
+   "predator": true,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Roll all dice not in birdfeeder. If any are [rodent], cache 1 [rodent] from the supply on this bird.",
+    "text_zh": "重掷喂食器外的所有骰子，若有啮齿，在这只鸟上储存 1 个啮齿",
+    "ops": [
+     {
+      "op": "predator",
+      "face": "rodent"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b021",
+   "file": "cards/BarnSwallow.jpg",
+   "name_en": "Barn Swallow",
+   "name_zh": "家燕",
+   "latin": "Hirundo rustica",
+   "swift_start": false,
+   "habitats": [
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    }
+   ],
+   "points": 1,
+   "nest": "wild",
+   "egg_limit": 3,
+   "wingspan": 38,
+   "beak": "right",
+   "predator": false,
+   "flocking": true,
+   "power": {
+    "color": "brown",
+    "text": "Tuck 1 [card] from your hand behind this bird. If you do, draw 1 [card].",
+    "text_zh": "从手牌塞 1 张卡到这只鸟下，若如此做：抽 1 张鸟卡（托盘或牌库自选）",
+    "ops": [
+     {
+      "op": "tuck_hand",
+      "n": 1,
+      "if_do": [
+       {
+        "op": "draw",
+        "n": 1,
+        "from": "any"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b022",
+   "file": "cards/BarredOwl.jpg",
+   "name_en": "Barred Owl",
+   "name_zh": "横斑林鸮",
+   "latin": "Strix varia",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "rodent",
+     "amount": 1
+    }
+   ],
+   "points": 3,
+   "nest": "cavity",
+   "egg_limit": 2,
+   "wingspan": 107,
+   "beak": "front",
+   "predator": true,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Look at a [card] from the deck. If less than 75cm, tuck it behind this bird. If not, discard it.",
+    "text_zh": "查看牌库顶 1 张卡：翼展小于 75cm 则塞到这只鸟下，否则弃置",
+    "ops": [
+     {
+      "op": "look_tuck",
+      "max_ws": 75
+     }
+    ]
+   }
+  },
+  {
+   "id": "b023",
+   "file": "cards/BarrowsGoldeneye.jpg",
+   "name_en": "Barrow's Goldeneye",
+   "name_zh": "巴氏鹊鸭",
+   "latin": "Bucephala islandica",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "seed",
+     "amount": 1
+    },
+    {
+     "type": "fish",
+     "amount": 1
+    }
+   ],
+   "points": 5,
+   "nest": "cavity",
+   "egg_limit": 4,
+   "wingspan": 71,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "pink",
+    "text": "When another player takes the \"lay eggs\" action, lay 1 [egg] on another bird with a [cavity] nest.",
+    "text_zh": "当其他玩家执行「产蛋」行动时，你可以：在另一只洞巢（或星巢）的鸟上产 1 蛋",
+    "ops": [
+     {
+      "op": "pink",
+      "trigger": "lay_eggs_action",
+      "effect": [
+       {
+        "op": "lay_eggs",
+        "n": 1,
+        "on": {
+         "other_nest": "cavity"
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b024",
+   "file": "cards/BellsVired.jpg",
+   "name_en": "Bell's Vireo",
+   "name_zh": "贝尔氏莺雀",
+   "latin": "Vireo bellii",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 2
+    }
+   ],
+   "points": 4,
+   "nest": "wild",
+   "egg_limit": 2,
+   "wingspan": 18,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Draw 2 new bonus cards and keep 1.",
+    "text_zh": "抽 2 张新的奖励卡，保留其中 1 张",
+    "ops": [
+     {
+      "op": "draw_bonus",
+      "draw": 2,
+      "keep": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b025",
+   "file": "cards/BeltedKingfisher.jpg",
+   "name_en": "Belted Kingfisher",
+   "name_zh": "带鱼狗",
+   "latin": "Megaceryle alcyon",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "fish",
+     "amount": 1
+    },
+    {
+     "type": "wild",
+     "amount": 1
+    }
+   ],
+   "points": 4,
+   "nest": "wild",
+   "egg_limit": 4,
+   "wingspan": 53,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "pink",
+    "text": "When another player plays a bird in their [wetland], gain 1 [fish] from the supply.",
+    "text_zh": "当其他玩家在湿地打出鸟时，你可以：从供应区获得 鱼×1",
+    "ops": [
+     {
+      "op": "pink",
+      "trigger": "bird_played",
+      "habitat": "wetland",
+      "effect": [
+       {
+        "op": "gain_food",
+        "from": "supply",
+        "food": "fish",
+        "n": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b026",
+   "file": "cards/BewicksWren.jpg",
+   "name_en": "Bewick's Wren",
+   "name_zh": "比氏苇鹪鹩",
+   "latin": "Thryomanes bewickii",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 2
+    },
+    {
+     "type": "seed",
+     "amount": 1
+    }
+   ],
+   "points": 4,
+   "nest": "cavity",
+   "egg_limit": 3,
+   "wingspan": 18,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "If this bird is to the right of all other birds in its habitat, move it to another habitat.",
+    "text_zh": "若这只鸟是其栖息地最右侧的鸟，将它迁徙到另一个栖息地",
+    "ops": [
+     {
+      "op": "move_if_rightmost"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b027",
+   "file": "cards/BlackSkimmer.jpg",
+   "name_en": "Black Skimmer",
+   "name_zh": "黑剪嘴鸥",
+   "latin": "Rynchops niger",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "fish",
+     "amount": 2
+    }
+   ],
+   "points": 6,
+   "nest": "ground",
+   "egg_limit": 2,
+   "wingspan": 112,
+   "beak": "left",
+   "predator": true,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Roll all dice not in birdfeeder. If any are [fish], cache 1 [fish] from the supply on this bird.",
+    "text_zh": "重掷喂食器外的所有骰子，若有鱼，在这只鸟上储存 1 个鱼",
+    "ops": [
+     {
+      "op": "predator",
+      "face": "fish"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b028",
+   "file": "cards/BlackTern.jpg",
+   "name_en": "Black Tern",
+   "name_zh": "黑浮鸥",
+   "latin": "Chlidonias niger",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "fish",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 4,
+   "nest": "wild",
+   "egg_limit": 2,
+   "wingspan": 61,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Draw 1 [card]. If you do, discard 1 [card] from your hand at the end of your turn.",
+    "text_zh": "抽 1 张鸟卡，回合结束时应弃 1 张手牌",
+    "ops": [
+     {
+      "op": "draw_then_eot_discard",
+      "draw": 1,
+      "discard": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b029",
+   "file": "cards/BlackVulture.jpg",
+   "name_en": "Black Vulture",
+   "name_zh": "黑美洲鹫",
+   "latin": "Coragyps atratus",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "none"
+    }
+   ],
+   "points": 2,
+   "nest": "cavity",
+   "egg_limit": 1,
+   "wingspan": 150,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "pink",
+    "text": "When another player's [predator] succeeds, gain 1 [die] from the birdfeeder.",
+    "text_zh": "当其他玩家的捕食者捕猎成功时，你可以：从喂食器取 1 颗骰子（自选面）",
+    "ops": [
+     {
+      "op": "pink",
+      "trigger": "predator_success",
+      "effect": [
+       {
+        "op": "take_die"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b030",
+   "file": "cards/Black-BelliedWhistling-Duck.jpg",
+   "name_en": "Black-Bellied Whistling-Duck",
+   "name_zh": "黑腹树鸭",
+   "latin": "Dendrocygna autumnalis",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "seed",
+     "amount": 2
+    }
+   ],
+   "points": 2,
+   "nest": "cavity",
+   "egg_limit": 5,
+   "wingspan": 76,
+   "beak": "right",
+   "predator": false,
+   "flocking": true,
+   "power": {
+    "color": "brown",
+    "text": "Discard 1 [seed] to tuck 2 [card] from the deck behind this bird.",
+    "text_zh": "弃 种子×1，从牌库顶塞 2 张卡到这只鸟下",
+    "ops": [
+     {
+      "op": "tuck_deck_cost",
+      "cost": {
+       "food": "seed",
+       "n": 1
+      },
+      "tuck": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": "b031",
+   "file": "cards/Black-BilledMagpie.jpg",
+   "name_en": "Black-Billed Magpie",
+   "name_zh": "黑嘴喜鹊",
+   "latin": "Pica hudsonia",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "wild",
+     "amount": 2
+    }
+   ],
+   "points": 3,
+   "nest": "wild",
+   "egg_limit": 3,
+   "wingspan": 64,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "pink",
+    "text": "When another player's [predator] succeeds, gain 1 [die] from the birdfeeder.",
+    "text_zh": "当其他玩家的捕食者捕猎成功时，你可以：从喂食器取 1 颗骰子（自选面）",
+    "ops": [
+     {
+      "op": "pink",
+      "trigger": "predator_success",
+      "effect": [
+       {
+        "op": "take_die"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b032",
+   "file": "cards/Black-ChinnedHummingbird.jpg",
+   "name_en": "Black-Chinned Hummingbird",
+   "name_zh": "黑颏北蜂鸟",
+   "latin": "Archilochus alexandri",
+   "swift_start": true,
+   "habitats": [
+    "forest",
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "wild",
+     "amount": 1
+    }
+   ],
+   "points": 4,
+   "nest": "bowl",
+   "egg_limit": 2,
+   "wingspan": 8,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "All players gain 1 [fruit] from the supply.",
+    "text_zh": "所有玩家各从供应区获得 水果×1",
+    "ops": [
+     {
+      "op": "all_gain",
+      "food": "fruit",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b033",
+   "file": "cards/Black-CrownedNight-Heron.jpg",
+   "name_en": "Black-Crowned Night-Heron",
+   "name_zh": "黑冠夜鹭",
+   "latin": "Nycticorax nycticorax",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "fish",
+     "amount": 1
+    },
+    {
+     "type": "rodent",
+     "amount": 1
+    }
+   ],
+   "points": 9,
+   "nest": "platform",
+   "egg_limit": 2,
+   "wingspan": 112,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Discard 1 [egg] from any of your other birds to gain 1 [wild] from the supply.",
+    "text_zh": "从你的另一只鸟上弃 1 蛋，获得任意食物×1",
+    "ops": [
+     {
+      "op": "discard_egg_gain",
+      "gain_food": "wild",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b034",
+   "file": "cards/Black-NeckedStilt.jpg",
+   "name_en": "Black-Necked Stilt",
+   "name_zh": "黑颈长脚鹬",
+   "latin": "Himantopus mexicanus",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 2
+    }
+   ],
+   "points": 4,
+   "nest": "ground",
+   "egg_limit": 2,
+   "wingspan": 74,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Draw 2 [card].",
+    "text_zh": "抽 2 张鸟卡（托盘或牌库自选）",
+    "ops": [
+     {
+      "op": "draw",
+      "n": 2,
+      "from": "any"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b035",
+   "file": "cards/BlueGrosbeak.jpg",
+   "name_en": "Blue Grosbeak",
+   "name_zh": "蓝彩鹀",
+   "latin": "Passerina caerulea",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "seed",
+     "amount": 2
+    }
+   ],
+   "points": 4,
+   "nest": "bowl",
+   "egg_limit": 3,
+   "wingspan": 28,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "If this bird is to the right of all other birds in its habitat, move it to another habitat.",
+    "text_zh": "若这只鸟是其栖息地最右侧的鸟，将它迁徙到另一个栖息地",
+    "ops": [
+     {
+      "op": "move_if_rightmost"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b036",
+   "file": "cards/BlueJay.jpg",
+   "name_en": "Blue Jay",
+   "name_zh": "冠蓝鸦",
+   "latin": "Cyanocitta cristata",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "seed",
+     "amount": 1
+    },
+    {
+     "type": "wild",
+     "amount": 1
+    }
+   ],
+   "points": 3,
+   "nest": "bowl",
+   "egg_limit": 2,
+   "wingspan": 41,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Gain 1 [seed] from the birdfeeder, if available. You may cache it on this bird.",
+    "text_zh": "从喂食器获得 1 种子（若有），可改为储存到这只鸟上",
+    "ops": [
+     {
+      "op": "gain_food",
+      "from": "feeder",
+      "food": "seed",
+      "n": 1,
+      "optional_cache": true
+     }
+    ]
+   }
+  },
+  {
+   "id": "b037",
+   "file": "cards/Blue-GrayGnatcatcher.jpg",
+   "name_en": "Blue-Gray Gnatcatcher",
+   "name_zh": "灰蓝蚋莺",
+   "latin": "Polioptila caerulea",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    }
+   ],
+   "points": 1,
+   "nest": "bowl",
+   "egg_limit": 3,
+   "wingspan": 15,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Gain 1 [invertebrate] from the supply.",
+    "text_zh": "从供应区获得 无脊椎×1",
+    "ops": [
+     {
+      "op": "gain_food",
+      "from": "supply",
+      "food": "invertebrate",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b038",
+   "file": "cards/Blue-WingedWarbler.jpg",
+   "name_en": "Blue-Winged Warbler",
+   "name_zh": "蓝翅林莺",
+   "latin": "Vermivora cyanoptera",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 2
+    }
+   ],
+   "points": 8,
+   "nest": "bowl",
+   "egg_limit": 2,
+   "wingspan": 20,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": null
+  },
+  {
+   "id": "b039",
+   "file": "cards/Bobolink.jpg",
+   "name_en": "Bobolink",
+   "name_zh": "食米鸟",
+   "latin": "Dolichonyx oryzivorus",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "seed",
+     "amount": 2
+    }
+   ],
+   "points": 4,
+   "nest": "ground",
+   "egg_limit": 3,
+   "wingspan": 30,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Lay 1 [egg] on each of your birds with a [ground] nest.",
+    "text_zh": "在每只地巢（或星巢）的鸟上各产 1 蛋",
+    "ops": [
+     {
+      "op": "lay_eggs_each",
+      "nest": "ground"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b040",
+   "file": "cards/Brant.jpg",
+   "name_en": "Brant",
+   "name_zh": "黑雁",
+   "latin": "Branta bernicla",
+   "swift_start": true,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "seed",
+     "amount": 1
+    },
+    {
+     "type": "wild",
+     "amount": 1
+    }
+   ],
+   "points": 3,
+   "nest": "ground",
+   "egg_limit": 2,
+   "wingspan": 114,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Draw the 3 face-up [card] in the bird tray.",
+    "text_zh": "拿取鸟托盘全部 3 张面朝上的鸟卡",
+    "ops": [
+     {
+      "op": "draw_tray_all"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b041",
+   "file": "cards/BrewersBlackbird.jpg",
+   "name_en": "Brewer's Blackbird",
+   "name_zh": "布氏黑鹂",
+   "latin": "Euphagus cyanocephalus",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "seed",
+     "amount": 1
+    },
+    {
+     "type": "wild",
+     "amount": 1
+    }
+   ],
+   "points": 3,
+   "nest": "bowl",
+   "egg_limit": 3,
+   "wingspan": 41,
+   "beak": "left",
+   "predator": false,
+   "flocking": true,
+   "power": {
+    "color": "brown",
+    "text": "Tuck 1 [card] from your hand behind this bird. If you do, you may also lay 1 [egg] on this bird.",
+    "text_zh": "从手牌塞 1 张卡到这只鸟下，若如此做：在这只鸟上产 1 蛋",
+    "ops": [
+     {
+      "op": "tuck_hand",
+      "n": 1,
+      "if_do": [
+       {
+        "op": "lay_eggs",
+        "n": 1,
+        "on": "this",
+        "optional": true
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b042",
+   "file": "cards/Broad-WingedHawk.jpg",
+   "name_en": "Broad-Winged Hawk",
+   "name_zh": "阔翅鵟",
+   "latin": "Buteo platypterus",
+   "swift_start": true,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "rodent",
+     "amount": 1
+    }
+   ],
+   "points": 4,
+   "nest": "platform",
+   "egg_limit": 2,
+   "wingspan": 85,
+   "beak": "right",
+   "predator": true,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Roll all dice not in birdfeeder. If any are [rodent], cache 1 [rodent] from the supply on this bird.",
+    "text_zh": "重掷喂食器外的所有骰子，若有啮齿，在这只鸟上储存 1 个啮齿",
+    "ops": [
+     {
+      "op": "predator",
+      "face": "rodent"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b043",
+   "file": "cards/BronzedCowbird.jpg",
+   "name_en": "Bronzed Cowbird",
+   "name_zh": "铜色牛鹂",
+   "latin": "Molothrus aeneus",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "seed",
+     "amount": 1
+    }
+   ],
+   "points": 5,
+   "nest": "none",
+   "egg_limit": 0,
+   "wingspan": 36,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "pink",
+    "text": "When another player takes the \"lay eggs\" action, lay 1 [egg] on a bird with a [bowl] nest.",
+    "text_zh": "当其他玩家执行「产蛋」行动时，你可以：在一只碗巢（或星巢）的鸟上产 1 蛋",
+    "ops": [
+     {
+      "op": "pink",
+      "trigger": "lay_eggs_action",
+      "effect": [
+       {
+        "op": "lay_eggs",
+        "n": 1,
+        "on": {
+         "nest": "bowl"
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b044",
+   "file": "cards/BrownPelican.jpg",
+   "name_en": "Brown Pelican",
+   "name_zh": "褐鹈鹕",
+   "latin": "Pelecanus occidentalis",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "fish",
+     "amount": 2
+    }
+   ],
+   "points": 4,
+   "nest": "platform",
+   "egg_limit": 2,
+   "wingspan": 201,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Gain 3 [fish] from the supply.",
+    "text_zh": "从供应区获得 鱼×3",
+    "ops": [
+     {
+      "op": "gain_food",
+      "from": "supply",
+      "food": "fish",
+      "n": 3
+     }
+    ]
+   }
+  },
+  {
+   "id": "b045",
+   "file": "cards/Brown-HeadedCowbird.jpg",
+   "name_en": "Brown-Headed Cowbird",
+   "name_zh": "褐头牛鹂",
+   "latin": "Molothrus ater",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "seed",
+     "amount": 1
+    }
+   ],
+   "points": 3,
+   "nest": "none",
+   "egg_limit": 0,
+   "wingspan": 30,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "pink",
+    "text": "When another player takes the \"lay eggs\" action, lay 1 [egg] on a bird with a [bowl] nest.",
+    "text_zh": "当其他玩家执行「产蛋」行动时，你可以：在一只碗巢（或星巢）的鸟上产 1 蛋",
+    "ops": [
+     {
+      "op": "pink",
+      "trigger": "lay_eggs_action",
+      "effect": [
+       {
+        "op": "lay_eggs",
+        "n": 1,
+        "on": {
+         "nest": "bowl"
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b046",
+   "file": "cards/BurrowingOwl.jpg",
+   "name_en": "Burrowing Owl",
+   "name_zh": "穴鸮",
+   "latin": "Athene cunicularia",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "rodent",
+     "amount": 1
+    }
+   ],
+   "points": 5,
+   "nest": "wild",
+   "egg_limit": 4,
+   "wingspan": 53,
+   "beak": "front",
+   "predator": true,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Roll all dice not in birdfeeder. If any are [rodent], cache 1 [rodent] from the supply on this bird.",
+    "text_zh": "重掷喂食器外的所有骰子，若有啮齿，在这只鸟上储存 1 个啮齿",
+    "ops": [
+     {
+      "op": "predator",
+      "face": "rodent"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b047",
+   "file": "cards/Bushtit.jpg",
+   "name_en": "Bushtit",
+   "name_zh": "美洲丛山雀",
+   "latin": "Psaltriparus minimus",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "seed",
+     "amount": 1
+    }
+   ],
+   "points": 2,
+   "nest": "wild",
+   "egg_limit": 5,
+   "wingspan": 15,
+   "beak": "left",
+   "predator": false,
+   "flocking": true,
+   "power": {
+    "color": "brown",
+    "text": "Tuck 1 [card] from your hand behind this bird. If you do, you may also lay 1 [egg] on this bird.",
+    "text_zh": "从手牌塞 1 张卡到这只鸟下，若如此做：在这只鸟上产 1 蛋",
+    "ops": [
+     {
+      "op": "tuck_hand",
+      "n": 1,
+      "if_do": [
+       {
+        "op": "lay_eggs",
+        "n": 1,
+        "on": "this",
+        "optional": true
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b048",
+   "file": "cards/CaliforniaCondor.jpg",
+   "name_en": "California Condor",
+   "name_zh": "加州神鹫",
+   "latin": "Gymnogyps californianus",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "none"
+    }
+   ],
+   "points": 1,
+   "nest": "ground",
+   "egg_limit": 1,
+   "wingspan": 277,
+   "beak": "front",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Draw 2 new bonus cards and keep 1.",
+    "text_zh": "抽 2 张新的奖励卡，保留其中 1 张",
+    "ops": [
+     {
+      "op": "draw_bonus",
+      "draw": 2,
+      "keep": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b049",
+   "file": "cards/CaliforniaQuail.jpg",
+   "name_en": "California Quail",
+   "name_zh": "珠颈斑鹑",
+   "latin": "Callipepla californica",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "seed",
+     "amount": 2
+    }
+   ],
+   "points": 3,
+   "nest": "ground",
+   "egg_limit": 6,
+   "wingspan": 36,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Lay 1 [egg] on this bird.",
+    "text_zh": "在这只鸟上产 1 蛋",
+    "ops": [
+     {
+      "op": "lay_eggs",
+      "n": 1,
+      "on": "this"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b050",
+   "file": "cards/CanadaGoose.jpg",
+   "name_en": "Canada Goose",
+   "name_zh": "加拿大雁",
+   "latin": "Branta canadensis",
+   "swift_start": false,
+   "habitats": [
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "seed",
+     "amount": 2
+    }
+   ],
+   "points": 3,
+   "nest": "ground",
+   "egg_limit": 3,
+   "wingspan": 132,
+   "beak": "right",
+   "predator": false,
+   "flocking": true,
+   "power": {
+    "color": "brown",
+    "text": "Discard 1 [seed] to tuck 2 [card] from the deck behind this bird.",
+    "text_zh": "弃 种子×1，从牌库顶塞 2 张卡到这只鸟下",
+    "ops": [
+     {
+      "op": "tuck_deck_cost",
+      "cost": {
+       "food": "seed",
+       "n": 1
+      },
+      "tuck": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": "b051",
+   "file": "cards/CanvasBack.jpg",
+   "name_en": "Canvasback",
+   "name_zh": "帆背潜鸭",
+   "latin": "Aythya valisineria",
+   "swift_start": true,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "seed",
+     "amount": 1
+    },
+    {
+     "type": "wild",
+     "amount": 1
+    }
+   ],
+   "points": 4,
+   "nest": "wild",
+   "egg_limit": 4,
+   "wingspan": 82,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "All players draw 1 [card] from the deck.",
+    "text_zh": "所有玩家各从牌库抽 1 张卡",
+    "ops": [
+     {
+      "op": "all_draw",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b052",
+   "file": "cards/CarolinaChickadee.jpg",
+   "name_en": "Carolina Chickadee",
+   "name_zh": "卡罗山雀",
+   "latin": "Poecile carolinensis",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "seed",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 2,
+   "nest": "cavity",
+   "egg_limit": 3,
+   "wingspan": 20,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Cache 1 [seed] from the supply on this bird.",
+    "text_zh": "在这只鸟上储存 种子×1",
+    "ops": [
+     {
+      "op": "cache_food",
+      "food": "seed",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b053",
+   "file": "cards/CarolinaWren.jpg",
+   "name_en": "Carolina Wren",
+   "name_zh": "卡罗苇鹪鹩",
+   "latin": "Thryothorus ludovicianus",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "fruit",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 1,
+   "nest": "cavity",
+   "egg_limit": 5,
+   "wingspan": 20,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Draw 2 [card].",
+    "text_zh": "抽 2 张鸟卡（托盘或牌库自选）",
+    "ops": [
+     {
+      "op": "draw",
+      "n": 2,
+      "from": "any"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b054",
+   "file": "cards/CassinsFinch.jpg",
+   "name_en": "Cassin's Finch",
+   "name_zh": "卡氏朱雀",
+   "latin": "Haemorhous cassinii",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "seed",
+     "amount": 1
+    },
+    {
+     "type": "fruit",
+     "amount": 1
+    }
+   ],
+   "points": 4,
+   "nest": "bowl",
+   "egg_limit": 3,
+   "wingspan": 30,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Draw 2 new bonus cards and keep 1.",
+    "text_zh": "抽 2 张新的奖励卡，保留其中 1 张",
+    "ops": [
+     {
+      "op": "draw_bonus",
+      "draw": 2,
+      "keep": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b055",
+   "file": "cards/CassinsSparrow.jpg",
+   "name_en": "Cassin's Sparrow",
+   "name_zh": "卡氏沙鹀",
+   "latin": "Peucaea cassinii",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "seed",
+     "amount": 1
+    }
+   ],
+   "points": 3,
+   "nest": "ground",
+   "egg_limit": 2,
+   "wingspan": 20,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Lay 1 [egg] on any bird.",
+    "text_zh": "在任意一只鸟上产 1 蛋",
+    "ops": [
+     {
+      "op": "lay_eggs",
+      "n": 1,
+      "on": "any"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b056",
+   "file": "cards/CedarWaxwing.jpg",
+   "name_en": "Cedar Waxwing",
+   "name_zh": "雪松太平鸟",
+   "latin": "Bombycilla cedrorum",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "fruit",
+     "amount": 2
+    }
+   ],
+   "points": 3,
+   "nest": "bowl",
+   "egg_limit": 3,
+   "wingspan": 25,
+   "beak": "right",
+   "predator": false,
+   "flocking": true,
+   "power": {
+    "color": "brown",
+    "text": "Tuck 1 [card] from your hand behind this bird. If you do, gain 1 [fruit] from the supply.",
+    "text_zh": "从手牌塞 1 张卡到这只鸟下，若如此做：从供应区获得 水果×1",
+    "ops": [
+     {
+      "op": "tuck_hand",
+      "n": 1,
+      "if_do": [
+       {
+        "op": "gain_food",
+        "from": "supply",
+        "food": "fruit",
+        "n": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b057",
+   "file": "cards/CeruleanWarbler.jpg",
+   "name_en": "Cerulean Warbler",
+   "name_zh": "青蓝林莺",
+   "latin": "Setophaga cerulea",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "seed",
+     "amount": 1
+    }
+   ],
+   "points": 4,
+   "nest": "bowl",
+   "egg_limit": 2,
+   "wingspan": 20,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Draw 2 new bonus cards and keep 1.",
+    "text_zh": "抽 2 张新的奖励卡，保留其中 1 张",
+    "ops": [
+     {
+      "op": "draw_bonus",
+      "draw": 2,
+      "keep": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b058",
+   "file": "cards/Chestnut-CollaredLongspur.jpg",
+   "name_en": "Chestnut-Collared Longspur",
+   "name_zh": "栗领铁爪鹀",
+   "latin": "Calcarius ornatus",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "seed",
+     "amount": 2
+    }
+   ],
+   "points": 5,
+   "nest": "ground",
+   "egg_limit": 4,
+   "wingspan": 25,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Draw 2 new bonus cards and keep 1.",
+    "text_zh": "抽 2 张新的奖励卡，保留其中 1 张",
+    "ops": [
+     {
+      "op": "draw_bonus",
+      "draw": 2,
+      "keep": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b059",
+   "file": "cards/ChihuahuanRaven.jpg",
+   "name_en": "Chihuahuan Raven",
+   "name_zh": "奇瓦瓦乌鸦",
+   "latin": "Corvus cryptoleucus",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "rodent",
+     "amount": 1
+    },
+    {
+     "type": "wild",
+     "amount": 2
+    }
+   ],
+   "points": 4,
+   "nest": "platform",
+   "egg_limit": 3,
+   "wingspan": 112,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Discard 1 [egg] from any of your other birds to gain 2 [wild] from the supply.",
+    "text_zh": "从你的另一只鸟上弃 1 蛋，获得任意食物×2",
+    "ops": [
+     {
+      "op": "discard_egg_gain",
+      "gain_food": "wild",
+      "n": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": "b060",
+   "file": "cards/ChimneySwift.jpg",
+   "name_en": "Chimney Swift",
+   "name_zh": "烟囱雨燕",
+   "latin": "Chaetura pelagica",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 2
+    }
+   ],
+   "points": 3,
+   "nest": "wild",
+   "egg_limit": 2,
+   "wingspan": 36,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "If this bird is to the right of all other birds in its habitat, move it to another habitat.",
+    "text_zh": "若这只鸟是其栖息地最右侧的鸟，将它迁徙到另一个栖息地",
+    "ops": [
+     {
+      "op": "move_if_rightmost"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b061",
+   "file": "cards/ChippingSparrow.jpg",
+   "name_en": "Chipping Sparrow",
+   "name_zh": "棕顶雀鹀",
+   "latin": "Spizella passerina",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "seed",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 1,
+   "nest": "bowl",
+   "egg_limit": 3,
+   "wingspan": 23,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Lay 1 [egg] on any bird.",
+    "text_zh": "在任意一只鸟上产 1 蛋",
+    "ops": [
+     {
+      "op": "lay_eggs",
+      "n": 1,
+      "on": "any"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b062",
+   "file": "cards/ClarksGrebe.jpg",
+   "name_en": "Clark's Grebe",
+   "name_zh": "克氏鸊鷉",
+   "latin": "Aechmophorus clarkii",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "fish",
+     "amount": 1
+    }
+   ],
+   "points": 5,
+   "nest": "wild",
+   "egg_limit": 2,
+   "wingspan": 61,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Draw 1 [card]. If you do, discard 1 [card] from your hand at the end of your turn.",
+    "text_zh": "抽 1 张鸟卡，回合结束时应弃 1 张手牌",
+    "ops": [
+     {
+      "op": "draw_then_eot_discard",
+      "draw": 1,
+      "discard": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b063",
+   "file": "cards/ClarksNutcracker.jpg",
+   "name_en": "Clark's Nutcracker",
+   "name_zh": "克氏星鸦",
+   "latin": "Nucifraga columbiana",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "seed",
+     "amount": 2
+    },
+    {
+     "type": "wild",
+     "amount": 1
+    }
+   ],
+   "points": 5,
+   "nest": "platform",
+   "egg_limit": 2,
+   "wingspan": 61,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Gain 1 [seed] from the birdfeeder, if available. You may cache it on this bird.",
+    "text_zh": "从喂食器获得 1 种子（若有），可改为储存到这只鸟上",
+    "ops": [
+     {
+      "op": "gain_food",
+      "from": "feeder",
+      "food": "seed",
+      "n": 1,
+      "optional_cache": true
+     }
+    ]
+   }
+  },
+  {
+   "id": "b064",
+   "file": "cards/CommonGrackle.jpg",
+   "name_en": "Common Grackle",
+   "name_zh": "普通拟八哥",
+   "latin": "Quiscalus quiscula",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "seed",
+     "amount": 1
+    },
+    {
+     "type": "wild",
+     "amount": 1
+    }
+   ],
+   "points": 3,
+   "nest": "bowl",
+   "egg_limit": 3,
+   "wingspan": 43,
+   "beak": "left",
+   "predator": false,
+   "flocking": true,
+   "power": {
+    "color": "brown",
+    "text": "Tuck 1 [card] from your hand behind this bird. If you do, you may also lay 1 [egg] on this bird.",
+    "text_zh": "从手牌塞 1 张卡到这只鸟下，若如此做：在这只鸟上产 1 蛋",
+    "ops": [
+     {
+      "op": "tuck_hand",
+      "n": 1,
+      "if_do": [
+       {
+        "op": "lay_eggs",
+        "n": 1,
+        "on": "this",
+        "optional": true
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b065",
+   "file": "cards/CommonLoon.jpg",
+   "name_en": "Common Loon",
+   "name_zh": "普通潜鸟",
+   "latin": "Gavia immer",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "fish",
+     "amount": 1
+    },
+    {
+     "type": "wild",
+     "amount": 1
+    }
+   ],
+   "points": 6,
+   "nest": "ground",
+   "egg_limit": 1,
+   "wingspan": 117,
+   "beak": "both",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Player(s) with the fewest birds in their [wetland] draw 1 [card].",
+    "text_zh": "湿地中鸟最少的每位玩家（可并列）各抽 1 张卡",
+    "ops": [
+     {
+      "op": "fewest_habitat_draw",
+      "habitat": "wetland",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b066",
+   "file": "cards/svg/commonmerganser.svg",
+   "name_en": "Common Merganser",
+   "name_zh": "普通秋沙鸭",
+   "latin": "Mergus merganser",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "fish",
+     "amount": 1
+    },
+    {
+     "type": "wild",
+     "amount": 1
+    }
+   ],
+   "points": 5,
+   "nest": "cavity",
+   "egg_limit": 4,
+   "wingspan": 86,
+   "beak": "right",
+   "predator": true,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Roll all dice not in birdfeeder. If any are [fish], cache 1 [fish] from the supply on this bird.",
+    "text_zh": "重掷喂食器外的所有骰子，若有鱼，在这只鸟上储存 1 个鱼",
+    "ops": [
+     {
+      "op": "predator",
+      "face": "fish"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b067",
+   "file": "cards/svg/commonnighthawk.svg",
+   "name_en": "Common Nighthawk",
+   "name_zh": "美洲夜鹰",
+   "latin": "Chordeiles minor",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 2
+    }
+   ],
+   "points": 3,
+   "nest": "ground",
+   "egg_limit": 2,
+   "wingspan": 56,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "If this bird is to the right of all other birds in its habitat, move it to another habitat.",
+    "text_zh": "若这只鸟是其栖息地最右侧的鸟，将它迁徙到另一个栖息地",
+    "ops": [
+     {
+      "op": "move_if_rightmost"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b068",
+   "file": "cards/svg/commonraven.svg",
+   "name_en": "Common Raven",
+   "name_zh": "普通渡鸦",
+   "latin": "Corvus corax",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "rodent",
+     "amount": 1
+    },
+    {
+     "type": "wild",
+     "amount": 2
+    }
+   ],
+   "points": 5,
+   "nest": "platform",
+   "egg_limit": 2,
+   "wingspan": 135,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Discard 1 [egg] from any of your other birds to gain 2 [wild] from the supply.",
+    "text_zh": "从你的另一只鸟上弃 1 蛋，获得任意食物×2",
+    "ops": [
+     {
+      "op": "discard_egg_gain",
+      "gain_food": "wild",
+      "n": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": "b069",
+   "file": "cards/svg/commonyellowthroat.svg",
+   "name_en": "Common Yellowthroat",
+   "name_zh": "黄喉地莺",
+   "latin": "Geothlypis trichas",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    }
+   ],
+   "points": 1,
+   "nest": "bowl",
+   "egg_limit": 4,
+   "wingspan": 18,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Draw 2 [card]. If you do, discard 1 [card] from your hand at the end of your turn.",
+    "text_zh": "抽 1 张鸟卡，回合结束时应弃 1 张手牌",
+    "ops": [
+     {
+      "op": "draw_then_eot_discard",
+      "draw": 1,
+      "discard": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b070",
+   "file": "cards/svg/coopershawk.svg",
+   "name_en": "Cooper's Hawk",
+   "name_zh": "库氏鹰",
+   "latin": "Accipiter cooperii",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "rodent",
+     "amount": 1
+    }
+   ],
+   "points": 3,
+   "nest": "platform",
+   "egg_limit": 2,
+   "wingspan": 79,
+   "beak": "left",
+   "predator": true,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Look at a [card] from the deck. If less than 75cm, tuck it behind this bird. If not, discard it.",
+    "text_zh": "查看牌库顶 1 张卡：翼展小于 75cm 则塞到这只鸟下，否则弃置",
+    "ops": [
+     {
+      "op": "look_tuck",
+      "max_ws": 75
+     }
+    ]
+   }
+  },
+  {
+   "id": "b071",
+   "file": "cards/svg/darkeyedjunco.svg",
+   "name_en": "Dark-Eyed Junco",
+   "name_zh": "暗眼灯草鹀",
+   "latin": "Junco hyemalis",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "seed",
+     "amount": 1
+    }
+   ],
+   "points": 3,
+   "nest": "ground",
+   "egg_limit": 3,
+   "wingspan": 23,
+   "beak": "left",
+   "predator": false,
+   "flocking": true,
+   "power": {
+    "color": "brown",
+    "text": "Tuck 1 [card] from your hand behind this bird. If you do, gain 1 [seed] from the supply.",
+    "text_zh": "从手牌塞 1 张卡到这只鸟下，若如此做：从供应区获得 种子×1",
+    "ops": [
+     {
+      "op": "tuck_hand",
+      "n": 1,
+      "if_do": [
+       {
+        "op": "gain_food",
+        "from": "supply",
+        "food": "seed",
+        "n": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b072",
+   "file": "cards/svg/dickcissel.svg",
+   "name_en": "Dickcissel",
+   "name_zh": "长刺歌雀",
+   "latin": "Spiza americana",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "seed",
+     "amount": 2
+    }
+   ],
+   "points": 4,
+   "nest": "ground",
+   "egg_limit": 3,
+   "wingspan": 25,
+   "beak": "right",
+   "predator": false,
+   "flocking": true,
+   "power": {
+    "color": "brown",
+    "text": "Tuck 1 [card] from your hand behind this bird. If you do, you may also lay 1 [egg] on this bird.",
+    "text_zh": "从手牌塞 1 张卡到这只鸟下，若如此做：在这只鸟上产 1 蛋",
+    "ops": [
+     {
+      "op": "tuck_hand",
+      "n": 1,
+      "if_do": [
+       {
+        "op": "lay_eggs",
+        "n": 1,
+        "on": "this",
+        "optional": true
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b073",
+   "file": "cards/svg/doublecrestedcormorant.svg",
+   "name_en": "Double-Crested Cormorant",
+   "name_zh": "双冠鸬鹚",
+   "latin": "Phalacrocorax auritus",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "fish",
+     "amount": 1
+    },
+    {
+     "type": "wild",
+     "amount": 1
+    }
+   ],
+   "points": 3,
+   "nest": "platform",
+   "egg_limit": 3,
+   "wingspan": 132,
+   "beak": "right",
+   "predator": false,
+   "flocking": true,
+   "power": {
+    "color": "brown",
+    "text": "Discard 1 [fish] to tuck 2 [card] from the deck behind this bird.",
+    "text_zh": "弃 鱼×1，从牌库顶塞 2 张卡到这只鸟下",
+    "ops": [
+     {
+      "op": "tuck_deck_cost",
+      "cost": {
+       "food": "fish",
+       "n": 1
+      },
+      "tuck": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": "b074",
+   "file": "cards/svg/downywoodpecker.svg",
+   "name_en": "Downy Woodpecker",
+   "name_zh": "绒啄木鸟",
+   "latin": "Picoides pubescens",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "seed",
+       "amount": 1
+      },
+      {
+       "type": "fruit",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 3,
+   "nest": "cavity",
+   "egg_limit": 2,
+   "wingspan": 30,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Play an additional bird in your [forest]. Pay its normal cost.",
+    "text_zh": "在你的森林再打出一只鸟，支付其正常费用（不耗行动）",
+    "ops": [
+     {
+      "op": "play_another_bird",
+      "habitat": "forest"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b075",
+   "file": "cards/svg/easternbluebird.svg",
+   "name_en": "Eastern Bluebird",
+   "name_zh": "东蓝鸲",
+   "latin": "Sialia sialis",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "fruit",
+     "amount": 1
+    }
+   ],
+   "points": 4,
+   "nest": "cavity",
+   "egg_limit": 5,
+   "wingspan": 33,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Play an additional bird in your [grassland]. Pay its normal cost.",
+    "text_zh": "在你的草原再打出一只鸟，支付其正常费用（不耗行动）",
+    "ops": [
+     {
+      "op": "play_another_bird",
+      "habitat": "grassland"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b076",
+   "file": "cards/svg/easternkingbird.svg",
+   "name_en": "Eastern Kingbird",
+   "name_zh": "东王霸鹟",
+   "latin": "Tyrannus tyrannus",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "fruit",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 2,
+   "nest": "bowl",
+   "egg_limit": 2,
+   "wingspan": 38,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "pink",
+    "text": "When another player plays a bird in their [forest], gain 1 [invertebrate] from the supply.",
+    "text_zh": "当其他玩家在森林打出鸟时，你可以：从供应区获得 无脊椎×1",
+    "ops": [
+     {
+      "op": "pink",
+      "trigger": "bird_played",
+      "habitat": "forest",
+      "effect": [
+       {
+        "op": "gain_food",
+        "from": "supply",
+        "food": "invertebrate",
+        "n": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b077",
+   "file": "cards/svg/easternphoebe.svg",
+   "name_en": "Eastern Phoebe",
+   "name_zh": "东菲比霸鹟",
+   "latin": "Sayornis phoebe",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "fruit",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 3,
+   "nest": "wild",
+   "egg_limit": 4,
+   "wingspan": 28,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "All players gain 1 [invertebrate] from the supply.",
+    "text_zh": "所有玩家各从供应区获得 无脊椎×1",
+    "ops": [
+     {
+      "op": "all_gain",
+      "food": "invertebrate",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b078",
+   "file": "cards/svg/easternscreechowl.svg",
+   "name_en": "Eastern Screech-Owl",
+   "name_zh": "东鸣角鸮",
+   "latin": "Megascops asio",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "rodent",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 4,
+   "nest": "cavity",
+   "egg_limit": 2,
+   "wingspan": 51,
+   "beak": "front",
+   "predator": true,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Roll all dice not in birdfeeder. If any are [rodent], cache 1 [rodent] from the supply on this bird.",
+    "text_zh": "重掷喂食器外的所有骰子，若有啮齿，在这只鸟上储存 1 个啮齿",
+    "ops": [
+     {
+      "op": "predator",
+      "face": "rodent"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b079",
+   "file": "cards/svg/ferruginoushawk.svg",
+   "name_en": "Ferruginous Hawk",
+   "name_zh": "棕尾鵟",
+   "latin": "Buteo regalis",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "rodent",
+     "amount": 2
+    }
+   ],
+   "points": 6,
+   "nest": "platform",
+   "egg_limit": 2,
+   "wingspan": 142,
+   "beak": "right",
+   "predator": true,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Roll all dice not in birdfeeder. If any are [rodent], cache 1 [rodent] from the supply on this bird.",
+    "text_zh": "重掷喂食器外的所有骰子，若有啮齿，在这只鸟上储存 1 个啮齿",
+    "ops": [
+     {
+      "op": "predator",
+      "face": "rodent"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b080",
+   "file": "cards/svg/fishcrow.svg",
+   "name_en": "Fish Crow",
+   "name_zh": "鱼鸦",
+   "latin": "Corvus ossifragus",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "fish",
+     "amount": 1
+    },
+    {
+     "type": "wild",
+     "amount": 1
+    }
+   ],
+   "points": 6,
+   "nest": "platform",
+   "egg_limit": 2,
+   "wingspan": 91,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Discard 1 [egg] from any of your other birds to gain 1 [wild] from the supply.",
+    "text_zh": "从你的另一只鸟上弃 1 蛋，获得任意食物×1",
+    "ops": [
+     {
+      "op": "discard_egg_gain",
+      "gain_food": "wild",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b081",
+   "file": "cards/ForstersTern.jpg",
+   "name_en": "Forster's Tern",
+   "name_zh": "福氏燕鸥",
+   "latin": "Sterna forsteri",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "fish",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 4,
+   "nest": "wild",
+   "egg_limit": 2,
+   "wingspan": 79,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Draw 1 [card]. If you do, discard 1 [card] from your hand at the end of your turn.",
+    "text_zh": "抽 1 张鸟卡，回合结束时应弃 1 张手牌",
+    "ops": [
+     {
+      "op": "draw_then_eot_discard",
+      "draw": 1,
+      "discard": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b082",
+   "file": "cards/svg/franklinsgull.svg",
+   "name_en": "Franklin's Gull",
+   "name_zh": "富兰克林鸥",
+   "latin": "Leucophaeus pipixcan",
+   "swift_start": false,
+   "habitats": [
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "fish",
+     "amount": 1
+    },
+    {
+     "type": "wild",
+     "amount": 1
+    }
+   ],
+   "points": 3,
+   "nest": "wild",
+   "egg_limit": 2,
+   "wingspan": 91,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Discard 1 [egg] to draw 2 [card].",
+    "text_zh": "弃 1 蛋，从牌库抽 2 张鸟卡",
+    "ops": [
+     {
+      "op": "discard_egg_draw",
+      "draw": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": "b083",
+   "file": "cards/svg/goldeneagle.svg",
+   "name_en": "Golden Eagle",
+   "name_zh": "金雕",
+   "latin": "Aquila chrysaetos",
+   "swift_start": false,
+   "habitats": [
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "rodent",
+     "amount": 3
+    }
+   ],
+   "points": 8,
+   "nest": "platform",
+   "egg_limit": 1,
+   "wingspan": 201,
+   "beak": "right",
+   "predator": true,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Look at a [card] from the deck. If less than 100cm, tuck it behind this bird. If not, discard it.",
+    "text_zh": "查看牌库顶 1 张卡：翼展小于 100cm 则塞到这只鸟下，否则弃置",
+    "ops": [
+     {
+      "op": "look_tuck",
+      "max_ws": 100
+     }
+    ]
+   }
+  },
+  {
+   "id": "b084",
+   "file": "cards/svg/grasshoppersparrow.svg",
+   "name_en": "Grasshopper Sparrow",
+   "name_zh": "蝗草鹀",
+   "latin": "Ammodramus savannarum",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "seed",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 2,
+   "nest": "ground",
+   "egg_limit": 2,
+   "wingspan": 20,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Lay 1 [egg] on any bird.",
+    "text_zh": "在任意一只鸟上产 1 蛋",
+    "ops": [
+     {
+      "op": "lay_eggs",
+      "n": 1,
+      "on": "any"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b085",
+   "file": "cards/svg/graycatbird.svg",
+   "name_en": "Gray Catbird",
+   "name_zh": "灰猫嘲鸫",
+   "latin": "Dumetella carolinensis",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "fruit",
+     "amount": 2
+    }
+   ],
+   "points": 5,
+   "nest": "bowl",
+   "egg_limit": 3,
+   "wingspan": 28,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Repeat a brown power on another bird in this habitat.",
+    "text_zh": "重复同一栖息地另一只鸟的棕色能力",
+    "ops": [
+     {
+      "op": "repeat_brown"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b086",
+   "file": "cards/svg/greatblueheron.svg",
+   "name_en": "Great Blue Heron",
+   "name_zh": "大蓝鹭",
+   "latin": "Ardea herodias",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "fish",
+     "amount": 1
+    }
+   ],
+   "points": 5,
+   "nest": "platform",
+   "egg_limit": 2,
+   "wingspan": 183,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Play an additional bird in your [wetland]. Pay its normal cost.",
+    "text_zh": "在你的湿地再打出一只鸟，支付其正常费用（不耗行动）",
+    "ops": [
+     {
+      "op": "play_another_bird",
+      "habitat": "wetland"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b087",
+   "file": "cards/svg/greatcrestedflycatcher.svg",
+   "name_en": "Great Crested Flycatcher",
+   "name_zh": "大冠蝇霸鹟",
+   "latin": "Myiarchus crinitus",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "fruit",
+     "amount": 1
+    }
+   ],
+   "points": 5,
+   "nest": "cavity",
+   "egg_limit": 3,
+   "wingspan": 33,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Gain 1 [invertebrate] from the birdfeeder, if available.",
+    "text_zh": "从喂食器获得 1 无脊椎（若有）",
+    "ops": [
+     {
+      "op": "gain_food",
+      "from": "feeder",
+      "food": "invertebrate",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b088",
+   "file": "cards/svg/greategret.svg",
+   "name_en": "Great Egret",
+   "name_zh": "大白鹭",
+   "latin": "Ardea alba",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "fish",
+     "amount": 2
+    },
+    {
+     "type": "rodent",
+     "amount": 1
+    }
+   ],
+   "points": 7,
+   "nest": "platform",
+   "egg_limit": 3,
+   "wingspan": 130,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Play an additional bird in your [wetland]. Pay its normal cost.",
+    "text_zh": "在你的湿地再打出一只鸟，支付其正常费用（不耗行动）",
+    "ops": [
+     {
+      "op": "play_another_bird",
+      "habitat": "wetland"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b089",
+   "file": "cards/svg/greathornedowl.svg",
+   "name_en": "Great Horned Owl",
+   "name_zh": "大雕鸮",
+   "latin": "Bubo virginianus",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "rodent",
+     "amount": 3
+    }
+   ],
+   "points": 8,
+   "nest": "platform",
+   "egg_limit": 2,
+   "wingspan": 112,
+   "beak": "front",
+   "predator": true,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Look at a [card] from the deck. If less than 100cm, tuck it behind this bird. If not, discard it.",
+    "text_zh": "查看牌库顶 1 张卡：翼展小于 100cm 则塞到这只鸟下，否则弃置",
+    "ops": [
+     {
+      "op": "look_tuck",
+      "max_ws": 100
+     }
+    ]
+   }
+  },
+  {
+   "id": "b090",
+   "file": "cards/svg/greaterprairiechicken.svg",
+   "name_en": "Greater Prairie-Chicken",
+   "name_zh": "草原榛鸡",
+   "latin": "Tympanuchus cupido",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "seed",
+     "amount": 2
+    }
+   ],
+   "points": 5,
+   "nest": "ground",
+   "egg_limit": 4,
+   "wingspan": 71,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Draw 2 new bonus cards and keep 1.",
+    "text_zh": "抽 2 张新的奖励卡，保留其中 1 张",
+    "ops": [
+     {
+      "op": "draw_bonus",
+      "draw": 2,
+      "keep": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b091",
+   "file": "cards/svg/greaterroadrunner.svg",
+   "name_en": "Greater Roadrunner",
+   "name_zh": "走鹃",
+   "latin": "Geococcyx californianus",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "rodent",
+     "amount": 1
+    },
+    {
+     "type": "wild",
+     "amount": 1
+    }
+   ],
+   "points": 7,
+   "nest": "platform",
+   "egg_limit": 2,
+   "wingspan": 56,
+   "beak": "left",
+   "predator": true,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Look at a [card] from the deck. If less than 50cm, tuck it behind this bird. If not, discard it.",
+    "text_zh": "查看牌库顶 1 张卡：翼展小于 50cm 则塞到这只鸟下，否则弃置",
+    "ops": [
+     {
+      "op": "look_tuck",
+      "max_ws": 50
+     }
+    ]
+   }
+  },
+  {
+   "id": "b092",
+   "file": "cards/svg/greenheron.svg",
+   "name_en": "Green Heron",
+   "name_zh": "绿鹭",
+   "latin": "Butorides virescens",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "fish",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 4,
+   "nest": "platform",
+   "egg_limit": 3,
+   "wingspan": 66,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Trade 1 [wild] for any other type from the supply.",
+    "text_zh": "弃 1 个食物，从供应区换 1 个其他类型的食物",
+    "ops": [
+     {
+      "op": "trade_food"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b093",
+   "file": "cards/svg/hermitthrush.svg",
+   "name_en": "Hermit Thrush",
+   "name_zh": "隐士夜鸫",
+   "latin": "Catharus guttatus",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "fruit",
+     "amount": 2
+    }
+   ],
+   "points": 7,
+   "nest": "wild",
+   "egg_limit": 2,
+   "wingspan": 30,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Player(s) with the fewest birds in their [forest] gain 1 [die] from birdfeeder.",
+    "text_zh": "森林中鸟最少的每位玩家（可并列）各从喂食器取 1 颗骰子",
+    "ops": [
+     {
+      "op": "fewest_habitat_food",
+      "habitat": "forest"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b094",
+   "file": "cards/svg/hoodedmerganser.svg",
+   "name_en": "Hooded Merganser",
+   "name_zh": "棕胁秋沙鸭",
+   "latin": "Lophodytes cucullatus",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "fish",
+     "amount": 1
+    }
+   ],
+   "points": 5,
+   "nest": "cavity",
+   "egg_limit": 4,
+   "wingspan": 61,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Repeat 1 [predator] power in this habitat.",
+    "text_zh": "重复同一栖息地另一只鸟的棕色能力（限捕食者能力）",
+    "ops": [
+     {
+      "op": "repeat_brown",
+      "predator_only": true
+     }
+    ]
+   }
+  },
+  {
+   "id": "b095",
+   "file": "cards/svg/hoodedwarbler.svg",
+   "name_en": "Hooded Warbler",
+   "name_zh": "巾冠林莺",
+   "latin": "Setophaga citrina",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 2
+    }
+   ],
+   "points": 7,
+   "nest": "bowl",
+   "egg_limit": 3,
+   "wingspan": 18,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": null
+  },
+  {
+   "id": "b096",
+   "file": "cards/svg/hornedlark.svg",
+   "name_en": "Horned Lark",
+   "name_zh": "角百灵",
+   "latin": "Eremophila alpestris",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "seed",
+     "amount": 1
+    }
+   ],
+   "points": 5,
+   "nest": "ground",
+   "egg_limit": 4,
+   "wingspan": 30,
+   "beak": "front",
+   "predator": false,
+   "flocking": true,
+   "power": {
+    "color": "pink",
+    "text": "When another player plays a bird in their [grassland], tuck 1 [card] from your hand behind this bird.",
+    "text_zh": "当其他玩家在草原打出鸟时，你可以：从手牌塞 1 张卡到这只鸟下",
+    "ops": [
+     {
+      "op": "pink",
+      "trigger": "bird_played",
+      "habitat": "grassland",
+      "effect": [
+       {
+        "op": "tuck_hand",
+        "n": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b097",
+   "file": "cards/svg/housefinch.svg",
+   "name_en": "House Finch",
+   "name_zh": "家朱雀",
+   "latin": "Haemorhous mexicanus",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "seed",
+     "amount": 1
+    },
+    {
+     "type": "fruit",
+     "amount": 1
+    }
+   ],
+   "points": 3,
+   "nest": "bowl",
+   "egg_limit": 6,
+   "wingspan": 25,
+   "beak": "left",
+   "predator": false,
+   "flocking": true,
+   "power": {
+    "color": "brown",
+    "text": "Tuck 1 [card] from your hand behind this bird. If you do, draw 1 [card].",
+    "text_zh": "从手牌塞 1 张卡到这只鸟下，若如此做：抽 1 张鸟卡（托盘或牌库自选）",
+    "ops": [
+     {
+      "op": "tuck_hand",
+      "n": 1,
+      "if_do": [
+       {
+        "op": "draw",
+        "n": 1,
+        "from": "any"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b098",
+   "file": "cards/svg/housewren.svg",
+   "name_en": "House Wren",
+   "name_zh": "家鹪鹩",
+   "latin": "Troglodytes aedon",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    }
+   ],
+   "points": 1,
+   "nest": "cavity",
+   "egg_limit": 5,
+   "wingspan": 15,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Play an additional bird in this bird's habitat. Pay its normal cost.",
+    "text_zh": "在你的本鸟所在栖息地再打出一只鸟，支付其正常费用（不耗行动）",
+    "ops": [
+     {
+      "op": "play_another_bird",
+      "this_habitat": true
+     }
+    ]
+   }
+  },
+  {
+   "id": "b099",
+   "file": "cards/svg/incadove.svg",
+   "name_en": "Inca Dove",
+   "name_zh": "印加鸠",
+   "latin": "Columbina inca",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "seed",
+     "amount": 2
+    }
+   ],
+   "points": 2,
+   "nest": "platform",
+   "egg_limit": 4,
+   "wingspan": 28,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Lay 1 [egg] on each of your birds with a [platform] nest.",
+    "text_zh": "在每只平台巢（或星巢）的鸟上各产 1 蛋",
+    "ops": [
+     {
+      "op": "lay_eggs_each",
+      "nest": "platform"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b100",
+   "file": "cards/svg/indigobunting.svg",
+   "name_en": "Indigo Bunting",
+   "name_zh": "靛蓝彩鹀",
+   "latin": "Passerina cyanea",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "seed",
+     "amount": 1
+    },
+    {
+     "type": "fruit",
+     "amount": 1
+    }
+   ],
+   "points": 5,
+   "nest": "bowl",
+   "egg_limit": 3,
+   "wingspan": 20,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Gain 1 [invertebrate] or [fruit] from the birdfeeder, if available.",
+    "text_zh": "从喂食器获得 1 无脊椎 或 水果（若有）",
+    "ops": [
+     {
+      "op": "gain_food",
+      "from": "feeder",
+      "food": "invertebrate",
+      "n": 1,
+      "choices": [
+       "invertebrate",
+       "fruit"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b101",
+   "file": "cards/svg/junipertitmouse.svg",
+   "name_en": "Juniper Titmouse",
+   "name_zh": "杜福山雀",
+   "latin": "Baeolophus ridgwayi",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "seed",
+     "amount": 1
+    }
+   ],
+   "points": 4,
+   "nest": "cavity",
+   "egg_limit": 3,
+   "wingspan": 23,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Cache 1 [seed] from the supply on this bird.",
+    "text_zh": "在这只鸟上储存 种子×1",
+    "ops": [
+     {
+      "op": "cache_food",
+      "food": "seed",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b102",
+   "file": "cards/svg/killdeer.svg",
+   "name_en": "Killdeer",
+   "name_zh": "双领鸻",
+   "latin": "Charadrius vociferus",
+   "swift_start": false,
+   "habitats": [
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "seed",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 1,
+   "nest": "ground",
+   "egg_limit": 3,
+   "wingspan": 46,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Discard 1 [egg] to draw 2 [card].",
+    "text_zh": "弃 1 蛋，从牌库抽 2 张鸟卡",
+    "ops": [
+     {
+      "op": "discard_egg_draw",
+      "draw": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": "b103",
+   "file": "cards/svg/kingrail.svg",
+   "name_en": "King Rail",
+   "name_zh": "王秧鸡",
+   "latin": "Rallus elegans",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "fish",
+     "amount": 1
+    },
+    {
+     "type": "wild",
+     "amount": 1
+    }
+   ],
+   "points": 4,
+   "nest": "platform",
+   "egg_limit": 6,
+   "wingspan": 51,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Draw 2 new bonus cards and keep 1.",
+    "text_zh": "抽 2 张新的奖励卡，保留其中 1 张",
+    "ops": [
+     {
+      "op": "draw_bonus",
+      "draw": 2,
+      "keep": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b104",
+   "file": "cards/svg/lazulibunting.svg",
+   "name_en": "Lazuli Bunting",
+   "name_zh": "琉璃彩鹀",
+   "latin": "Passerina amoena",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "seed",
+     "amount": 1
+    },
+    {
+     "type": "fruit",
+     "amount": 1
+    }
+   ],
+   "points": 4,
+   "nest": "bowl",
+   "egg_limit": 4,
+   "wingspan": 23,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "All players lay 1 [egg] on any 1 [bowl] bird. You may lay 1 [egg] on 1 additional [bowl] bird.",
+    "text_zh": "所有玩家各在 1 只碗巢（或星巢）的鸟上产 1 蛋，你可额外在另一只上产 1 蛋",
+    "ops": [
+     {
+      "op": "all_lay_eggs",
+      "nest": "bowl"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b105",
+   "file": "cards/svg/lincolnssparrow.svg",
+   "name_en": "Lincoln's Sparrow",
+   "name_zh": "林肯带鹀",
+   "latin": "Melospiza lincolnii",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "seed",
+     "amount": 1
+    }
+   ],
+   "points": 3,
+   "nest": "ground",
+   "egg_limit": 2,
+   "wingspan": 20,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "If this bird is to the right of all other birds in its habitat, move it to another habitat.",
+    "text_zh": "若这只鸟是其栖息地最右侧的鸟，将它迁徙到另一个栖息地",
+    "ops": [
+     {
+      "op": "move_if_rightmost"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b106",
+   "file": "cards/svg/loggerheadshrike.svg",
+   "name_en": "Loggerhead Shrike",
+   "name_zh": "呆头伯劳",
+   "latin": "Lanius ludovicianus",
+   "swift_start": false,
+   "habitats": [
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "rodent",
+     "amount": 1
+    }
+   ],
+   "points": 3,
+   "nest": "bowl",
+   "egg_limit": 4,
+   "wingspan": 30,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "pink",
+    "text": "When another player takes the \"gain food\" action, if they gain any number of [rodent], cache 1 [rodent] from the supply on this bird.",
+    "text_zh": "当其他玩家「获取食物」行动中获得啮齿时，你可以：在这只鸟上储存 啮齿×1",
+    "ops": [
+     {
+      "op": "pink",
+      "trigger": "gain_food_action",
+      "food": "rodent",
+      "effect": [
+       {
+        "op": "cache_food",
+        "food": "rodent",
+        "n": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b107",
+   "file": "cards/svg/mallard.svg",
+   "name_en": "Mallard",
+   "name_zh": "绿头鸭",
+   "latin": "Anas platyrhynchos",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "seed",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 0,
+   "nest": "ground",
+   "egg_limit": 4,
+   "wingspan": 89,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Draw 1 [card].",
+    "text_zh": "抽 1 张鸟卡",
+    "ops": [
+     {
+      "op": "draw",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b108",
+   "file": "cards/svg/mississippikite.svg",
+   "name_en": "Mississippi Kite",
+   "name_zh": "密西西比鸢",
+   "latin": "Ictinia mississippiensis",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "rodent",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 4,
+   "nest": "platform",
+   "egg_limit": 1,
+   "wingspan": 79,
+   "beak": "left",
+   "predator": true,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Roll all dice not in birdfeeder. If any are [rodent], cache 1 [rodent] from the supply on this bird.",
+    "text_zh": "重掷喂食器外的所有骰子，若有啮齿，在这只鸟上储存 1 个啮齿",
+    "ops": [
+     {
+      "op": "predator",
+      "face": "rodent"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b109",
+   "file": "cards/svg/mountainbluebird.svg",
+   "name_en": "Mountain Bluebird",
+   "name_zh": "山蓝鸲",
+   "latin": "Sialia currucoides",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "fruit",
+     "amount": 1
+    }
+   ],
+   "points": 4,
+   "nest": "cavity",
+   "egg_limit": 5,
+   "wingspan": 36,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Play an additional bird in your [grassland]. Pay its normal cost.",
+    "text_zh": "在你的草原再打出一只鸟，支付其正常费用（不耗行动）",
+    "ops": [
+     {
+      "op": "play_another_bird",
+      "habitat": "grassland"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b110",
+   "file": "cards/svg/mountainchickadee.svg",
+   "name_en": "Mountain Chickadee",
+   "name_zh": "高山山雀",
+   "latin": "Poecile gambeli",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "seed",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 2,
+   "nest": "cavity",
+   "egg_limit": 3,
+   "wingspan": 23,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Cache 1 [seed] from the supply on this bird.",
+    "text_zh": "在这只鸟上储存 种子×1",
+    "ops": [
+     {
+      "op": "cache_food",
+      "food": "seed",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b111",
+   "file": "cards/svg/mourningdove.svg",
+   "name_en": "Mourning Dove",
+   "name_zh": "哀鸽",
+   "latin": "Zenaida macroura",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "seed",
+     "amount": 1
+    }
+   ],
+   "points": 0,
+   "nest": "platform",
+   "egg_limit": 5,
+   "wingspan": 46,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Lay 1 [egg] on this bird.",
+    "text_zh": "在这只鸟上产 1 蛋",
+    "ops": [
+     {
+      "op": "lay_eggs",
+      "n": 1,
+      "on": "this"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b112",
+   "file": "cards/svg/northernbobwhite.svg",
+   "name_en": "Northern Bobwhite",
+   "name_zh": "山齿鹑",
+   "latin": "Colinus virginianus",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "seed",
+     "amount": 3
+    }
+   ],
+   "points": 5,
+   "nest": "ground",
+   "egg_limit": 6,
+   "wingspan": 33,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Lay 1 [egg] on this bird.",
+    "text_zh": "在这只鸟上产 1 蛋",
+    "ops": [
+     {
+      "op": "lay_eggs",
+      "n": 1,
+      "on": "this"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b113",
+   "file": "cards/svg/northerncardinal.svg",
+   "name_en": "Northern Cardinal",
+   "name_zh": "北美红雀",
+   "latin": "Cardinalis cardinalis",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "seed",
+     "amount": 1
+    },
+    {
+     "type": "fruit",
+     "amount": 1
+    }
+   ],
+   "points": 3,
+   "nest": "bowl",
+   "egg_limit": 5,
+   "wingspan": 30,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Gain 1 [fruit] from the supply.",
+    "text_zh": "从供应区获得 水果×1",
+    "ops": [
+     {
+      "op": "gain_food",
+      "from": "supply",
+      "food": "fruit",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b114",
+   "file": "cards/svg/northernflicker.svg",
+   "name_en": "Northern Flicker",
+   "name_zh": "北扑翅䴕",
+   "latin": "Colaptes auratus",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "seed",
+       "amount": 1
+      },
+      {
+       "type": "fruit",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 2,
+   "nest": "cavity",
+   "egg_limit": 4,
+   "wingspan": 51,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Gain all [invertebrate] that are in the birdfeeder.",
+    "text_zh": "获得喂食器中所有无脊椎",
+    "ops": [
+     {
+      "op": "gain_all_dice",
+      "face": "invertebrate"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b115",
+   "file": "cards/svg/northernharrier.svg",
+   "name_en": "Northern Harrier",
+   "name_zh": "白尾鹞",
+   "latin": "Circus hudsonius",
+   "swift_start": false,
+   "habitats": [
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "rodent",
+     "amount": 1
+    }
+   ],
+   "points": 3,
+   "nest": "platform",
+   "egg_limit": 2,
+   "wingspan": 109,
+   "beak": "right",
+   "predator": true,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Look at a [card] from the deck. If less than 75cm, tuck it behind this bird. If not, discard it.",
+    "text_zh": "查看牌库顶 1 张卡：翼展小于 75cm 则塞到这只鸟下，否则弃置",
+    "ops": [
+     {
+      "op": "look_tuck",
+      "max_ws": 75
+     }
+    ]
+   }
+  },
+  {
+   "id": "b116",
+   "file": "cards/svg/northernmockingbird.svg",
+   "name_en": "Northern Mockingbird",
+   "name_zh": "北方嘲鸫",
+   "latin": "Mimus polyglottos",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "fruit",
+     "amount": 1
+    }
+   ],
+   "points": 2,
+   "nest": "bowl",
+   "egg_limit": 4,
+   "wingspan": 36,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Repeat a brown power on another bird in this habitat.",
+    "text_zh": "重复同一栖息地另一只鸟的棕色能力",
+    "ops": [
+     {
+      "op": "repeat_brown"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b117",
+   "file": "cards/svg/northernshoveler.svg",
+   "name_en": "Northern Shoveler",
+   "name_zh": "琵嘴鸭",
+   "latin": "Spatula clypeata",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "seed",
+     "amount": 2
+    }
+   ],
+   "points": 7,
+   "nest": "ground",
+   "egg_limit": 4,
+   "wingspan": 76,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "All players draw 1 [card] from the deck.",
+    "text_zh": "所有玩家各从牌库抽 1 张卡",
+    "ops": [
+     {
+      "op": "all_draw",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b118",
+   "file": "cards/svg/osprey.svg",
+   "name_en": "Osprey",
+   "name_zh": "鹗",
+   "latin": "Pandion haliaetus",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "fish",
+     "amount": 1
+    }
+   ],
+   "points": 5,
+   "nest": "platform",
+   "egg_limit": 2,
+   "wingspan": 160,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "All players gain 1 [fish] from the supply.",
+    "text_zh": "所有玩家各从供应区获得 鱼×1",
+    "ops": [
+     {
+      "op": "all_gain",
+      "food": "fish",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b119",
+   "file": "cards/svg/paintedbunting.svg",
+   "name_en": "Painted Bunting",
+   "name_zh": "彩鹀",
+   "latin": "Passerina ciris",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "seed",
+     "amount": 2
+    }
+   ],
+   "points": 5,
+   "nest": "bowl",
+   "egg_limit": 4,
+   "wingspan": 23,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Draw 2 new bonus cards and keep 1.",
+    "text_zh": "抽 2 张新的奖励卡，保留其中 1 张",
+    "ops": [
+     {
+      "op": "draw_bonus",
+      "draw": 2,
+      "keep": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b120",
+   "file": "cards/svg/paintedwhitestart.svg",
+   "name_en": "Painted Whitestart",
+   "name_zh": "彩尾鸲",
+   "latin": "Myioborus pictus",
+   "swift_start": true,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    }
+   ],
+   "points": 1,
+   "nest": "ground",
+   "egg_limit": 3,
+   "wingspan": 22,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Gain 1 [invertebrate] from the supply.",
+    "text_zh": "从供应区获得 无脊椎×1",
+    "ops": [
+     {
+      "op": "gain_food",
+      "from": "supply",
+      "food": "invertebrate",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b121",
+   "file": "cards/svg/peregrinefalcon.svg",
+   "name_en": "Peregrine Falcon",
+   "name_zh": "游隼",
+   "latin": "Falco peregrinus",
+   "swift_start": false,
+   "habitats": [
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "rodent",
+     "amount": 2
+    }
+   ],
+   "points": 5,
+   "nest": "platform",
+   "egg_limit": 2,
+   "wingspan": 104,
+   "beak": "left",
+   "predator": true,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Look at a [card] from the deck. If less than 100cm, tuck it behind this bird. If not, discard it.",
+    "text_zh": "查看牌库顶 1 张卡：翼展小于 100cm 则塞到这只鸟下，否则弃置",
+    "ops": [
+     {
+      "op": "look_tuck",
+      "max_ws": 100
+     }
+    ]
+   }
+  },
+  {
+   "id": "b122",
+   "file": "cards/svg/piedbilledgrebe.svg",
+   "name_en": "Pied-Billed Grebe",
+   "name_zh": "斑嘴巨䴙䴘",
+   "latin": "Podilymbus podiceps",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "fish",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 0,
+   "nest": "platform",
+   "egg_limit": 4,
+   "wingspan": 41,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Draw 2 [card]. If you do, discard 1 [card] from your hand at the end of your turn.",
+    "text_zh": "抽 1 张鸟卡，回合结束时应弃 1 张手牌",
+    "ops": [
+     {
+      "op": "draw_then_eot_discard",
+      "draw": 1,
+      "discard": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b123",
+   "file": "cards/svg/pileatedwoodpecker.svg",
+   "name_en": "Pileated Woodpecker",
+   "name_zh": "北美黑啄木鸟",
+   "latin": "Dryocopus pileatus",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "fruit",
+     "amount": 1
+    }
+   ],
+   "points": 4,
+   "nest": "cavity",
+   "egg_limit": 2,
+   "wingspan": 74,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "All players lay 1 [egg] on any 1 [cavity] bird. You may lay 1 [egg] on 1 additional [cavity] bird.",
+    "text_zh": "所有玩家各在 1 只洞巢（或星巢）的鸟上产 1 蛋，你可额外在另一只上产 1 蛋",
+    "ops": [
+     {
+      "op": "all_lay_eggs",
+      "nest": "cavity"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b124",
+   "file": "cards/svg/pinesiskin.svg",
+   "name_en": "Pine Siskin",
+   "name_zh": "松金翅雀",
+   "latin": "Spinus pinus",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "seed",
+     "amount": 2
+    }
+   ],
+   "points": 3,
+   "nest": "bowl",
+   "egg_limit": 2,
+   "wingspan": 23,
+   "beak": "right",
+   "predator": false,
+   "flocking": true,
+   "power": {
+    "color": "brown",
+    "text": "Tuck 1 [card] from your hand behind this bird. If you do, gain 1 [seed] from the supply.",
+    "text_zh": "从手牌塞 1 张卡到这只鸟下，若如此做：从供应区获得 种子×1",
+    "ops": [
+     {
+      "op": "tuck_hand",
+      "n": 1,
+      "if_do": [
+       {
+        "op": "gain_food",
+        "from": "supply",
+        "food": "seed",
+        "n": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b125",
+   "file": "cards/svg/prothonotarywarbler.svg",
+   "name_en": "Prothonotary Warbler",
+   "name_zh": "蓝翅黄森莺",
+   "latin": "Protonotaria citrea",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 2
+    },
+    {
+     "type": "seed",
+     "amount": 1
+    }
+   ],
+   "points": 8,
+   "nest": "cavity",
+   "egg_limit": 4,
+   "wingspan": 23,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": null
+  },
+  {
+   "id": "b126",
+   "file": "cards/svg/purplegallinule.svg",
+   "name_en": "Purple Gallinule",
+   "name_zh": "紫青水鸡",
+   "latin": "Porphyrio martinicus",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "seed",
+     "amount": 1
+    },
+    {
+     "type": "fruit",
+     "amount": 1
+    },
+    {
+     "type": "wild",
+     "amount": 1
+    }
+   ],
+   "points": 7,
+   "nest": "platform",
+   "egg_limit": 4,
+   "wingspan": 56,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "All players draw 1 [card] from the deck.",
+    "text_zh": "所有玩家各从牌库抽 1 张卡",
+    "ops": [
+     {
+      "op": "all_draw",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b127",
+   "file": "cards/svg/purplemartin.svg",
+   "name_en": "Purple Martin",
+   "name_zh": "紫崖燕",
+   "latin": "Progne subis",
+   "swift_start": false,
+   "habitats": [
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    }
+   ],
+   "points": 2,
+   "nest": "cavity",
+   "egg_limit": 3,
+   "wingspan": 46,
+   "beak": "right",
+   "predator": false,
+   "flocking": true,
+   "power": {
+    "color": "brown",
+    "text": "Tuck 1 [card] from your hand behind this bird. If you do, draw 1 [card].",
+    "text_zh": "从手牌塞 1 张卡到这只鸟下，若如此做：抽 1 张鸟卡（托盘或牌库自选）",
+    "ops": [
+     {
+      "op": "tuck_hand",
+      "n": 1,
+      "if_do": [
+       {
+        "op": "draw",
+        "n": 1,
+        "from": "any"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b128",
+   "file": "cards/svg/pygmynuthatch.svg",
+   "name_en": "Pygmy Nuthatch",
+   "name_zh": "侏儒䴓",
+   "latin": "Sitta pygmaea",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "seed",
+     "amount": 1
+    }
+   ],
+   "points": 2,
+   "nest": "cavity",
+   "egg_limit": 4,
+   "wingspan": 20,
+   "beak": "right",
+   "predator": false,
+   "flocking": true,
+   "power": {
+    "color": "brown",
+    "text": "Tuck 1 [card] from your hand behind this bird. If you do, gain 1 [invertebrate] or [seed] from the supply.",
+    "text_zh": "从手牌塞 1 张卡到这只鸟下，若如此做：从供应区获得 无脊椎 或 种子",
+    "ops": [
+     {
+      "op": "tuck_hand",
+      "n": 1,
+      "if_do": [
+       {
+        "op": "gain_food",
+        "from": "supply",
+        "food": "invertebrate",
+        "n": 1,
+        "choices": [
+         "invertebrate",
+         "seed"
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b129",
+   "file": "cards/svg/redcrossbill.svg",
+   "name_en": "Red Crossbill",
+   "name_zh": "红交嘴雀",
+   "latin": "Loxia curvirostra",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "seed",
+     "amount": 2
+    }
+   ],
+   "points": 6,
+   "nest": "bowl",
+   "egg_limit": 2,
+   "wingspan": 28,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "All players gain 1 [seed] from the supply.",
+    "text_zh": "所有玩家各从供应区获得 种子×1",
+    "ops": [
+     {
+      "op": "all_gain",
+      "food": "seed",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b130",
+   "file": "cards/svg/redbelliedwoodpecker.svg",
+   "name_en": "Red-Bellied Woodpecker",
+   "name_zh": "红腹啄木鸟",
+   "latin": "Melanerpes carolinus",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "seed",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 1,
+   "nest": "cavity",
+   "egg_limit": 3,
+   "wingspan": 41,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Gain 1 [seed] from the birdfeeder, if available. You may cache it on this bird.",
+    "text_zh": "从喂食器获得 1 种子（若有），可改为储存到这只鸟上",
+    "ops": [
+     {
+      "op": "gain_food",
+      "from": "feeder",
+      "food": "seed",
+      "n": 1,
+      "optional_cache": true
+     }
+    ]
+   }
+  },
+  {
+   "id": "b131",
+   "file": "cards/svg/redbreastedmerganser.svg",
+   "name_en": "Red-Breasted Merganser",
+   "name_zh": "红胸秋沙鸭",
+   "latin": "Mergus serrator",
+   "swift_start": true,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "fish",
+     "amount": 1
+    }
+   ],
+   "points": 3,
+   "nest": "ground",
+   "egg_limit": 4,
+   "wingspan": 78,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Draw 2 [card]. If you do, discard 1 [card] from your hand at the end of your turn.",
+    "text_zh": "抽 1 张鸟卡，回合结束时应弃 1 张手牌",
+    "ops": [
+     {
+      "op": "draw_then_eot_discard",
+      "draw": 1,
+      "discard": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b132",
+   "file": "cards/svg/redbreastednuthatch.svg",
+   "name_en": "Red-Breasted Nuthatch",
+   "name_zh": "红胸䴓",
+   "latin": "Sitta canadensis",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "seed",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 2,
+   "nest": "cavity",
+   "egg_limit": 3,
+   "wingspan": 23,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Cache 1 [seed] from the supply on this bird.",
+    "text_zh": "在这只鸟上储存 种子×1",
+    "ops": [
+     {
+      "op": "cache_food",
+      "food": "seed",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b133",
+   "file": "cards/svg/redcockadedwoodpecker.svg",
+   "name_en": "Red-Cockaded Woodpecker",
+   "name_zh": "红冠啄木鸟",
+   "latin": "Picoides borealis",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "fruit",
+     "amount": 1
+    }
+   ],
+   "points": 4,
+   "nest": "cavity",
+   "egg_limit": 2,
+   "wingspan": 36,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Draw 2 new bonus cards and keep 1.",
+    "text_zh": "在你的森林再打出一只鸟，支付其正常费用（不耗行动）",
+    "ops": [
+     {
+      "op": "play_another_bird",
+      "habitat": "forest"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b134",
+   "file": "cards/svg/redeyedvireo.svg",
+   "name_en": "Red-Eyed Vireo",
+   "name_zh": "红眼绿鹃",
+   "latin": "Vireo olivaceus",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "fruit",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 3,
+   "nest": "wild",
+   "egg_limit": 2,
+   "wingspan": 25,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Play an additional bird in your [forest]. Pay its normal cost.",
+    "text_zh": "在你的森林再打出一只鸟，支付其正常费用（不耗行动）",
+    "ops": [
+     {
+      "op": "play_another_bird",
+      "habitat": "forest"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b135",
+   "file": "cards/svg/redheadedwoodpecker.svg",
+   "name_en": "Red-Headed Woodpecker",
+   "name_zh": "红头啄木鸟",
+   "latin": "Melanerpes erythrocephalus",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "seed",
+     "amount": 1
+    },
+    {
+     "type": "wild",
+     "amount": 1
+    }
+   ],
+   "points": 4,
+   "nest": "cavity",
+   "egg_limit": 3,
+   "wingspan": 43,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Gain 1 [seed] from the birdfeeder, if available. You may cache it on this bird.",
+    "text_zh": "从喂食器获得 1 种子（若有），可改为储存到这只鸟上",
+    "ops": [
+     {
+      "op": "gain_food",
+      "from": "feeder",
+      "food": "seed",
+      "n": 1,
+      "optional_cache": true
+     }
+    ]
+   }
+  },
+  {
+   "id": "b136",
+   "file": "cards/svg/redshoulderedhawk.svg",
+   "name_en": "Red-Shouldered Hawk",
+   "name_zh": "红肩鵟",
+   "latin": "Buteo lineatus",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "rodent",
+     "amount": 1
+    }
+   ],
+   "points": 3,
+   "nest": "platform",
+   "egg_limit": 2,
+   "wingspan": 102,
+   "beak": "right",
+   "predator": true,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Look at a [card] from the deck. If less than 75cm, tuck it behind this bird. If not, discard it.",
+    "text_zh": "查看牌库顶 1 张卡：翼展小于 75cm 则塞到这只鸟下，否则弃置",
+    "ops": [
+     {
+      "op": "look_tuck",
+      "max_ws": 75
+     }
+    ]
+   }
+  },
+  {
+   "id": "b137",
+   "file": "cards/svg/redtailedhawk.svg",
+   "name_en": "Red-Tailed Hawk",
+   "name_zh": "红尾鵟",
+   "latin": "Buteo jamaicensis",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "rodent",
+     "amount": 2
+    }
+   ],
+   "points": 5,
+   "nest": "platform",
+   "egg_limit": 2,
+   "wingspan": 124,
+   "beak": "right",
+   "predator": true,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Look at a [card] from the deck. If less than 75cm, tuck it behind this bird. If not, discard it.",
+    "text_zh": "查看牌库顶 1 张卡：翼展小于 75cm 则塞到这只鸟下，否则弃置",
+    "ops": [
+     {
+      "op": "look_tuck",
+      "max_ws": 75
+     }
+    ]
+   }
+  },
+  {
+   "id": "b138",
+   "file": "cards/svg/redwingedblackbird.svg",
+   "name_en": "Red-Winged Blackbird",
+   "name_zh": "红翅黑鹂",
+   "latin": "Agelaius phoeniceus",
+   "swift_start": false,
+   "habitats": [
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "seed",
+     "amount": 1
+    }
+   ],
+   "points": 2,
+   "nest": "bowl",
+   "egg_limit": 3,
+   "wingspan": 33,
+   "beak": "left",
+   "predator": false,
+   "flocking": true,
+   "power": {
+    "color": "brown",
+    "text": "Tuck 1 [card] from your hand behind this bird. If you do, you may also lay 1 [egg] on this bird.",
+    "text_zh": "从手牌塞 1 张卡到这只鸟下，若如此做：在这只鸟上产 1 蛋",
+    "ops": [
+     {
+      "op": "tuck_hand",
+      "n": 1,
+      "if_do": [
+       {
+        "op": "lay_eggs",
+        "n": 1,
+        "on": "this",
+        "optional": true
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b139",
+   "file": "cards/svg/ringbilledgull.svg",
+   "name_en": "Ring-Billed Gull",
+   "name_zh": "环嘴鸥",
+   "latin": "Larus delawarensis",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "wild",
+     "amount": 2
+    }
+   ],
+   "points": 4,
+   "nest": "ground",
+   "egg_limit": 2,
+   "wingspan": 122,
+   "beak": "right",
+   "predator": false,
+   "flocking": true,
+   "power": {
+    "color": "brown",
+    "text": "Tuck 1 [card] from your hand behind this bird. If you do, draw 1 [card].",
+    "text_zh": "从手牌塞 1 张卡到这只鸟下，若如此做：抽 1 张鸟卡（托盘或牌库自选）",
+    "ops": [
+     {
+      "op": "tuck_hand",
+      "n": 1,
+      "if_do": [
+       {
+        "op": "draw",
+        "n": 1,
+        "from": "any"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b140",
+   "file": "cards/svg/rosebreastedgrosbeak.svg",
+   "name_en": "Rose-Breasted Grosbeak",
+   "name_zh": "玫胸白斑翅雀",
+   "latin": "Pheucticus ludovicianus",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "seed",
+     "amount": 1
+    },
+    {
+     "type": "fruit",
+     "amount": 1
+    }
+   ],
+   "points": 6,
+   "nest": "bowl",
+   "egg_limit": 3,
+   "wingspan": 33,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Gain 1 [seed] or [fruit] from the birdfeeder, if available.",
+    "text_zh": "从喂食器获得 1 种子 或 水果（若有）",
+    "ops": [
+     {
+      "op": "gain_food",
+      "from": "feeder",
+      "food": "seed",
+      "n": 1,
+      "choices": [
+       "seed",
+       "fruit"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b141",
+   "file": "cards/svg/roseatespoonbill.svg",
+   "name_en": "Roseate Spoonbill",
+   "name_zh": "玫瑰琵鹭",
+   "latin": "Platalea ajaja",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "seed",
+     "amount": 1
+    },
+    {
+     "type": "fish",
+     "amount": 1
+    }
+   ],
+   "points": 6,
+   "nest": "platform",
+   "egg_limit": 2,
+   "wingspan": 127,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Draw 2 new bonus cards and keep 1.",
+    "text_zh": "抽 2 张新的奖励卡，保留其中 1 张",
+    "ops": [
+     {
+      "op": "draw_bonus",
+      "draw": 2,
+      "keep": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b142",
+   "file": "cards/svg/rubycrownedkinglet.svg",
+   "name_en": "Ruby-Crowned Kinglet",
+   "name_zh": "红玉冠戴菊",
+   "latin": "Regulus calendula",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "seed",
+       "amount": 1
+      },
+      {
+       "type": "fruit",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 2,
+   "nest": "bowl",
+   "egg_limit": 3,
+   "wingspan": 20,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Play an additional bird in your [forest]. Pay its normal cost.",
+    "text_zh": "在你的森林再打出一只鸟，支付其正常费用（不耗行动）",
+    "ops": [
+     {
+      "op": "play_another_bird",
+      "habitat": "forest"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b143",
+   "file": "cards/svg/rubythroatedhummingbird.svg",
+   "name_en": "Ruby-Throated Hummingbird",
+   "name_zh": "红喉北蜂鸟",
+   "latin": "Archilochus colubris",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "wild",
+     "amount": 1
+    }
+   ],
+   "points": 4,
+   "nest": "bowl",
+   "egg_limit": 2,
+   "wingspan": 10,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Each player gains 1 [die] from the birdfeeder, starting with the player of your choice.",
+    "text_zh": "每位玩家（含你）依次从喂食器取 1 颗骰子，由你选择起始玩家",
+    "ops": [
+     {
+      "op": "each_take_die"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b144",
+   "file": "cards/RuddyDuck.jpg",
+   "name_en": "Ruddy Duck",
+   "name_zh": "棕硬尾鸭",
+   "latin": "Oxyura jamaicensis",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "seed",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 0,
+   "nest": "platform",
+   "egg_limit": 5,
+   "wingspan": 48,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Draw 2 [card]. If you do, discard 1 [card] from your hand at the end of your turn.",
+    "text_zh": "抽 2 张鸟卡，回合结束时应弃 1 张手牌",
+    "ops": [
+     {
+      "op": "draw_then_eot_discard",
+      "draw": 2,
+      "discard": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b145",
+   "file": "cards/svg/sandhillcrane.svg",
+   "name_en": "Sandhill Crane",
+   "name_zh": "沙丘鹤",
+   "latin": "Antigone canadensis",
+   "swift_start": false,
+   "habitats": [
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "seed",
+     "amount": 2
+    },
+    {
+     "type": "wild",
+     "amount": 1
+    }
+   ],
+   "points": 5,
+   "nest": "ground",
+   "egg_limit": 1,
+   "wingspan": 196,
+   "beak": "left",
+   "predator": false,
+   "flocking": true,
+   "power": {
+    "color": "brown",
+    "text": "Discard 1 [seed] to tuck 2 [card] from the deck behind this bird.",
+    "text_zh": "弃 种子×1，从牌库顶塞 2 张卡到这只鸟下",
+    "ops": [
+     {
+      "op": "tuck_deck_cost",
+      "cost": {
+       "food": "seed",
+       "n": 1
+      },
+      "tuck": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": "b146",
+   "file": "cards/svg/savannahsparrow.svg",
+   "name_en": "Savannah Sparrow",
+   "name_zh": "稀树草鹀",
+   "latin": "Passerculus sandwichensis",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "seed",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 2,
+   "nest": "ground",
+   "egg_limit": 3,
+   "wingspan": 18,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Play an additional bird in your [grassland]. Pay its normal cost.",
+    "text_zh": "在你的草原再打出一只鸟，支付其正常费用（不耗行动）",
+    "ops": [
+     {
+      "op": "play_another_bird",
+      "habitat": "grassland"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b147",
+   "file": "cards/svg/saysphoebe.svg",
+   "name_en": "Say's Phoebe",
+   "name_zh": "塞伊菲比霸鹟",
+   "latin": "Sayornis saya",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 3
+    }
+   ],
+   "points": 5,
+   "nest": "bowl",
+   "egg_limit": 3,
+   "wingspan": 33,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Lay 1 [egg] on each of your birds with a [bowl] nest.",
+    "text_zh": "在每只碗巢（或星巢）的鸟上各产 1 蛋",
+    "ops": [
+     {
+      "op": "lay_eggs_each",
+      "nest": "bowl"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b148",
+   "file": "cards/svg/scaledquail.svg",
+   "name_en": "Scaled Quail",
+   "name_zh": "鳞斑翎鹑",
+   "latin": "Callipepla squamata",
+   "swift_start": true,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "seed",
+     "amount": 1
+    }
+   ],
+   "points": 0,
+   "nest": "ground",
+   "egg_limit": 6,
+   "wingspan": 36,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Lay 1 [egg] on this bird.",
+    "text_zh": "在这只鸟上产 1 蛋",
+    "ops": [
+     {
+      "op": "lay_eggs",
+      "n": 1,
+      "on": "this"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b149",
+   "file": "cards/svg/scissortailedflycatcher.svg",
+   "name_en": "Scissor-Tailed Flycatcher",
+   "name_zh": "剪尾王霸鹟",
+   "latin": "Tyrannus forficatus",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 2
+    },
+    {
+     "type": "fruit",
+     "amount": 1
+    }
+   ],
+   "points": 8,
+   "nest": "bowl",
+   "egg_limit": 2,
+   "wingspan": 38,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "All players gain 1 [invertebrate] from the supply.",
+    "text_zh": "所有玩家各从供应区获得 无脊椎×1",
+    "ops": [
+     {
+      "op": "all_gain",
+      "food": "invertebrate",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b150",
+   "file": "cards/svg/snowyegret.svg",
+   "name_en": "Snowy Egret",
+   "name_zh": "雪鹭",
+   "latin": "Egretta thula",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "fish",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 4,
+   "nest": "platform",
+   "egg_limit": 2,
+   "wingspan": 104,
+   "beak": "left",
+   "predator": true,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Roll all dice not in birdfeeder. If any are [fish], cache 1 [fish] from the supply on this bird.",
+    "text_zh": "重掷喂食器外的所有骰子，若有鱼，在这只鸟上储存 1 个鱼",
+    "ops": [
+     {
+      "op": "predator",
+      "face": "fish"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b151",
+   "file": "cards/svg/songsparrow.svg",
+   "name_en": "Song Sparrow",
+   "name_zh": "歌带鹀",
+   "latin": "Melospiza melodia",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "seed",
+       "amount": 1
+      },
+      {
+       "type": "fruit",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 0,
+   "nest": "bowl",
+   "egg_limit": 5,
+   "wingspan": 20,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "If this bird is to the right of all other birds in its habitat, move it to another habitat.",
+    "text_zh": "若这只鸟是其栖息地最右侧的鸟，将它迁徙到另一个栖息地",
+    "ops": [
+     {
+      "op": "move_if_rightmost"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b152",
+   "file": "cards/svg/spottedowl.svg",
+   "name_en": "Spotted Owl",
+   "name_zh": "斑林鸮",
+   "latin": "Strix occidentalis",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "rodent",
+     "amount": 2
+    }
+   ],
+   "points": 5,
+   "nest": "cavity",
+   "egg_limit": 1,
+   "wingspan": 102,
+   "beak": "front",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Draw 2 new bonus cards and keep 1.",
+    "text_zh": "抽 2 张新的奖励卡，保留其中 1 张",
+    "ops": [
+     {
+      "op": "draw_bonus",
+      "draw": 2,
+      "keep": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b153",
+   "file": "cards/svg/spottedsandpiper.svg",
+   "name_en": "Spotted Sandpiper",
+   "name_zh": "斑矶鹬",
+   "latin": "Actitis macularius",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    }
+   ],
+   "points": 5,
+   "nest": "ground",
+   "egg_limit": 2,
+   "wingspan": 38,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "All players draw 1 [card] from the deck.",
+    "text_zh": "所有玩家各从牌库抽 1 张卡",
+    "ops": [
+     {
+      "op": "all_draw",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b154",
+   "file": "cards/svg/spottedtowhee.svg",
+   "name_en": "Spotted Towhee",
+   "name_zh": "斑唧鹀",
+   "latin": "Pipilo maculatus",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "seed",
+       "amount": 1
+      },
+      {
+       "type": "fruit",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 0,
+   "nest": "ground",
+   "egg_limit": 4,
+   "wingspan": 28,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Gain 1 [seed] from the supply.",
+    "text_zh": "从供应区获得 种子×1",
+    "ops": [
+     {
+      "op": "gain_food",
+      "from": "supply",
+      "food": "seed",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b155",
+   "file": "cards/svg/spraguespipit.svg",
+   "name_en": "Sprague's Pipit",
+   "name_zh": "斯氏鹨",
+   "latin": "Anthus spragueii",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "seed",
+     "amount": 1
+    }
+   ],
+   "points": 3,
+   "nest": "ground",
+   "egg_limit": 3,
+   "wingspan": 25,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Draw 2 new bonus cards and keep 1.",
+    "text_zh": "抽 2 张新的奖励卡，保留其中 1 张",
+    "ops": [
+     {
+      "op": "draw_bonus",
+      "draw": 2,
+      "keep": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b156",
+   "file": "cards/svg/stellersjay.svg",
+   "name_en": "Steller's Jay",
+   "name_zh": "暗冠蓝鸦",
+   "latin": "Cyanocitta stelleri",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "seed",
+     "amount": 2
+    },
+    {
+     "type": "wild",
+     "amount": 1
+    }
+   ],
+   "points": 5,
+   "nest": "bowl",
+   "egg_limit": 2,
+   "wingspan": 48,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Gain 1 [seed] from the birdfeeder, if available. You may cache it on this bird.",
+    "text_zh": "从喂食器获得 1 种子（若有），可改为储存到这只鸟上",
+    "ops": [
+     {
+      "op": "gain_food",
+      "from": "feeder",
+      "food": "seed",
+      "n": 1,
+      "optional_cache": true
+     }
+    ]
+   }
+  },
+  {
+   "id": "b157",
+   "file": "cards/svg/swainsonshawk.svg",
+   "name_en": "Swainson's Hawk",
+   "name_zh": "斯氏鵟",
+   "latin": "Buteo swainsoni",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "rodent",
+     "amount": 1
+    }
+   ],
+   "points": 5,
+   "nest": "platform",
+   "egg_limit": 2,
+   "wingspan": 130,
+   "beak": "right",
+   "predator": true,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Look at a [card] from the deck. If less than 75cm, tuck it behind this bird. If not, discard it.",
+    "text_zh": "查看牌库顶 1 张卡：翼展小于 75cm 则塞到这只鸟下，否则弃置",
+    "ops": [
+     {
+      "op": "look_tuck",
+      "max_ws": 75
+     }
+    ]
+   }
+  },
+  {
+   "id": "b158",
+   "file": "cards/svg/treeswallow.svg",
+   "name_en": "Tree Swallow",
+   "name_zh": "树燕",
+   "latin": "Tachycineta bicolor",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "fruit",
+     "amount": 1
+    }
+   ],
+   "points": 3,
+   "nest": "cavity",
+   "egg_limit": 4,
+   "wingspan": 38,
+   "beak": "left",
+   "predator": false,
+   "flocking": true,
+   "power": {
+    "color": "brown",
+    "text": "Tuck 1 [card] from your hand behind this bird. If you do, draw 1 [card].",
+    "text_zh": "从手牌塞 1 张卡到这只鸟下，若如此做：抽 1 张鸟卡（托盘或牌库自选）",
+    "ops": [
+     {
+      "op": "tuck_hand",
+      "n": 1,
+      "if_do": [
+       {
+        "op": "draw",
+        "n": 1,
+        "from": "any"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b159",
+   "file": "cards/svg/trumpeterswan.svg",
+   "name_en": "Trumpeter Swan",
+   "name_zh": "黑嘴天鹅",
+   "latin": "Cygnus buccinator",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "seed",
+     "amount": 2
+    },
+    {
+     "type": "wild",
+     "amount": 1
+    }
+   ],
+   "points": 9,
+   "nest": "ground",
+   "egg_limit": 2,
+   "wingspan": 203,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": null
+  },
+  {
+   "id": "b160",
+   "file": "cards/svg/tuftedtitmouse.svg",
+   "name_en": "Tufted Titmouse",
+   "name_zh": "簇山雀",
+   "latin": "Baeolophus bicolor",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "seed",
+       "amount": 1
+      },
+      {
+       "type": "fruit",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 2,
+   "nest": "cavity",
+   "egg_limit": 3,
+   "wingspan": 25,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Play an additional bird in your [forest]. Pay its normal cost.",
+    "text_zh": "在你的森林再打出一只鸟，支付其正常费用（不耗行动）",
+    "ops": [
+     {
+      "op": "play_another_bird",
+      "habitat": "forest"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b161",
+   "file": "cards/svg/turkeyvulture.svg",
+   "name_en": "Turkey Vulture",
+   "name_zh": "红头美洲鹫",
+   "latin": "Cathartes aura",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "none"
+    }
+   ],
+   "points": 1,
+   "nest": "cavity",
+   "egg_limit": 1,
+   "wingspan": 170,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "pink",
+    "text": "When another player's [predator] succeeds, gain 1 [die] from the birdfeeder.",
+    "text_zh": "当其他玩家的捕食者捕猎成功时，你可以：从喂食器取 1 颗骰子（自选面）",
+    "ops": [
+     {
+      "op": "pink",
+      "trigger": "predator_success",
+      "effect": [
+       {
+        "op": "take_die"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b162",
+   "file": "cards/svg/vauxsswift.svg",
+   "name_en": "Vaux's Swift",
+   "name_zh": "沃氏雨燕",
+   "latin": "Chaetura vauxi",
+   "swift_start": true,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    }
+   ],
+   "points": 2,
+   "nest": "cavity",
+   "egg_limit": 3,
+   "wingspan": 31,
+   "beak": "right",
+   "predator": false,
+   "flocking": true,
+   "power": {
+    "color": "brown",
+    "text": "Tuck 1 [card] from your hand behind this bird. If you do, gain 1 [invertebrate] from the supply.",
+    "text_zh": "从手牌塞 1 张卡到这只鸟下，若如此做：从供应区获得 无脊椎×1",
+    "ops": [
+     {
+      "op": "tuck_hand",
+      "n": 1,
+      "if_do": [
+       {
+        "op": "gain_food",
+        "from": "supply",
+        "food": "invertebrate",
+        "n": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b163",
+   "file": "cards/svg/violetgreenswallow.svg",
+   "name_en": "Violet-Green Swallow",
+   "name_zh": "紫绿树燕",
+   "latin": "Tachycineta thalassina",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 2
+    }
+   ],
+   "points": 3,
+   "nest": "cavity",
+   "egg_limit": 3,
+   "wingspan": 36,
+   "beak": "right",
+   "predator": false,
+   "flocking": true,
+   "power": {
+    "color": "brown",
+    "text": "Tuck 1 [card] from your hand behind this bird. If you do, draw 1 [card].",
+    "text_zh": "从手牌塞 1 张卡到这只鸟下，若如此做：抽 1 张鸟卡（托盘或牌库自选）",
+    "ops": [
+     {
+      "op": "tuck_hand",
+      "n": 1,
+      "if_do": [
+       {
+        "op": "draw",
+        "n": 1,
+        "from": "any"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b164",
+   "file": "cards/svg/westernmeadowlark.svg",
+   "name_en": "Western Meadowlark",
+   "name_zh": "西美草地鹨",
+   "latin": "Sturnella neglecta",
+   "swift_start": false,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "seed",
+     "amount": 1
+    }
+   ],
+   "points": 2,
+   "nest": "ground",
+   "egg_limit": 4,
+   "wingspan": 38,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "All players lay 1 [egg] on any 1 [ground] bird. You may lay 1 [egg] on 1 additional [ground] bird.",
+    "text_zh": "所有玩家各在 1 只地巢（或星巢）的鸟上产 1 蛋，你可额外在另一只上产 1 蛋",
+    "ops": [
+     {
+      "op": "all_lay_eggs",
+      "nest": "ground"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b165",
+   "file": "cards/svg/westerntanager.svg",
+   "name_en": "Western Tanager",
+   "name_zh": "西部唐纳雀",
+   "latin": "Piranga ludoviciana",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 2
+    },
+    {
+     "type": "fruit",
+     "amount": 1
+    }
+   ],
+   "points": 6,
+   "nest": "bowl",
+   "egg_limit": 2,
+   "wingspan": 30,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Gain 1 [invertebrate] or [fruit] from the birdfeeder, if available.",
+    "text_zh": "从喂食器获得 1 无脊椎 或 水果（若有）",
+    "ops": [
+     {
+      "op": "gain_food",
+      "from": "feeder",
+      "food": "invertebrate",
+      "n": 1,
+      "choices": [
+       "invertebrate",
+       "fruit"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b166",
+   "file": "cards/svg/whitebreastednuthatch.svg",
+   "name_en": "White-Breasted Nuthatch",
+   "name_zh": "白胸䴓",
+   "latin": "Sitta carolinensis",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "seed",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 2,
+   "nest": "cavity",
+   "egg_limit": 3,
+   "wingspan": 28,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Cache 1 [seed] from the supply on this bird.",
+    "text_zh": "在这只鸟上储存 种子×1",
+    "ops": [
+     {
+      "op": "cache_food",
+      "food": "seed",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b167",
+   "file": "cards/svg/whitecrownedsparrow.svg",
+   "name_en": "White-Crowned Sparrow",
+   "name_zh": "白冠带鹀",
+   "latin": "Zonotrichia leucophrys",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "seed",
+     "amount": 1
+    }
+   ],
+   "points": 2,
+   "nest": "ground",
+   "egg_limit": 5,
+   "wingspan": 25,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "If this bird is to the right of all other birds in its habitat, move it to another habitat.",
+    "text_zh": "若这只鸟是其栖息地最右侧的鸟，将它迁徙到另一个栖息地",
+    "ops": [
+     {
+      "op": "move_if_rightmost"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b168",
+   "file": "cards/svg/whitefacedibis.svg",
+   "name_en": "White-Faced Ibis",
+   "name_zh": "白脸鹮",
+   "latin": "Plegadis chihi",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 2
+    },
+    {
+     "type": "fish",
+     "amount": 1
+    }
+   ],
+   "points": 8,
+   "nest": "platform",
+   "egg_limit": 2,
+   "wingspan": 91,
+   "beak": "left",
+   "predator": true,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Roll all dice not in birdfeeder. If any are [fish], cache 1 [fish] from the supply on this bird.",
+    "text_zh": "重掷喂食器外的所有骰子，若有鱼，在这只鸟上储存 1 个鱼",
+    "ops": [
+     {
+      "op": "predator",
+      "face": "fish"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b169",
+   "file": "cards/svg/whitethroatedswift.svg",
+   "name_en": "White-Throated Swift",
+   "name_zh": "白喉雨燕",
+   "latin": "Aeronautes saxatalis",
+   "swift_start": true,
+   "habitats": [
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    }
+   ],
+   "points": 2,
+   "nest": "cavity",
+   "egg_limit": 2,
+   "wingspan": 38,
+   "beak": "left",
+   "predator": false,
+   "flocking": true,
+   "power": {
+    "color": "brown",
+    "text": "Tuck 1 [card] from your hand behind this bird. If you do, lay 1 [egg] on any bird.",
+    "text_zh": "从手牌塞 1 张卡到这只鸟下，若如此做：在任意一只鸟上产 1 蛋",
+    "ops": [
+     {
+      "op": "tuck_hand",
+      "n": 1,
+      "if_do": [
+       {
+        "op": "lay_eggs",
+        "n": 1,
+        "on": "any"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b170",
+   "file": "cards/svg/whoopingcrane.svg",
+   "name_en": "Whooping Crane",
+   "name_zh": "美洲鹤",
+   "latin": "Grus americana",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "wild",
+     "amount": 3
+    }
+   ],
+   "points": 6,
+   "nest": "ground",
+   "egg_limit": 1,
+   "wingspan": 221,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Draw 2 new bonus cards and keep 1.",
+    "text_zh": "抽 2 张新的奖励卡，保留其中 1 张",
+    "ops": [
+     {
+      "op": "draw_bonus",
+      "draw": 2,
+      "keep": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b171",
+   "file": "cards/svg/wildturkey.svg",
+   "name_en": "Wild Turkey",
+   "name_zh": "野火鸡",
+   "latin": "Meleagris gallopavo",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland"
+   ],
+   "food_cost": [
+    {
+     "type": "seed",
+     "amount": 2
+    },
+    {
+     "type": "fruit",
+     "amount": 1
+    }
+   ],
+   "points": 8,
+   "nest": "ground",
+   "egg_limit": 5,
+   "wingspan": 135,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": null
+  },
+  {
+   "id": "b172",
+   "file": "cards/svg/willet.svg",
+   "name_en": "Willet",
+   "name_zh": "斑翅鹬",
+   "latin": "Tringa semipalmata",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "fish",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 4,
+   "nest": "ground",
+   "egg_limit": 2,
+   "wingspan": 66,
+   "beak": "right",
+   "predator": true,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Roll all dice not in birdfeeder. If any are [fish], cache 1 [fish] from the supply on this bird.",
+    "text_zh": "重掷喂食器外的所有骰子，若有鱼，在这只鸟上储存 1 个鱼",
+    "ops": [
+     {
+      "op": "predator",
+      "face": "fish"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b173",
+   "file": "cards/svg/wilsonssnipe.svg",
+   "name_en": "Wilson's Snipe",
+   "name_zh": "威氏沙锥",
+   "latin": "Gallinago delicata",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    }
+   ],
+   "points": 5,
+   "nest": "ground",
+   "egg_limit": 2,
+   "wingspan": 41,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "All players draw 1 [card] from the deck.",
+    "text_zh": "所有玩家各从牌库抽 1 张卡",
+    "ops": [
+     {
+      "op": "all_draw",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b174",
+   "file": "cards/svg/woodduck.svg",
+   "name_en": "Wood Duck",
+   "name_zh": "林鸳鸯",
+   "latin": "Aix sponsa",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "seed",
+     "amount": 2
+    },
+    {
+     "type": "fruit",
+     "amount": 1
+    }
+   ],
+   "points": 4,
+   "nest": "cavity",
+   "egg_limit": 4,
+   "wingspan": 76,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Draw 2 [card]. If you do, discard 1 [card] from your hand at the end of your turn.",
+    "text_zh": "抽 1 张鸟卡，回合结束时应弃 1 张手牌",
+    "ops": [
+     {
+      "op": "draw_then_eot_discard",
+      "draw": 1,
+      "discard": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b175",
+   "file": "cards/svg/woodstork.svg",
+   "name_en": "Wood Stork",
+   "name_zh": "林鹳",
+   "latin": "Mycteria americana",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "fish",
+     "amount": 1
+    },
+    {
+     "type": "rodent",
+     "amount": 1
+    },
+    {
+     "type": "wild",
+     "amount": 1
+    }
+   ],
+   "points": 6,
+   "nest": "platform",
+   "egg_limit": 2,
+   "wingspan": 155,
+   "beak": "left",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "white",
+    "text": "Draw 2 new bonus cards and keep 1.",
+    "text_zh": "抽 2 张新的奖励卡，保留其中 1 张",
+    "ops": [
+     {
+      "op": "draw_bonus",
+      "draw": 2,
+      "keep": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b176",
+   "file": "cards/svg/yellowbelliedsapsucker.svg",
+   "name_en": "Yellow-Bellied Sapsucker",
+   "name_zh": "黄腹吸汁啄木鸟",
+   "latin": "Sphyrapicus varius",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "fruit",
+     "amount": 1
+    }
+   ],
+   "points": 3,
+   "nest": "cavity",
+   "egg_limit": 3,
+   "wingspan": 41,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "Gain 1 [invertebrate] from the supply.",
+    "text_zh": "从供应区获得 无脊椎×1",
+    "ops": [
+     {
+      "op": "gain_food",
+      "from": "supply",
+      "food": "invertebrate",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "b177",
+   "file": "cards/svg/yellowbilledcuckoo.svg",
+   "name_en": "Yellow-Billed Cuckoo",
+   "name_zh": "黄嘴杜鹃",
+   "latin": "Coccyzus americanus",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 2
+    },
+    {
+     "type": "wild",
+     "amount": 1
+    }
+   ],
+   "points": 5,
+   "nest": "platform",
+   "egg_limit": 2,
+   "wingspan": 46,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "pink",
+    "text": "When another player takes the \"lay eggs\" action, lay 1 [egg] on a bird with a [bowl] nest.",
+    "text_zh": "当其他玩家执行「产蛋」行动时，你可以：在一只碗巢（或星巢）的鸟上产 1 蛋",
+    "ops": [
+     {
+      "op": "pink",
+      "trigger": "lay_eggs_action",
+      "effect": [
+       {
+        "op": "lay_eggs",
+        "n": 1,
+        "on": {
+         "nest": "bowl"
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b178",
+   "file": "cards/svg/yellowbreastedchat.svg",
+   "name_en": "Yellow-Breasted Chat",
+   "name_zh": "黄胸巨莺",
+   "latin": "Icteria virens",
+   "swift_start": false,
+   "habitats": [
+    "forest",
+    "grassland",
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "fruit",
+     "amount": 2
+    }
+   ],
+   "points": 5,
+   "nest": "bowl",
+   "egg_limit": 3,
+   "wingspan": 25,
+   "beak": "right",
+   "predator": false,
+   "flocking": false,
+   "power": {
+    "color": "brown",
+    "text": "If this bird is to the right of all other birds in its habitat, move it to another habitat.",
+    "text_zh": "若这只鸟是其栖息地最右侧的鸟，将它迁徙到另一个栖息地",
+    "ops": [
+     {
+      "op": "move_if_rightmost"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b179",
+   "file": "cards/svg/yellowheadedblackbird.svg",
+   "name_en": "Yellow-Headed Blackbird",
+   "name_zh": "黄头黑鹂",
+   "latin": "Xanthocephalus xanthocephalus",
+   "swift_start": false,
+   "habitats": [
+    "wetland"
+   ],
+   "food_cost": [
+    {
+     "type": "invertebrate",
+     "amount": 1
+    },
+    {
+     "type": "seed",
+     "amount": 1
+    }
+   ],
+   "points": 4,
+   "nest": "bowl",
+   "egg_limit": 3,
+   "wingspan": 38,
+   "beak": "right",
+   "predator": false,
+   "flocking": true,
+   "power": {
+    "color": "brown",
+    "text": "Tuck 1 [card] from your hand behind this bird. If you do, you may also lay 1 [egg] on this bird.",
+    "text_zh": "从手牌塞 1 张卡到这只鸟下，若如此做：在这只鸟上产 1 蛋",
+    "ops": [
+     {
+      "op": "tuck_hand",
+      "n": 1,
+      "if_do": [
+       {
+        "op": "lay_eggs",
+        "n": 1,
+        "on": "this",
+        "optional": true
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b180",
+   "file": "cards/svg/yellowrumpedwarbler.svg",
+   "name_en": "Yellow-Rumped Warbler",
+   "name_zh": "黄腰林莺",
+   "latin": "Setophaga coronata",
+   "swift_start": false,
+   "habitats": [
+    "forest"
+   ],
+   "food_cost": [
+    {
+     "any_of": [
+      {
+       "type": "invertebrate",
+       "amount": 1
+      },
+      {
+       "type": "seed",
+       "amount": 1
+      },
+      {
+       "type": "fruit",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "points": 1,
+   "nest": "bowl",
+   "egg_limit": 4,
+   "wingspan": 23,
+   "beak": "right",
+   "predator": false,
+   "flocking": true,
+   "power": {
+    "color": "brown",
+    "text": "Tuck 1 [card] from your hand behind this bird. If you do, draw 1 [card].",
+    "text_zh": "从手牌塞 1 张卡到这只鸟下，若如此做：抽 1 张鸟卡（托盘或牌库自选）",
+    "ops": [
+     {
+      "op": "tuck_hand",
+      "n": 1,
+      "if_do": [
+       {
+        "op": "draw",
+        "n": 1,
+        "from": "any"
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "bonus": [
+  {
+   "id": "bonus_anatomist",
+   "name_en": "Anatomist",
+   "name_zh": "解剖学家",
+   "detail_zh": "名字含身体部位的鸟：2–3 只 3 分，4+ 只 7 分",
+   "vp_text": "2 to 3 birds: 3分; 4+ birds: 7分",
+   "file": "cards/Anatomist.jpg"
+  },
+  {
+   "id": "bonus_backyardbirder",
+   "name_en": "Backyard Birder",
+   "name_zh": "后院观鸟者",
+   "detail_zh": "分数低于 4 的鸟：5–6 只 3 分，7+ 只 6 分",
+   "vp_text": "5 to 6 birds: 3分; 6+ birds: 6分",
+   "file": "cards/BackyardBirder.jpg"
+  },
+  {
+   "id": "bonus_birdcounter",
+   "name_en": "Bird Counter",
+   "name_zh": "数鸟人",
+   "detail_zh": "每只带群栖标记的鸟 2 分",
+   "vp_text": "2分 per bird",
+   "file": "cards/BirdCounter.jpg"
+  },
+  {
+   "id": "bonus_birdfeeder",
+   "name_en": "Bird Feeder",
+   "name_zh": "喂鸟者",
+   "detail_zh": "食物成本含种子的鸟：5–7 只 3 分，8+ 只 7 分",
+   "vp_text": "5 to 7 birds: 3分; 8+ birds: 7分",
+   "file": "cards/BirdFeeder.jpg"
+  },
+  {
+   "id": "bonus_breedingmanager",
+   "name_en": "Breeding Manager",
+   "name_zh": "繁育主管",
+   "detail_zh": "每只上面有至少 4 颗蛋的鸟 1 分",
+   "vp_text": "1分 per bird",
+   "file": "cards/BreedingManager.jpg"
+  },
+  {
+   "id": "bonus_cartographer",
+   "name_en": "Cartographer",
+   "name_zh": "制图师",
+   "detail_zh": "名字含地理词的鸟：2–3 只 3 分，4+ 只 7 分",
+   "vp_text": "2 to 3 birds: 3分; 4+ birds: 7分",
+   "file": "cards/Cartographer.jpg"
+  },
+  {
+   "id": "bonus_ecologist",
+   "name_en": "Ecologist",
+   "name_zh": "生态学家",
+   "detail_zh": "鸟最少的栖息地中每只鸟 2 分",
+   "vp_text": "2分 per bird",
+   "file": "cards/Ecologist.jpg"
+  },
+  {
+   "id": "bonus_enclosurebuilder",
+   "name_en": "Enclosure Builder",
+   "name_zh": "地巢建造师",
+   "detail_zh": "地巢（或星巢）鸟：4–5 只 4 分，6+ 只 7 分",
+   "vp_text": "4 to 5 birds: 4分; 6+ birds: 7分",
+   "file": "cards/svg/bonus_enclosurebuilder.svg"
+  },
+  {
+   "id": "bonus_falconer",
+   "name_en": "Falconer",
+   "name_zh": "驯鹰人",
+   "detail_zh": "每只带捕食者标记的鸟 2 分",
+   "vp_text": "2分 per bird",
+   "file": "cards/svg/bonus_falconer.svg"
+  },
+  {
+   "id": "bonus_fisherymanager",
+   "name_en": "Fishery Manager",
+   "name_zh": "渔场主管",
+   "detail_zh": "食物成本含鱼的鸟：2–3 只 3 分，4+ 只 8 分",
+   "vp_text": "2 to 3 birds: 3分; 4+ birds: 8分",
+   "file": "cards/svg/bonus_fisherymanager.svg"
+  },
+  {
+   "id": "bonus_foodwebexpert",
+   "name_en": "Food Web Expert",
+   "name_zh": "食物网专家",
+   "detail_zh": "食物成本仅含无脊椎的鸟，每只 2 分",
+   "vp_text": "2分 per bird",
+   "file": "cards/svg/bonus_foodwebexpert.svg"
+  },
+  {
+   "id": "bonus_forester",
+   "name_en": "Forester",
+   "name_zh": "林务官",
+   "detail_zh": "仅能在森林打出的鸟：3–4 只 4 分，5 只 5 分",
+   "vp_text": "3 to 4 birds: 4分; 5 birds: 5分",
+   "file": "cards/svg/bonus_forester.svg"
+  },
+  {
+   "id": "bonus_historian",
+   "name_en": "Historian",
+   "name_zh": "历史学家",
+   "detail_zh": "以人名命名的鸟，每只 2 分",
+   "vp_text": "2分 per bird",
+   "file": "cards/svg/bonus_historian.svg"
+  },
+  {
+   "id": "bonus_largebirdspecialist",
+   "name_en": "Large Bird Specialist",
+   "name_zh": "大型鸟专家",
+   "detail_zh": "翼展大于 65cm 的鸟：4–5 只 3 分，6+ 只 6 分",
+   "vp_text": "4 to 5 birds: 3分; 6+ birds: 6分",
+   "file": "cards/svg/bonus_largebirdspecialist.svg"
+  },
+  {
+   "id": "bonus_nestboxbuilder",
+   "name_en": "Nest Box Builder",
+   "name_zh": "巢箱建造师",
+   "detail_zh": "洞巢（或星巢）鸟：4–5 只 4 分，6+ 只 7 分",
+   "vp_text": "4 to 5 birds: 4分; 6+ birds: 7分",
+   "file": "cards/svg/bonus_nestboxbuilder.svg"
+  },
+  {
+   "id": "bonus_omnivorespecialist",
+   "name_en": "Omnivore Specialist",
+   "name_zh": "杂食专家",
+   "detail_zh": "食物成本含任意食物的鸟，每只 2 分",
+   "vp_text": "2分 per bird",
+   "file": "cards/svg/bonus_omnivorespecialist.svg"
+  },
+  {
+   "id": "bonus_oologist",
+   "name_en": "Oologist",
+   "name_zh": "鸟卵学家",
+   "detail_zh": "你巢中的蛋：7–8 颗 3 分，9+ 颗 6 分",
+   "vp_text": "7 to 8 birds: 3分; 9+ birds: 6分",
+   "file": "cards/svg/bonus_oologist.svg"
+  },
+  {
+   "id": "bonus_passerinespecialist",
+   "name_en": "Passerine Specialist",
+   "name_zh": "雀形目专家",
+   "detail_zh": "翼展不超过 30cm 的鸟：4–5 只 3 分，6+ 只 6 分",
+   "vp_text": "4 to 5 birds: 3分; 6+ birds: 6分",
+   "file": "cards/svg/bonus_passerinespecialist.svg"
+  },
+  {
+   "id": "bonus_photographer",
+   "name_en": "Photographer",
+   "name_zh": "摄影师",
+   "detail_zh": "名字含颜色词的鸟：4–5 只 3 分，6+ 只 7 分",
+   "vp_text": "4 to 5 birds: 3分; 6+ birds: 7分",
+   "file": "cards/svg/bonus_photographer.svg"
+  },
+  {
+   "id": "bonus_platformbuilder",
+   "name_en": "Platform Builder",
+   "name_zh": "平台巢建造师",
+   "detail_zh": "平台巢（或星巢）鸟：4–5 只 4 分，6+ 只 7 分",
+   "vp_text": "4 to 5 birds: 4分; 6+ birds: 7分",
+   "file": "cards/svg/bonus_platformbuilder.svg"
+  },
+  {
+   "id": "bonus_prairiemanager",
+   "name_en": "Prairie Manager",
+   "name_zh": "草原主管",
+   "detail_zh": "仅能在草原打出的鸟：2–3 只 3 分，4+ 只 8 分",
+   "vp_text": "2 to 3 birds: 3分; 4+ birds: 8分",
+   "file": "cards/svg/bonus_prairiemanager.svg"
+  },
+  {
+   "id": "bonus_rodentologist",
+   "name_en": "Rodentologist",
+   "name_zh": "啮齿学家",
+   "detail_zh": "食物成本含啮齿的鸟，每只 2 分",
+   "vp_text": "2分 per bird",
+   "file": "cards/svg/bonus_rodentologist.svg"
+  },
+  {
+   "id": "bonus_visionaryleader",
+   "name_en": "Visionary Leader",
+   "name_zh": "远见领袖",
+   "detail_zh": "你手中的鸟卡：5–7 张 4 分，8+ 张 7 分",
+   "vp_text": "5 to 7 birds: 4分; 8+ birds: 7分",
+   "file": "cards/svg/bonus_visionaryleader.svg"
+  },
+  {
+   "id": "bonus_viticulturalist",
+   "name_en": "Viticulturalist",
+   "name_zh": "葡萄栽培家",
+   "detail_zh": "食物成本含水果的鸟：2–3 只 3 分，4+ 只 7 分",
+   "vp_text": "2 to 3 birds: 3分; 4+ birds: 7分",
+   "file": "cards/svg/bonus_viticulturalist.svg"
+  },
+  {
+   "id": "bonus_wetlandscientist",
+   "name_en": "Wetland Scientist",
+   "name_zh": "湿地科学家",
+   "detail_zh": "仅能在湿地打出的鸟：3–4 只 3 分，5 只 7 分",
+   "vp_text": "3 to 4 birds: 3分; 5 birds: 7分",
+   "file": "cards/svg/bonus_wetlandscientist.svg"
+  },
+  {
+   "id": "bonus_wildlifegardener",
+   "name_en": "Wildlife Gardener",
+   "name_zh": "野生动物园丁",
+   "detail_zh": "碗巢（或星巢）鸟：4–5 只 4 分，6+ 只 7 分",
+   "vp_text": "4 to 5 birds: 4分; 6+ birds: 7分",
+   "file": "cards/svg/bonus_wildlifegardener.svg"
+  }
+ ],
+ "goals": [
+  {
+   "id": "goal_egg_sets",
+   "file": "goals/goal_1.jpg",
+   "name_zh": "三栖息地蛋套数",
+   "tip_zh": "每套 = 森林1蛋+草原1蛋+湿地1蛋，取最小值"
+  },
+  {
+   "id": "goal_egg_forest",
+   "file": "goals/goal_2.jpg",
+   "name_zh": "森林中的蛋总数",
+   "tip_zh": "森林行所有鸟上的蛋"
+  },
+  {
+   "id": "goal_egg_wetland",
+   "file": "goals/goal_3.jpg",
+   "name_zh": "湿地中的蛋总数",
+   "tip_zh": "湿地行所有鸟上的蛋"
+  },
+  {
+   "id": "goal_egg_grassland",
+   "file": "goals/goal_4.jpg",
+   "name_zh": "草原中的蛋总数",
+   "tip_zh": "草原行所有鸟上的蛋"
+  },
+  {
+   "id": "goal_egg_ground",
+   "file": "goals/goal_5.jpg",
+   "name_zh": "地巢中的蛋总数",
+   "tip_zh": "所有地巢鸟上的蛋（星巢可匹配）"
+  },
+  {
+   "id": "goal_egg_bowl",
+   "file": "goals/goal_6.jpg",
+   "name_zh": "碗巢中的蛋总数",
+   "tip_zh": "所有碗巢鸟上的蛋（星巢可匹配）"
+  },
+  {
+   "id": "goal_egg_platform",
+   "file": "goals/goal_7.jpg",
+   "name_zh": "平台巢中的蛋",
+   "tip_zh": "所有平台巢鸟上的蛋（星巢可匹配）"
+  },
+  {
+   "id": "goal_egg_cavity",
+   "file": "goals/goal_8.jpg",
+   "name_zh": "洞巢中的蛋总数",
+   "tip_zh": "所有洞巢鸟上的蛋（星巢可匹配）"
+  },
+  {
+   "id": "goal_total_birds",
+   "file": "goals/goal_9.jpg",
+   "name_zh": "已打出的总鸟数",
+   "tip_zh": "三个栖息地全部鸟"
+  },
+  {
+   "id": "goal_bird_forest",
+   "file": "goals/goal_10.jpg",
+   "name_zh": "森林中的鸟数",
+   "tip_zh": "森林行的鸟"
+  },
+  {
+   "id": "goal_bird_wetland",
+   "file": "goals/goal_11.jpg",
+   "name_zh": "湿地中的鸟数",
+   "tip_zh": "湿地行的鸟"
+  },
+  {
+   "id": "goal_bird_grassland",
+   "file": "goals/goal_12.jpg",
+   "name_zh": "草原中的鸟数",
+   "tip_zh": "草原行的鸟"
+  },
+  {
+   "id": "goal_bird_egg_ground",
+   "file": "goals/goal_13.jpg",
+   "name_zh": "有蛋的地巢鸟数",
+   "tip_zh": "至少 1 蛋的地巢鸟（星巢可匹配）"
+  },
+  {
+   "id": "goal_bird_egg_bowl",
+   "file": "goals/goal_14.jpg",
+   "name_zh": "有蛋的碗巢鸟数",
+   "tip_zh": "至少 1 蛋的碗巢鸟（星巢可匹配）"
+  },
+  {
+   "id": "goal_bird_egg_platform",
+   "file": "goals/goal_15.jpg",
+   "name_zh": "有蛋的平台巢鸟数",
+   "tip_zh": "至少 1 蛋的平台巢鸟（星巢可匹配）"
+  },
+  {
+   "id": "goal_bird_egg_cavity",
+   "file": "goals/goal_16.jpg",
+   "name_zh": "有蛋的洞巢鸟数",
+   "tip_zh": "至少 1 蛋的洞巢鸟（星巢可匹配）"
+  }
+ ],
+ "mat": {
+  "play_egg_cost": [
+   0,
+   1,
+   1,
+   2,
+   2
+  ],
+  "forest": [
+   {
+    "dice": 1
+   },
+   {
+    "dice": 1,
+    "exchange": "card_food"
+   },
+   {
+    "dice": 2,
+    "exchange": "card_food"
+   },
+   {
+    "dice": 2,
+    "exchange": "card_food"
+   },
+   {
+    "dice": 2,
+    "exchange": "card_food"
+   }
+  ],
+  "grassland": [
+   {
+    "eggs": 2
+   },
+   {
+    "eggs": 2,
+    "exchange": "food_egg"
+   },
+   {
+    "eggs": 2,
+    "exchange": "food_egg"
+   },
+   {
+    "eggs": 3,
+    "exchange": "food_egg"
+   },
+   {
+    "eggs": 4,
+    "exchange": "food_egg"
+   }
+  ],
+  "wetland": [
+   {
+    "cards": 1
+   },
+   {
+    "cards": 1,
+    "exchange": "egg_card"
+   },
+   {
+    "cards": 2,
+    "exchange": "egg_card"
+   },
+   {
+    "cards": 2,
+    "exchange": "egg_card"
+   },
+   {
+    "cards": 3,
+    "exchange": "egg_card"
+   }
+  ]
+ },
+ "constants": {
+  "rounds": 4,
+  "actions_per_round": [
+   8,
+   7,
+   6,
+   5
+  ],
+  "dice_count": 5,
+  "tray_size": 3,
+  "hand_start": 5,
+  "food_start": 5,
+  "bonus_choice": 2,
+  "goal_base_scores": [
+   [
+    4,
+    2,
+    1,
+    0,
+    0
+   ],
+   [
+    5,
+    3,
+    1,
+    0,
+    0
+   ],
+   [
+    6,
+    3,
+    2,
+    0,
+    0
+   ],
+   [
+    7,
+    4,
+    3,
+    0,
+    0
+   ]
+  ],
+  "goal_flock_scores": [
+   [
+    5,
+    2,
+    1,
+    0,
+    0,
+    0
+   ],
+   [
+    6,
+    3,
+    2,
+    1,
+    0,
+    0
+   ],
+   [
+    7,
+    4,
+    3,
+    2,
+    1,
+    0
+   ],
+   [
+    8,
+    5,
+    4,
+    3,
+    2,
+    0
+   ]
+  ],
+  "egg_points": 1,
+  "cached_food_points": 1,
+  "tucked_card_points": 1
+ }
+}

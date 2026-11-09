@@ -1,0 +1,15 @@
+{
+  "name": "wingspan-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "展翅翱翔（Wingspan）零依赖网页实现：单机/在线，base/flock/extended 三模式，180 张核心鸟卡",
+  "scripts": {
+    "start": "node server/server.js",
+    "build": "node tools/build_data.mjs",
+    "test": "node tests/sim.mjs && node tests/ops_direct.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

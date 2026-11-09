@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 570 870" font-family="'Microsoft YaHei','PingFang SC','Noto Sans SC',sans-serif">
+<defs><linearGradient id="pg" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#fbf5e8"/><stop offset="1" stop-color="#f4eddb"/></linearGradient></defs>
+<rect x="6" y="6" width="558" height="858" rx="20" fill="url(#pg)" stroke="#b9a98c" stroke-width="2"/>
+
+  <path d="M6,26 a20,20 0 0 1 20,-20 h518 a20,20 0 0 1 20,20 v70 h-558 Z" fill="#c99b3f"/>
+  <text x="285" y="58" font-size="26" fill="#fff" text-anchor="middle" font-weight="800">Falconer</text>
+  <circle cx="285" cy="280" r="110" fill="#efe4c9" stroke="#c9b996" stroke-width="2"/>
+  <path d="M285.0,202.0L306.2,250.9L359.2,255.9L319.2,291.1L330.8,343.1L285.0,316.0L239.2,343.1L250.8,291.1L210.8,255.9L263.8,250.9Z" fill="#c99b3f"/>
+  <text x="285" y="440" font-size="30" fill="#3a2c1a" text-anchor="middle" font-weight="700">驯鹰人</text>
+  <line x1="60" y1="470" x2="510" y2="470" stroke="#c9b996"/>
+  <text x="50" y="510.0" font-size="18" fill="#3a2c1a" text-anchor="start" font-family="inherit" font-weight="normal">每只带捕食者标记的鸟 2 分</text>
+  <text x="50" y="640.0" font-size="17" fill="#8a6a2c" text-anchor="start" font-family="inherit" font-weight="700">2分 per bird</text>
+  <text x="285" y="846" font-size="12" fill="#a8987c" text-anchor="middle">程序化卡面 · 非官方扫描</text></svg>

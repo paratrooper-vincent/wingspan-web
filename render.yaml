@@ -1,0 +1,14 @@
+# Render 一键部署蓝图（Blueprint）
+# 用法：https://dashboard.render.com/blueprints -> 新建 -> 连接本仓库 -> 自动识别本文件
+services:
+  - type: web
+    name: wingspan-web
+    runtime: node
+    plan: free
+    # 项目零第三方依赖，npm install 为空操作；game_data.json 已随仓库提交，无需 build
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "20"

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>展翅翱翔 · 在线对局</title>
+<link rel="stylesheet" href="/client/css/app.css">
+</head>
+<body data-theme="paper">
+<!-- ============ 官方风格图标库（SVG symbol） ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- 食物：无脊椎（毛毛虫） -->
+    <symbol id="i-inv" viewBox="0 0 24 24">
+      <path d="M4 15c-1.8 0-3-1.4-3-3s1.2-3 3-3c.6-2.8 3-5 6-5 3.4 0 6 2.4 6.5 5.6 2.6.2 4.5 2.2 4.5 4.9 0 2.8-2.2 5-5 5H9c-2.5 0-4.6-1.9-5-4.5z" fill="#7aa93c" stroke="#4e7318" stroke-width="1"/>
+      <circle cx="7" cy="12" r="1.5" fill="#4e7318"/><circle cx="11" cy="11" r="1.5" fill="#4e7318"/><circle cx="15" cy="11.5" r="1.5" fill="#4e7318"/>
+      <circle cx="19.5" cy="9" r="2.4" fill="#8fbc4f" stroke="#4e7318" stroke-width="1"/><circle cx="19" cy="8.4" r=".6" fill="#223"/>
+    </symbol>
+    <!-- 食物：种子（麦穗） -->
+    <symbol id="i-seed" viewBox="0 0 24 24">
+      <path d="M12 22V6" stroke="#a67c2e" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M12 6c-1.5-2-4-3-6.5-2.6C5.5 6 7.5 8.4 12 8.4zm0 2.4c-1.5-2-4-3-6.5-2.6m6.5 8.2c-1.5-2-4-3-6.5-2.6m6.5 0c-1.5-2-4-3-6.5-2.6" fill="none" stroke="#c99b3f" stroke-width="0"/>
+      <ellipse cx="8.6" cy="8.8" rx="2.6" ry="1.5" transform="rotate(-30 8.6 8.8)" fill="#e2b34e" stroke="#a67c2e" stroke-width=".8"/>
+      <ellipse cx="8.6" cy="13.4" rx="2.6" ry="1.5" transform="rotate(-30 8.6 13.4)" fill="#e2b34e" stroke="#a67c2e" stroke-width=".8"/>
+      <ellipse cx="15.4" cy="8.8" rx="2.6" ry="1.5" transform="rotate(30 15.4 8.8)" fill="#e2b34e" stroke="#a67c2e" stroke-width=".8"/>
+      <ellipse cx="15.4" cy="13.4" rx="2.6" ry="1.5" transform="rotate(30 15.4 13.4)" fill="#e2b34e" stroke="#a67c2e" stroke-width=".8"/>
+      <ellipse cx="12" cy="5" rx="1.7" ry="3" fill="#e2b34e" stroke="#a67c2e" stroke-width=".8"/>
+      <path d="M12 22c0-3 1.5-6 3-8" fill="none" stroke="#7ea03f" stroke-width="1.6" stroke-linecap="round"/>
+    </symbol>
+    <!-- 食物：鱼 -->
+    <symbol id="i-fish" viewBox="0 0 24 24">
+      <path d="M2 12c3-4.5 7.5-6.5 12-6.5 3.6 0 6.6 1.8 8 4.2l-2.5 2.3L22 14.3c-1.4 2.4-4.4 4.2-8 4.2-4.5 0-9-2-12-6.5z" fill="#5b9bd5" stroke="#2f5f94" stroke-width="1"/>
+      <path d="M14 5.8c1.8 1.8 2.6 4 2.6 6.2s-.8 4.4-2.6 6.2" fill="none" stroke="#2f5f94" stroke-width="1" stroke-dasharray="2 1.6"/>
+      <circle cx="7" cy="11" r=".9" fill="#13253a"/>
+      <path d="M20 9.5l1.8-1.6M20 14.5l1.8 1.6" stroke="#2f5f94" stroke-width="1" stroke-linecap="round"/>
+    </symbol>
+    <!-- 食物：水果（樱桃） -->
+    <symbol id="i-fruit" viewBox="0 0 24 24">
+      <path d="M12 3c-1 3-4 4-7 4.5M12 3c1 3 4 4 7 4.5M12 3v3" fill="none" stroke="#5c8a34" stroke-width="1.4" stroke-linecap="round"/>
+      <circle cx="8" cy="15" r="5.4" fill="#d5473c" stroke="#8f231c" stroke-width="1"/>
+      <circle cx="17" cy="16.5" r="4.6" fill="#e05a4e" stroke="#8f231c" stroke-width="1"/>
+      <ellipse cx="6.5" cy="13.5" rx="1.4" ry="2" transform="rotate(-25 6.5 13.5)" fill="#f2938a" opacity=".8"/>
+      <ellipse cx="15.8" cy="15.2" rx="1.1" ry="1.6" transform="rotate(-25 15.8 15.2)" fill="#f2938a" opacity=".8"/>
+    </symbol>
+    <!-- 食物：啮齿（老鼠） -->
+    <symbol id="i-rodent" viewBox="0 0 24 24">
+      <path d="M3.5 14.5c0-4 3-7 7.5-7 4 0 7 1.8 9 4.5 1 1.4 1.4 3 .8 4.2-.4.9-1.4 1.3-2.4 1.1l-2.8-.6c-1.6.9-3.6 1.3-5.6 1-2.9-.4-5-1.6-5.9-3.4-.4-.2-.6-.5-.6-.8z" fill="#9aa1a8" stroke="#5d646b" stroke-width="1"/>
+      <circle cx="8.2" cy="10.8" r="2.5" fill="#b8bfc6" stroke="#5d646b" stroke-width=".9"/>
+      <circle cx="7.4" cy="10.4" r=".5" fill="#223"/>
+      <path d="M3.5 15.5C1.8 16 .8 17.2 1.2 18.4c.3 1 1.5 1.6 3 1.4" fill="none" stroke="#9aa1a8" stroke-width="1.3" stroke-linecap="round"/>
+      <circle cx="14.5" cy="12.2" r=".7" fill="#3a4148"/>
+    </symbol>
+    <!-- 万能食物（彩虹圆盘） -->
+    <symbol id="i-wild" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9.5" fill="#fff" stroke="#6b5b3f" stroke-width="1"/>
+      <path d="M12 12V2.5A9.5 9.5 0 0 1 21.5 12z" fill="#d5473c"/>
+      <path d="M12 12h9.5A9.5 9.5 0 0 1 12 21.5z" fill="#e2b34e"/>
+      <path d="M12 12v9.5A9.5 9.5 0 0 1 2.5 12z" fill="#5b9bd5"/>
+      <path d="M12 12H2.5A9.5 9.5 0 0 1 12 2.5z" fill="#7aa93c"/>
+      <circle cx="12" cy="12" r="9.5" fill="none" stroke="#6b5b3f" stroke-width="1.4"/>
+    </symbol>
+    <!-- 无食物成本 -->
+    <symbol id="i-none" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="#9b8b74" stroke-width="1.6"/>
+      <path d="M5.6 5.6l12.8 12.8" stroke="#9b8b74" stroke-width="1.6"/>
+    </symbol>
+    <!-- 蛋 -->
+    <symbol id="i-egg" viewBox="0 0 24 24">
+      <path d="M12 2.5C15.8 2.5 19 9 19 14a7 7 0 0 1-14 0c0-5 3.2-11.5 7-11.5z" fill="#f6ead2" stroke="#b9a37c" stroke-width="1.1"/>
+      <path d="M9.5 8.5c-1 1.4-1.6 3-1.7 4.6" fill="none" stroke="#fffdf5" stroke-width="1.6" stroke-linecap="round"/>
+    </symbol>
+    <!-- 巢穴：碗巢 -->
+    <symbol id="n-bowl" viewBox="0 0 24 24">
+      <path d="M3 12h18c0 4.5-3.4 8-9 8s-9-3.5-9-8z" fill="#a97b46" stroke="#6e4a22" stroke-width="1"/>
+      <path d="M4.5 14.5h15" stroke="#6e4a22" stroke-width=".8" stroke-dasharray="2 1.5"/>
+    </symbol>
+    <!-- 巢穴：洞巢 -->
+    <symbol id="n-cavity" viewBox="0 0 24 24">
+      <rect x="6" y="3" width="12" height="18" rx="2.5" fill="#8a6236" stroke="#5a3c1c" stroke-width="1"/>
+      <ellipse cx="12" cy="13" rx="3.4" ry="4" fill="#3d2812"/>
+    </symbol>
+    <!-- 巢穴：地巢 -->
+    <symbol id="n-ground" viewBox="0 0 24 24">
+      <path d="M2 17c2-1 4-2.5 10-2.5s8 1.5 10 2.5c-2 2-6 3.5-10 3.5S4 19 2 17z" fill="#b58d55" stroke="#7a5a2a" stroke-width="1"/>
+      <ellipse cx="12" cy="15.5" rx="4" ry="1.2" fill="#7a5a2a" opacity=".4"/>
+    </symbol>
+    <!-- 巢穴：平台巢 -->
+    <symbol id="n-platform" viewBox="0 0 24 24">
+      <path d="M3 13h18M6 16.5h12M9 20h6" stroke="#7a5a2a" stroke-width="2" stroke-linecap="round"/>
+      <path d="M5 10l14 3M19 10L5 13" stroke="#a97b46" stroke-width="1.6" stroke-linecap="round"/>
+    </symbol>
+    <!-- 巢穴：星形（万能） -->
+    <symbol id="n-wild" viewBox="0 0 24 24">
+      <path d="M12 2.5l2.6 6.2 6.7.5-5.1 4.4 1.6 6.6L12 16.8l-5.8 3.4 1.6-6.6-5.1-4.4 6.7-.5z" fill="#e2b34e" stroke="#a67c2e" stroke-width="1"/>
+    </symbol>
+    <!-- 栖息地小图标 -->
+    <symbol id="h-forest" viewBox="0 0 24 24">
+      <path d="M12 2.5L5.5 12h3L4 18h16l-4.5-6h3z" fill="#3e7d4e" stroke="#265231" stroke-width="1"/>
+      <path d="M12 18v3.5" stroke="#6e4a22" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="h-grassland" viewBox="0 0 24 24">
+      <path d="M4 20c1-5 3-8 8-9-3.5 3-4 6-4 9zM9 20c.6-4 2.4-7 6.5-8.6-2.4 2.8-2.8 5.6-2.6 8.6zM14.5 20c.4-2.6 1.6-4.6 4-6-1.4 1.9-1.7 3.9-1.5 6z" fill="#b8910f" stroke="#8a6a08" stroke-width=".8"/>
+    </symbol>
+    <symbol id="h-wetland" viewBox="0 0 24 24">
+      <path d="M2.5 16c2.5 0 2.5-1.5 5-1.5s2.5 1.5 5 1.5 2.5-1.5 5-1.5 2.5 1.5 4 1.5" fill="none" stroke="#4a7fa5" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M2.5 19.5c2.5 0 2.5-1.5 5-1.5s2.5 1.5 5 1.5 2.5-1.5 5-1.5 2.5 1.5 4 1.5" fill="none" stroke="#4a7fa5" stroke-width="1.6" stroke-linecap="round" opacity=".6"/>
+      <path d="M12 4v7M12 4l-2.5 3M12 4l2.5 3" stroke="#4a7fa5" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    </symbol>
+    <!-- 行动图标 -->
+    <symbol id="a-play" viewBox="0 0 24 24">
+      <rect x="5" y="3" width="14" height="18" rx="2" fill="#fff8ec" stroke="#8a6a3a" stroke-width="1.2"/>
+      <path d="M8 8h8M8 11h8M8 14h5" stroke="#b09565" stroke-width="1.1" stroke-linecap="round"/>
+      <path d="M15.5 16.5c-2 .2-3.5 1.5-4 3 1.8-.3 3.3-1.3 4-3z" fill="#3e7d4e"/>
+    </symbol>
+    <symbol id="a-food" viewBox="0 0 24 24"><use href="#i-fruit" width="24" height="24"/></symbol>
+    <symbol id="a-eggs" viewBox="0 0 24 24">
+      <use href="#i-egg" x="0" y="3" width="14" height="14"/><use href="#i-egg" x="10" y="7" width="14" height="14"/>
+    </symbol>
+    <symbol id="a-draw" viewBox="0 0 24 24">
+      <rect x="3" y="6" width="11" height="15" rx="1.5" transform="rotate(-8 8.5 13.5)" fill="#fff8ec" stroke="#8a6a3a" stroke-width="1.1"/>
+      <rect x="10" y="4" width="11" height="15" rx="1.5" transform="rotate(8 15.5 11.5)" fill="#fdf4e0" stroke="#8a6a3a" stroke-width="1.1"/>
+    </symbol>
+    <!-- 羽毛 Logo -->
+    <symbol id="logo" viewBox="0 0 48 48">
+      <path d="M40 6C26 8 14 16 9 30c-1.6 4.4-2.2 8.6-2 12 3.4.2 7.6-.4 12-2 14-5 22-17 24-31l-3-3z" fill="#e8d9b8" stroke="#8a6a3a" stroke-width="1.6"/>
+      <path d="M38 8C26 10 16 17 11 29m27-21C27 12 19 19 14 30m24-21c-8 3-14 9-18 19" fill="none" stroke="#b09565" stroke-width="1"/>
+      <path d="M7 42C18 30 28 18 41 8" stroke="#8a6a3a" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <!-- 卡牌图标：分数（羽毛笔） -->
+    <symbol id="i-points" viewBox="0 0 24 24">
+      <path d="M20 4C12 5 7 9 5 16l-1.5 4L8 19c6-2 10-7 12-15z" fill="#e2b34e" stroke="#a67c2e" stroke-width="1"/>
+      <path d="M17 7C12 9 9 12 7.5 16.5" stroke="#a67c2e" stroke-width=".9" fill="none"/>
+    </symbol>
+    <!-- 翼展 -->
+    <symbol id="i-wingspan" viewBox="0 0 24 24">
+      <path d="M2 13c3-4 7-6 10-6s7 2 10 6c-3-1-7-1.4-10-.4-3-1-7-.6-10 .4z" fill="#7fa8c9" stroke="#3f6d94" stroke-width="1"/>
+      <circle cx="12" cy="12" r="1.6" fill="#3f6d94"/>
+    </symbol>
+    <!-- 捕食者 / 群栖 标记 -->
+    <symbol id="i-predator" viewBox="0 0 24 24">
+      <path d="M4 6c4-2 8-2 12 0v3c0 5-3 9-6 9s-6-4-6-9z" fill="#c9bfae" stroke="#7a6f5c" stroke-width="1"/>
+      <path d="M6 8l3 2m6-2l-3 2M8 12h8" stroke="#7a6f5c" stroke-width="1" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-flock" viewBox="0 0 24 24">
+      <path d="M3 16c2-4 5-6 9-6s7 2 9 6c-2 0-4 .3-6 1-1-1.4-2-2-3-2s-2 .6-3 2c-2-.7-4-1-6-1z" fill="#7aa93c" stroke="#4e7318" stroke-width="1"/>
+      <circle cx="12" cy="8" r="1.2" fill="#4e7318"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ============ 顶层结构 ============ -->
+<div id="app">
+  <!-- 首页 -->
+  <section id="screen-home" class="screen">
+    <div class="home-hero">
+      <svg class="home-logo"><use href="#logo"/></svg>
+      <h1>展翅翱翔</h1>
+      <p class="sub">Wingspan · 在线对局 · 4–8 人</p>
+      <p class="edition">官方卡牌与数据 · 服务端权威规则引擎</p>
+    </div>
+    <div class="home-panel">
+      <div class="field">
+        <label>昵称</label>
+        <input id="inp-name" maxlength="12" placeholder="观鸟人">
+      </div>
+      <div class="field">
+        <label>模式</label>
+        <div class="mode-cards" id="mode-cards">
+          <button class="mode-card sel" data-mode="base"><b>基础</b><span>4–5 人</span><i>官方基础规则</i></button>
+          <button class="mode-card" data-mode="flock"><b>Flock</b><span>6–7 人</span><i>官方亚洲篇·双组并发</i></button>
+          <button class="mode-card" data-mode="extended"><b>扩展</b><span>8 人</span><i>非官方扩展·4+4</i></button>
+        </div>
+      </div>
+      <div class="field" id="field-players">
+        <label>总人数 <span class="hint" id="players-hint"></span></label>
+        <div class="seg" id="seg-players"></div>
+      </div>
+      <div class="field">
+        <label>目标板</label>
+        <div class="seg" id="seg-goal">
+          <button data-v="green" class="sel">绿面 · 名次竞争</button>
+          <button data-v="blue">蓝面 · 每物品 1 分</button>
+        </div>
+      </div>
+      <div class="home-actions">
+        <button id="btn-solo" class="btn primary big">单机试玩（机器人陪打）</button>
+        <button id="btn-create" class="btn big">创建房间（好友加入）</button>
+        <div class="join-row">
+          <input id="inp-code" maxlength="4" placeholder="房间码">
+          <button id="btn-join" class="btn">加入房间</button>
+        </div>
+      </div>
+      <p class="legal">学习与个人研究用途 · 卡牌版权归 Stonemaier Games · 8 人扩展为非官方模式</p>
+    </div>
+  </section>
+
+  <!-- 房间大厅 -->
+  <section id="screen-lobby" class="screen hidden">
+    <div class="lobby-box">
+      <h2>房间 <span id="lobby-code" class="code"></span></h2>
+      <p id="lobby-meta"></p>
+      <div id="lobby-players" class="lobby-players"></div>
+      <div class="lobby-actions">
+        <button id="btn-start" class="btn primary big">开始对局</button>
+        <button id="btn-leave" class="btn">离开</button>
+      </div>
+      <p class="hint">把房间码告诉朋友，他们在首页输入即可加入；空位将由机器人补齐。</p>
+    </div>
+  </section>
+
+  <!-- 对局主界面：三段式 -->
+  <section id="screen-game" class="screen hidden">
+    <header id="topbar">
+      <div class="brand"><svg><use href="#logo"/></svg><b>展翅翱翔</b><span id="tb-mode" class="badge"></span><span id="tb-room" class="badge ghost"></span></div>
+      <div id="tb-round" class="round-chip"></div>
+      <div id="tb-active" class="active-chip"></div>
+      <div class="spacer"></div>
+      <button id="btn-rules" class="btn ghost" title="规则与卡牌浏览">📖 规则</button>
+      <button id="btn-cards" class="btn ghost" title="浏览全部卡牌">🃏 卡牌</button>
+      <button id="btn-theme" class="btn ghost" title="切换深浅主题">🌙</button>
+    </header>
+
+    <div id="stage">
+      <main id="center">
+        <div id="public-area"></div>
+        <div id="mat"></div>
+      </main>
+      <aside id="sidebar">
+        <div id="goal-panel" class="panel"></div>
+        <div id="players-panel" class="panel"></div>
+        <div id="log-panel" class="panel"></div>
+      </aside>
+    </div>
+
+    <footer id="handbar">
+      <div id="action-buttons"></div>
+      <div id="food-tray"></div>
+      <div id="hand-cards"></div>
+    </footer>
+    <div id="hint-bar" class="hidden"></div>
+  </section>
+</div>
+
+<!-- 弹窗层 -->
+<div id="modal-root"></div>
+<div id="toast-root"></div>
+
+<script type="module" src="/client/js/main.js"></script>
+</body>
+</html>
